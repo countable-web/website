@@ -237,6 +237,7 @@ a.brand
       box-shadow none
 
 #contact
+  z-index 500
   position fixed
   left 0
   right 0
@@ -245,7 +246,37 @@ a.brand
   background-color #aaa
   box-shadow 0 -5px 0 0 rgba(0,0,0,0.1)
   padding 17px
+  .contact-form, .close
+    display none
   p
     a
       font-size 18px
       color black
+
+
+#contact.open
+
+  .container
+    position relative
+  height 210px
+  background-color #ccc
+  #contact-us
+    display none
+  .contact-form
+    z-index 550
+    display block
+    position absolute
+    right 0
+    top 0
+    bottom 0
+    width 260px
+    font-family Arial
+    label
+      display none
+  .close
+    display block
+    top 0
+    right 10px
+    position absolute
+    z-index 600
+    font-size 16px

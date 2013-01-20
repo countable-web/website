@@ -24,7 +24,7 @@ html(lang='en')
     link(rel='apple-touch-icon-precomposed', sizes='114x114', href='/bootstrap/docs/assets/ico/apple-touch-icon-114-precomposed.png')
     link(rel='apple-touch-icon-precomposed', sizes='72x72', href='/bootstrap/docs/assets/ico/apple-touch-icon-72-precomposed.png')
     link(rel='apple-touch-icon-precomposed', href='/bootstrap/docs/assets/ico/apple-touch-icon-57-precomposed.png')
-    link(rel='shortcut icon', href='/bootstrap/docs/assets/ico/favicon.png')
+    link(rel='shortcut icon', href='/favicon.ico')
 
   body(data-spy="scroll", data-target=".navbar")
 
@@ -75,6 +75,16 @@ html(lang='en')
     #contact
       .container
 
+        .contact-form
+          p
+            a(href='#') Ask us anything!
+          | <!-- start contact -->
+          | <script data-sil-id='f58a3be0-2c71-11e2-9a9d-81d1bd0b9b02'> (function() { var u='http://htmlcontactbox.com/widget/contact/f58a3be0-2c71-11e2-9a9d-81d1bd0b9b02?page=',e,s=document.createElement("script"); s.type="text/javascript"; s.src=u+encodeURIComponent(window.location+''); s.async=true; e=document.getElementsByTagName("script");e=e[e.length-1]; e.parentNode.insertBefore(s, e); })(); </script><link rel="stylesheet" type="text/css" href="http://htmlcontactbox.com/bootstrap/css/bootstrap-widget.css" />
+          | <div class='sil-widget-contact sil-widget' id='sil-widget-f58a3be0-2c71-11e2-9a9d-81d1bd0b9b02'><a href='http://htmlcontactbox.com'>contact is loading <img class='sil-loading' src='http://htmlcontactbox.com/loading.gif'/>.</a></div>
+          | <!-- end contact -->
+        .close
+          i.icon-remove
+
         p.pull-left
 
             a(href='tel:7787091230') 778.709.1230
@@ -82,8 +92,7 @@ html(lang='en')
             a(href='mailto:info@countable.ca') info@countable.ca
 
         p.pull-right
-
-            a(href='#services') Contact Us
+          a#contact-us(href='#') Contact Us
 
         .clearfix
   
@@ -125,7 +134,14 @@ html(lang='en')
               var $spy = $(this).scrollspy('refresh')
             });
           }).resize();
+          $("#contact-us").click(function(){
+            $("#contact").addClass("open")
+          });
+          $("#contact .close").click(function(){
+            $("#contact").removeClass("open")
+          }); 
         })
+
 
 
       }(window.jQuery)
