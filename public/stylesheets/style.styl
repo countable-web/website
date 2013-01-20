@@ -1,0 +1,251 @@
+/* GLOBAL STYLES */
+body 
+  padding: 50px 0 0 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: black;
+  background-color rgba(0,0,0,0.1)
+
+.resize-page
+  background-color white
+  h1
+    padding-top 100px
+.page-shade
+  box-shadow inset 0 0 100px 0 rgba(0,0,0,0.1)
+
+a
+  color darkblue
+
+/* PARALLAX */
+ul.parallax-viewport
+
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  -webkit-background-size:cover;
+  background:url(/images/background.jpg) no-repeat center center fixed;
+  background-size:cover;
+  list-style:none;
+  margin:0;
+  min-height:650px;
+  overflow:hidden;
+  padding:0;
+  position:relative;
+  width:100%;
+
+
+ul.parallax-viewport li.parallax-layer
+  bottom:0;
+  height:650px;
+  position:absolute;
+  width:100%;
+
+
+ul.parallax-viewport li.parallax-layer.layer1
+
+  background:url(/images/layer3.png) repeat-x 0 100%;
+  width:2020px;
+
+
+ul.parallax-viewport li.parallax-layer.layer2
+
+  //background:url(/images/layer2.png) repeat-x 0 100%;
+  width:2120px;
+
+
+ul.parallax-viewport li.parallax-layer.layer3
+
+  //background:url(/images/layer3.png) repeat-x 0 100%;
+  width:2320px;
+
+
+ul.parallax-viewport li.parallax-layer.layer3 .tree-left
+
+  bottom:0;
+  height:1161px;
+  left:0;
+  position:absolute;
+  width:357px;
+
+
+ul.parallax-viewport li.parallax-layer.layer3 .tree-right
+
+  bottom:0;
+  height:1170px;
+  position:absolute;
+  right:0;
+  width:357px;
+
+
+/* Carousel base class */
+.carousel
+  z-index 100
+  position absolute
+  top 0px
+  margin-bottom: 60px;
+
+  .container 
+    position: relative;
+    z-index: 9;
+  
+  .carousel-inner 
+    position relative
+  
+  .carousel-control 
+
+    height: 80px;
+    margin-top: 0;
+    font-size: 120px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    background-color: transparent;
+    border: 0;
+    color white
+
+  .carousel-control:hover
+    color white
+
+  .item 
+    height: 500px;
+    
+  /*img 
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;*/
+  .carousel-col
+    float left
+    width 25%
+    text-align center
+
+  .carousel-caption
+    background-color: transparent;
+    position: static;
+    padding: 0 20px 0 20px;
+    top: 0;
+    left 40px
+    right 40px
+    position: absolute;
+    
+    h1, p
+      padding-bottom 25px
+      max-width 500px
+      margin: 0
+      color white
+      line-height 1.25
+      text-shadow 0 1px 3px black
+
+    
+  .carousel-caption .btn
+    margin-top: 10px
+    
+/* MARKETING CONTENT */
+
+.marketing .span4 
+  text-align: center
+
+.marketing h2 
+  font-weight: normal
+
+.marketing .span4 p 
+  margin-left: 10px
+  margin-right: 10px
+
+
+/* RESPONSIVE CSS */
+
+@media (max-width: 767px) 
+  .navbar-inner
+    margin: -20px;
+  
+  .carousel
+
+    margin-left: -20px;
+    margin-right: -20px;
+
+    .item 
+      height: 300px;
+    
+    img 
+      height: 300px;
+    
+    .carousel-caption 
+      width: 65%;
+      padding: 0 70px;
+      margin-top: 100px;
+    
+    .carousel-caption h1
+      font-size: 30px;
+    
+    .carousel-caption .lead, .carousel-caption .btn 
+      font-size: 18px;
+      
+  .marketing .span4 + .span4 
+    margin-top: 40px;
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html, body 
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+
+
+/* Wrapper for page content to push down footer */
+#wrap 
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+
+
+/* Set the fixed height of the footer here */
+#push, #footer 
+  height: 80px;
+  color #aaa
+
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) 
+  #footer
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+a.brand
+  background url("/images/logos/COUNTABLE-LOGO-5.png") 0 9px no-repeat
+  width 300px
+  height 25px
+
+#navbar
+  font-weight bold
+  text-transform uppercase
+  font-size 16px
+  .navbar-inner
+    box-shadow 0 5px 0 0 rgba(0,0,0,0.1)
+  .nav
+    li a
+      padding-top 18px
+      padding-bottom 10px
+      border-top 4px solid #ddd
+      color #aaa
+    li.active a
+      box-shadow none
+      border-top 4px solid black
+      color black
+    li:hover a
+      box-shadow none
+
+#contact
+  position fixed
+  left 0
+  right 0
+  bottom 0
+  height 20px
+  background-color #aaa
+  box-shadow 0 -5px 0 0 rgba(0,0,0,0.1)
+  padding 17px
+  p
+    a
+      font-size 18px
+      color black
