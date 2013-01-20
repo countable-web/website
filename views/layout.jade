@@ -1,0 +1,131 @@
+!!! 5
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Countable · Modern Web Apps in Vancouver, BC
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')      
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    //
+       Le styles 
+    link(href='/bootstrap/docs/assets/css/bootstrap.css', rel='stylesheet')
+    link(href='/bootstrap/docs/assets/css/bootstrap-responsive.css', rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/jparallax/css/jquery.parallax.css')
+
+    //
+       HTML5 shim, for IE6-8 support of HTML5 elements 
+    //if lt IE 9
+      script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    //
+       Fav and touch icons 
+    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='/bootstrap/docs/assets/ico/apple-touch-icon-144-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='/bootstrap/docs/assets/ico/apple-touch-icon-114-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='/bootstrap/docs/assets/ico/apple-touch-icon-72-precomposed.png')
+    link(rel='apple-touch-icon-precomposed', href='/bootstrap/docs/assets/ico/apple-touch-icon-57-precomposed.png')
+    link(rel='shortcut icon', href='/bootstrap/docs/assets/ico/favicon.png')
+
+  body(data-spy="scroll", data-target=".navbar")
+
+    //
+         Part 1: Wrap all page content here 
+    #wrap
+
+
+      //
+         NAVBAR
+      .navbar-wrapper
+        //
+           Wrap the .navbar in .container to center it within the absolutely positioned parent. 
+        .navbar.navbar-fixed-top#navbar
+          .navbar-inner
+            .container
+              //
+                 Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. 
+              a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.brand(href='#')
+
+              //
+                 Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. 
+              .nav-collapse.collapse
+                ul.nav.pull-right
+                  li.active
+                    a(href='#home') Welcome
+                  li
+                    a(href='#services') Services
+                  li
+                    a(href='#projects') Projects
+
+      block pre-content
+
+      block content
+
+      #push
+    
+      #footer
+        .container
+          p.credit
+            | &copy; 2013 Countable Web Produtions
+
+
+    #contact
+      .container
+
+        p.pull-left
+
+            a(href='tel:7787091230') 778.709.1230
+            |  | 
+            a(href='mailto:info@countable.ca') info@countable.ca
+
+        p.pull-right
+
+            a(href='#services') Contact Us
+
+        .clearfix
+  
+    script(src='/bootstrap/docs/assets/js/jquery.js')
+    script(src='/javascripts/jquery.scrollTo-1.4.3.1.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-transition.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-alert.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-modal.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-dropdown.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-scrollspy.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-tab.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-tooltip.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-popover.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-button.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-collapse.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-carousel.js')
+    script(src='/bootstrap/docs/assets/js/bootstrap-typeahead.js')
+    script(src='/bootstrap/docs/assets/js/holder/holder.js')
+
+    script(src="/jparallax/js/jquery.parallax.min.js")
+
+    script
+
+
+
+      !function ($) {
+        $(function(){
+
+          //smoothAnchors();
+          // carousel demo
+          $('.nav').localScroll();
+          $('#myCarousel').carousel()
+
+          $( '.parallax-layer' ).parallax( { mouseport: $(".parallax-viewport") } );
+
+          $(window).resize(function(){
+            $('.resize-page').height($('body').height()-103);
+            $("[data-spy=\"scroll\"]").each(function () {
+              var $spy = $(this).scrollspy('refresh')
+            });
+          }).resize();
+        })
+
+
+      }(window.jQuery)
