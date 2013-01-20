@@ -16,6 +16,7 @@ body {
 }
 a {
   color: #00008b;
+  cursor: pointer;
 }
 /* PARALLAX */
 ul.parallax-viewport {
