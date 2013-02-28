@@ -5,17 +5,18 @@ block content
 
   ul.parallax-viewport.resize-page#home
     li.container
-        #myCarousel.carousel.slide
+        .visible-phone.carousel-replacement
+          h1 Welcome!
+        #myCarousel.carousel.slide.hidden-phone
           .carousel-inner
             .item.active
-
               .container
                 .carousel-caption
-                  h1 Welcome
-                  p Countable Web is founded and run by two UBC computer science grads with the goal of pushing the boundaries of today's Web
-                    | into a new era of better online experiences for all.
-            .item
+                  h1 Welcome!
+                  p Thank you for visiting our website! Have a look around, or 
+                    a.contact-us(href="#") say hi.
 
+            .item
               .container
                 .carousel-caption
                   h1 Services
@@ -24,50 +25,50 @@ block content
                     .carousel-col
                       p
                         | Wireframes
-                      p
-                        img(width=200, height=200, src="/images/HTML5_Logo_200.png")
+                      p.huge
+                        i.icon.icon-th
                     .carousel-col
                       p
                         | User Interfaces
-                      p
-                        img(width=200, height=200, src="/images/HTML5_Logo_200.png")
+                      p.huge
+                        i.icon.icon-columns
                     .carousel-col
                       p
                         | Prototypes
-                      p
-                        img(width=200, height=200, src="/images/HTML5_Logo_200.png")
+                      p.huge
+                        i.icon.icon-plane
                     .carousel-col
                       p
                         | Search Engine Visibility
-                      p
-                        img(width=200, height=200, src="/images/HTML5_Logo_200.png")
+                      p.huge
+                        i.icon.icon-eye-open
 
             .item
-
               .container
                 .carousel-caption
                   h1 Technology
+                  p Web technology is a tool used to delight our customers, so we choose the best fit for each project. Favourites include:
                   .carousel-cols
                     .carousel-col
                       p
-                        | HTML 5 &amp; CSS3
+                        | HTML 5
                       p
-                        img(width=200, height=200, src="/images/HTML5_Logo_200.png")
+                        img(src="/images/HTML5_Logo_200.png")
                     .carousel-col
                       p
                         | NodeJS
                       p
-                        img(width=200, height=200, src="/images/HTML5_Logo_200.png")
+                        img(src="/images/nodejs-light.png")
                     .carousel-col
                       p
                         | MongoDB
                       p
-                        img(width=200, height=200, src="/images/HTML5_Logo_200.png")
+                        img( src="/images/mongodb-leaf.png")
                     .carousel-col
                       p
-                        | Django
+                        | CSS3
                       p
-                        img(width=200, height=200, src="/images/HTML5_Logo_200.png")
+                        img(src="/images/HTML5_Styling_256.png")
                     .clearfix
           a.left.carousel-control(href='#myCarousel', data-slide='prev') ‹
           a.right.carousel-control(href='#myCarousel', data-slide='next') ›
@@ -78,50 +79,78 @@ block content
       img.tree-left(src='/images/tree_left.png', width='731', height='1161')
       img.tree-right(src='/images/tree_right.png', width='357', height='1170')
 
-  .resize-page.services.marketing.page-shade
+  .resize-page.services.page-shade
 
     .container
-      h1#services Services
+      h1#mission Mission
 
       .row
-        .span4
-          // img.img-circle(data-src='holder.js/140x140')
-          i.icon.icon-comments
-          h2 About Us
-          p Countable is founded and run by two UBC computer science grads with the goal of pushing the boundaries of today's Web
-            | into a new era of better online experiences for all.
+        .span6
+          h2 Who
+          p 
+            b We
+            |  are two UBC computer science grads obsessed with making the internet better.
+          p 
+            b You
+            |  are have bright ideas for building tomorrow's online experiences!
 
-        .span4
-          // img.img-circle(data-src='holder.js/140x140')
-          h2 Services
-          p Web App and Widget Development
-          ul
-            li User Interfaces
-            li Wireframes
-            li Prototypes
-            li Search Engine Visibility
+        .span6
+          br
+          br
+          br
+          h3 What
+          p 
+            b Push
+            |  the boundaries of today's Web into a new era of better online experiences for all.
+      .row
+        .span6
+          h3 Why
+          p
+            b Because
+            |  we can!
 
-        .span4
-          // img.img-circle(data-src='holder.js/140x140')
-          h2 Technology
-          p Use the latest and the best!
-          ul
-            li NodeJS with Express
-            li MongoDB
-            li Django
-            li HTML5 and CSS3
+        .span6
+          h4 When &amp; Where
+          p For completeness sake, here and now in Vancouver BC of course!
 
   .resize-page.projects.marketing.page-shade
     .container
-      h1#projects Projects
+      h1#clients Clients
+
+      p
+        | Some customers we've had the pleasure of writing software for.
 
       .row
         .span4
-          h3 1st Project
-          img(data-src='holder.js/280x140')
+          .client
+            h3 HTML Comment Box
+            p.repr
+              i.icon.icon-comments(style="font-size:200px;line-height:150px")
+            p HCB is a free, simple to use comments widget used by tens of thousands of small businesses, hobbyists, non-profits, and others.
+            p.visit
+              a(href="http://www.htmlcommentbox.com", target="_blank") Visit site &rsaquo;
+
         .span4
-          h3 2nd Project
-          img(data-src='holder.js/280x140')
+          .client
+            h3 Ecotrust Canada
+            p.repr
+              img(src='/images/thisfish.png')
+            p Ecotrust is a non-profit in BC, Canada with a focus on commerical fisheries and First Nations land use, title and rights. We have developed 
+              a(href="thisfish.info") ThisFish
+              |  traceability software, Electronic commerical fishery monitoring software, web based atlases and an ebook reader.
+            p.visit
+              a(href="http://www.thisfish.info", target="_blank") Visit site &rsaquo;
+
         .span4
-          h3 3rd Project
-          img(data-src='holder.js/280x140')
+          .client
+            h3 Mr. B-Listed
+            p.repr
+              img(src='/images/mr-b-listed.png')
+            p
+              | Mr. B-Listed is web based real estate brokerage that aims to make it accessible, safe and affortable to sell real estate 
+              a(href="http://mrblisted.ca", target="_blank") for sale by owner
+              | .
+            p.visit
+              a(href="http://mrblisted.ca", target="_blank") Visit site &rsaquo;
+
+

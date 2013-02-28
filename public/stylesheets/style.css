@@ -1,22 +1,29 @@
 /* GLOBAL STYLES */
 body {
-  padding: 50px 0 0 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "webfontregular", Helvetica, Arial, sans-serif;
   color: #000;
-  background-color: rgba(0,0,0,0.1);
+  background-color: #000;
 }
 .resize-page {
   background-color: #fff;
+  text-align: center;
 }
-.resize-page h1 {
+.resize-page h1:first-child {
   padding-top: 100px;
 }
 .page-shade {
   box-shadow: inset 0 0 100px 0 rgba(0,0,0,0.1);
 }
-a {
-  color: #00008b;
+a,
+a:hover,
+a:visited {
+  text-decoration: underline;
+  color: #666;
   cursor: pointer;
+}
+a:hover {
+  color: #000;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 /* PARALLAX */
 ul.parallax-viewport {
@@ -69,16 +76,11 @@ ul.parallax-viewport li.parallax-layer.layer3 .tree-right {
   position: absolute;
   top: 0px;
   margin-bottom: 60px;
-/*img 
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 500px;*/
 }
 .carousel .container {
   position: relative;
   z-index: 9;
+  text-align: center;
 }
 .carousel .carousel-inner {
   position: relative;
@@ -96,7 +98,10 @@ ul.parallax-viewport li.parallax-layer.layer3 .tree-right {
   color: #fff;
 }
 .carousel .item {
-  height: 500px;
+  height: 600px;
+}
+.carousel .item .huge {
+  font-size: 100px;
 }
 .carousel .carousel-col {
   float: left;
@@ -113,58 +118,28 @@ ul.parallax-viewport li.parallax-layer.layer3 .tree-right {
   position: absolute;
 }
 .carousel .carousel-caption h1,
+.carousel .carousel-caption h2,
 .carousel .carousel-caption p {
-  padding-bottom: 25px;
-  max-width: 500px;
+  padding-bottom: 10px;
   margin: 0;
   color: #fff;
   line-height: 1.25;
   text-shadow: 0 1px 3px #000;
 }
+.carousel .carousel-caption h1 a,
+.carousel .carousel-caption h2 a,
+.carousel .carousel-caption p a {
+  color: #fff;
+  text-decoration: underline;
+}
+.carousel .carousel-caption h1 {
+  padding: 50px 0 0 0;
+}
+.carousel .carousel-caption p {
+  font-size: 16px;
+}
 .carousel .carousel-caption .btn {
   margin-top: 10px;
-}
-/* MARKETING CONTENT */
-.marketing .span4 {
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: normal;
-}
-.marketing .span4 p {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-/* RESPONSIVE CSS */
-@media (max-width: 767px) {
-  .navbar-inner {
-    margin: -20px;
-  }
-  .carousel {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-  .carousel .item {
-    height: 300px;
-  }
-  .carousel img {
-    height: 300px;
-  }
-  .carousel .carousel-caption {
-    width: 65%;
-    padding: 0 70px;
-    margin-top: 100px;
-  }
-  .carousel .carousel-caption h1 {
-    font-size: 30px;
-  }
-  .carousel .carousel-caption .lead,
-  .carousel .carousel-caption .btn {
-    font-size: 18px;
-  }
-  .marketing .span4 + .span4 {
-    margin-top: 40px;
-  }
 }
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -185,7 +160,7 @@ body {
 #push,
 #footer {
   height: 80px;
-  color: #aaa;
+  color: #fff;
 }
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
@@ -199,19 +174,25 @@ body {
 a.brand {
   background: url("/images/logos/COUNTABLE-LOGO-5.png") 0 9px no-repeat;
   width: 300px;
-  height: 25px;
+  height: 50px;
 }
 #navbar {
-  font-weight: bold;
+  font-weight: normal;
+  height: 50px;
   text-transform: uppercase;
   font-size: 16px;
+  background-color: #fff;
 }
 #navbar .navbar-inner {
+  background-color: #fff;
+  height: 50px;
   box-shadow: 0 5px 0 0 rgba(0,0,0,0.1);
 }
 #navbar .nav li a {
-  padding-top: 18px;
-  padding-bottom: 10px;
+  font-size: 12px;
+  letter-spacing: 0.5em;
+  padding-top: 15px;
+  padding-bottom: 11px;
   border-top: 4px solid #ddd;
   color: #aaa;
 }
@@ -221,35 +202,83 @@ a.brand {
   color: #000;
 }
 #navbar .nav li:hover a {
-  box-shadow: none;
+  color: #000;
+}
+h1 {
+  font-size: 130px;
+  line-height: 110px;
+}
+h2 {
+  font-size: 100px;
+  line-height: 90px;
+}
+h3 {
+  font-size: 50px;
+  line-height: 40px;
+}
+h4 {
+  font-size: 30px;
+  line-height: 25px;
+}
+.client {
+  min-height: 240px;
+}
+.client .repr {
+  height: 150px;
 }
 #contact {
+  letter-spacing: 0.5em;
   z-index: 500;
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   height: 20px;
-  background-color: #aaa;
+  background-color: #fff;
   box-shadow: 0 -5px 0 0 rgba(0,0,0,0.1);
   padding: 17px;
 }
 #contact .contact-form,
-#contact .close {
+#contact .close-contact {
   display: none;
 }
+#contact .contact-form textarea {
+  height: 60px;
+}
+#contact .contact-form input {
+  height: 35px;
+}
+#contact .contact-form input,
+#contact .contact-form textarea {
+  border: 2px solid #000;
+}
+#contact .contact-form button {
+  background: #000;
+  color: #fff;
+}
 #contact p a {
-  font-size: 18px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
   color: #000;
+}
+#contact .contact-details i {
+  font-size: 16px;
+}
+#contact .contact-details a {
+  margin-right: 50px;
 }
 #contact.open {
   height: 210px;
-  background-color: #ccc;
 }
 #contact.open .container {
+  background-image: url("/images/shokunin_World_Map.png");
+  background-position: 360px 20px;
+  background-repeat: no-repeat;
   position: relative;
+  height: 210px;
 }
-#contact.open #contact-us {
+#contact.open .contact-us1 {
   display: none;
 }
 #contact.open .contact-form {
@@ -261,15 +290,73 @@ a.brand {
   bottom: 0;
   width: 260px;
   font-family: Arial;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #fff;
 }
 #contact.open .contact-form label {
   display: none;
 }
-#contact.open .close {
+#contact.open .close-contact {
   display: block;
   top: 0;
   right: 10px;
   position: absolute;
   z-index: 600;
-  font-size: 16px;
+  font-size: 30px;
+  cursor: pointer;
+}
+/* RESPONSIVE CSS */
+@media (max-width: 979px) {
+  .nav-collapse {
+    top: -14px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  }
+  .nav-collapse .nav>li>a {
+    font-weight: normal;
+  }
+  #navbar {
+    position: fixed;
+  }
+  #navbar li a {
+    margin: 0;
+  }
+  #navbar .navbar-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #navbar .brand {
+    margin-left: 5px;
+  }
+  #contact.open {
+    letter-spacing: 0.25em;
+  }
+  #contact.open .contact-form textarea {
+    height: 35px;
+    margin-bottom: 0;
+  }
+  #contact.open .container {
+    background-position: 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    font-size: 80px;
+    line-height: 70px;
+  }
+  h2 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  body {
+    padding: 0;
+  }
+  .contact-details a {
+    display: block;
+  }
+  .carousel-replacement {
+    color: #fff;
+    text-shadow: 0 1px 3px #000;
+  }
 }
