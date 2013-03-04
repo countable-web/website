@@ -3,9 +3,11 @@ body {
   font: 14px "webfontregular", Helvetica, Arial, sans-serif;
   color: #000;
   background-color: #000;
+  cursor: url("/images/badge.png") 4 12, auto;
 }
 .resize-page {
   background-color: #fff;
+  padding: 50px 0 50px 0;
   text-align: center;
 }
 .resize-page h1:first-child {
@@ -17,7 +19,6 @@ body {
 a,
 a:hover,
 a:visited {
-  text-decoration: underline;
   color: #666;
   cursor: pointer;
 }
@@ -42,34 +43,41 @@ ul.parallax-viewport {
 }
 ul.parallax-viewport li.parallax-layer {
   bottom: 0;
-  height: 650px;
+  top: 0;
   position: absolute;
   width: 100%;
 }
 ul.parallax-viewport li.parallax-layer.layer1 {
-  background: url("/images/layer3.png") repeat-x 0 100%;
+  background: url("/images/layer1.png") repeat-x 0 100%;
   width: 2020px;
 }
 ul.parallax-viewport li.parallax-layer.layer2 {
+  background: url("/images/layer2.png") repeat-x 0 100%;
   width: 2120px;
 }
-ul.parallax-viewport li.parallax-layer.layer3 {
-  width: 2320px;
-}
-ul.parallax-viewport li.parallax-layer.layer3 .tree-left {
-  bottom: 0;
-  height: 1161px;
-  left: 0;
-  position: absolute;
-  width: 357px;
-}
-ul.parallax-viewport li.parallax-layer.layer3 .tree-right {
-  bottom: 0;
-  height: 1170px;
-  position: absolute;
-  right: 0;
-  width: 357px;
-}
+/*
+ul.parallax-viewport li.parallax-layer.layer3
+
+  background:url(/images/layer3.png) repeat-x 0 100%;
+  width:2320px;
+
+ul.parallax-viewport li.parallax-layer.layer3 .tree-left
+
+  bottom:0;
+  height:1161px;
+  left:0;
+  position:absolute;
+  width:357px;
+
+
+ul.parallax-viewport li.parallax-layer.layer3 .tree-right
+
+  bottom:0;
+  height:1170px;
+  position:absolute;
+  right:0;
+  width:357px;
+*/
 /* Carousel base class */
 .carousel {
   z-index: 100;
@@ -124,13 +132,17 @@ ul.parallax-viewport li.parallax-layer.layer3 .tree-right {
   margin: 0;
   color: #fff;
   line-height: 1.25;
-  text-shadow: 0 1px 3px #000;
+  text-shadow: 0 4px 4px #000;
 }
 .carousel .carousel-caption h1 a,
 .carousel .carousel-caption h2 a,
 .carousel .carousel-caption p a {
   color: #fff;
   text-decoration: underline;
+}
+.carousel .carousel-caption h1,
+.carousel .carousel-caption h2 {
+  opacity: 0.7;
 }
 .carousel .carousel-caption h1 {
   padding: 50px 0 0 0;
@@ -140,6 +152,9 @@ ul.parallax-viewport li.parallax-layer.layer3 .tree-right {
 }
 .carousel .carousel-caption .btn {
   margin-top: 10px;
+}
+.carousel .logo-massive {
+  opacity: 0.6;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -161,6 +176,23 @@ body {
 #footer {
   height: 80px;
   color: #fff;
+}
+#mission .container {
+  background-image: url("/images/voyager-translucent.png");
+  background-position: 0 260px;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+#mission .container section {
+  padding-top: 30px;
+  clear: both;
+}
+#mission .container section:before {
+  content: "{";
+  float: left;
+  font-size: 120px;
+  line-height: 110px;
+  color: #ddd;
 }
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
@@ -224,7 +256,8 @@ h4 {
   min-height: 240px;
 }
 .client .repr {
-  height: 150px;
+  height: 110px;
+  padding: 10px;
 }
 #contact {
   letter-spacing: 0.5em;
@@ -273,7 +306,7 @@ h4 {
 }
 #contact.open .container {
   background-image: url("/images/shokunin_World_Map.png");
-  background-position: 360px 20px;
+  background-position: 620px 0;
   background-repeat: no-repeat;
   position: relative;
   height: 210px;
