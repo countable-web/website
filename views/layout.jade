@@ -51,7 +51,7 @@ html(lang='en')
             .nav-collapse.collapse
               ul.nav.pull-right
                 li.active
-                  a(href='#home') Welcome
+                  a(href='#home') Briefing
                 li
                   a(href='#mission') Mission
                 li
@@ -90,7 +90,7 @@ html(lang='en')
               |  info@countable.ca
 
         p.pull-right
-          a.contact-us.contact-us1 Contact Us
+          a.contact-us.contact-us1 Communicator
 
         .clearfix
 
@@ -106,13 +106,14 @@ html(lang='en')
 
           //smoothAnchors();
           // carousel demo
-          $('.nav').localScroll();
+          $('.nav').localScroll({
+            });
           $('#myCarousel').carousel()
 
           $( '.parallax-layer' ).parallax( { mouseport: $(".parallax-viewport") } );
 
           $(window).resize(function(){
-            $('.resize-page').css('min-height',($('body').height()-103)+'px');
+            $('.resize-page').css('min-height',$('body').height()+'px');
             $("[data-spy=\"scroll\"]").each(function () {
               var $spy = $(this).scrollspy('refresh')
             });
