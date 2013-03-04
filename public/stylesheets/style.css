@@ -3,7 +3,7 @@ body {
   font: 14px "webfontregular", Helvetica, Arial, sans-serif;
   color: #000;
   background-color: #000;
-  cursor: url("/images/badge.png") 4 12, auto;
+  cursor: url("/images/badge.png") 4 0, auto;
 }
 .resize-page {
   background-color: #fff;
@@ -109,6 +109,7 @@ ul.parallax-viewport li.parallax-layer.layer3 .tree-right
   height: 600px;
 }
 .carousel .item .huge {
+  opacity: 0.8;
   font-size: 100px;
 }
 .carousel .carousel-col {
