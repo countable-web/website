@@ -3,94 +3,20 @@ extends layout
 
 block content
 
-  ul.parallax-viewport.resize-page#home
-    li.container
-        .visible-phone.carousel-replacement
-          h1 Welcome!
-        #myCarousel.carousel.slide.hidden-phone
-          .carousel-inner
-            .item.active
-              .container
-                .carousel-caption
-                  h1 The Web.
-                  h2 The Final Frontier.
-                  p Thank you for visiting our website! Have a look around, or 
-                    a.contact-us(href="#") say hi.
-
-            .item
-              .container
-                .carousel-caption
-                  h1 Services
-                  p Web Apps and Widget Development
-                  .carousel-cols
-                    .carousel-col
-                      p
-                        | Wireframes
-                      p.huge
-                        i.icon.icon-th
-                    .carousel-col
-                      p
-                        | User Interfaces
-                      p.huge
-                        i.icon.icon-columns
-                    .carousel-col
-                      p
-                        | Prototypes
-                      p.huge
-                        i.icon.icon-plane
-                    .carousel-col
-                      p
-                        | Search Engine Visibility
-                      p.huge
-                        i.icon.icon-eye-open
-
-            .item
-              .container
-                .carousel-caption
-                  h1 Technology
-                  p Web technology is a tool used to delight our customers, so we choose the best fit for each project. Favourites include:
-                  .carousel-cols
-                    .carousel-col
-                      p
-                        | HTML 5
-                      p
-                        img(src="/images/HTML5_Logo_200.png")
-                    .carousel-col
-                      p
-                        | NodeJS
-                      p
-                        img(src="/images/nodejs-light.png")
-                    .carousel-col
-                      p
-                        | MongoDB
-                      p
-                        img( src="/images/mongodb-leaf.png")
-                    .carousel-col
-                      p
-                        | CSS3
-                      p
-                        img(src="/images/HTML5_Styling_256.png")
-                    .clearfix
-            .item
-              .container
-                .carousel-caption
-                  h1 Countable
-                  p We write web apps for tomorrow.
-                  img.logo-massive(src="/images/logos/COUTNABLE-Infinti-EMBLEM.bw.png")
-          a.left.carousel-control(href='#myCarousel', data-slide='prev') ‹
-          a.right.carousel-control(href='#myCarousel', data-slide='next') ›
+  ul.parallax-viewport.resize-page#what
     li.parallax-layer.layer1
     li.parallax-layer.layer2
     li.parallax-layer.layer3
-      
-      img.tree-left(src='/images/tree_left.png', width='731', height='1161')
-      img.tree-right(src='/images/tree_right.png', width='357', height='1170')
+    li.overlay
+      img.logo(src="/images/giant-infinity.png")
+    //
+      img.overflow-left(src='/images/overflow_left.png', width='731', height='1161')
+      img.overflow-right(src='/images/overflow_right.png', width='357', height='1170')
 
-  .resize-page.services.page-shade#mission
+  .resize-page.services.page-shade#why
 
     .container
-
-      h1 Mission
+      h1 Why
       .row
         .span5
           br
@@ -102,16 +28,86 @@ block content
             h3 Our Obsession.
             p Our obsession is to establish you a leader in your industry's place on the internet.
             p A dedicated team of Vancouer's best and brightest, with decades of experience building modern software solutions, we are the ones for the job.
-          section
-            h3 Countable.
-            p 
-              | We believe the problem space of apply web technology to business problems is "countable" in the mathematical sense.
-              | This means we have faith that taking consistent, orderly steps we will always arrive at the solution.
 
 
-  .resize-page.projects.marketing.page-shade#clients
+  .resize-page.page-shade#how
+    .carousel.slide#how-carousel
+      .carousel-inner
+        .item.active
+          .container
+            .carousel-caption
+              h1 The Web.
+              h2 The Final Frontier.
+              p Thank you for visiting our website! Have a look around, or 
+                a.contact-us(href="#") say hi.
+
+        .item
+          .container
+            .carousel-caption
+              h1 How
+              p Web Apps and Widget Development
+              .carousel-cols
+                .carousel-col
+                  p
+                    | Wireframes
+                  p.huge
+                    i.icon.icon-th
+                .carousel-col
+                  p
+                    | User Interfaces
+                  p.huge
+                    i.icon.icon-columns
+                .carousel-col
+                  p
+                    | Prototypes
+                  p.huge
+                    i.icon.icon-plane
+                .carousel-col
+                  p
+                    | Search Engine Visibility
+                  p.huge
+                    i.icon.icon-eye-open
+
+        .item
+          .container
+            .carousel-caption
+              h1 Technology
+              p Web technology is a tool used to delight our customers, so we choose the best fit for each project. Favourites include:
+              .carousel-cols
+                .carousel-col
+                  p
+                    | HTML 5
+                  p
+                    img(src="/images/HTML5_Logo_200.png")
+                .carousel-col
+                  p
+                    | NodeJS
+                  p
+                    img(src="/images/nodejs-light.png")
+                .carousel-col
+                  p
+                    | MongoDB
+                  p
+                    img( src="/images/mongodb-leaf.png")
+                .carousel-col
+                  p
+                    | CSS3
+                  p
+                    img(src="/images/HTML5_Styling_256.png")
+                .clearfix
+        .item
+          .container
+            .carousel-caption
+              h1 Countable
+              p 
+                | We believe the problem space of apply web technology to business problems is "countable" in the mathematical sense.
+                | This means we have faith that taking consistent, orderly steps we will always arrive at the solution.
+      a.left.carousel-control(href='#how-carousel', data-slide='prev') ‹
+            a.right.carousel-control(href='#how-carousel', data-slide='next') ›
+
+  .resize-page.projects.marketing.page-shade#who
     .container
-      h1 Clients
+      h1 Who
       p
         | Some customers we've had the pleasure of writing software for.
 

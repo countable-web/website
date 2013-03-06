@@ -17,52 +17,59 @@ html(lang='en')
     link(rel='stylesheet', href='/jparallax/css/jquery.parallax.css')
 
     link(rel="stylesheet", href="/font/futura/stylesheet.css")
-    link(rel="stylesheet", href="/font/rez/stylesheet.css")
-    link(rel="stylesheet", href="/font/megalopolis/stylesheet.css")
 
     //if lt IE 9
       script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
-
-    link(rel='apple-touch-icon-precomposed', sizes='144x144', href='/bootstrap/docs/assets/ico/apple-touch-icon-144-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', sizes='114x114', href='/bootstrap/docs/assets/ico/apple-touch-icon-114-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', sizes='72x72', href='/bootstrap/docs/assets/ico/apple-touch-icon-72-precomposed.png')
-    link(rel='apple-touch-icon-precomposed', href='/bootstrap/docs/assets/ico/apple-touch-icon-57-precomposed.png')
     link(rel='shortcut icon', href='/favicon.ico')
+    style
+      .logo-none
+      {
+        -webkit-animation: zoom 1s;
+        -webkit-animation-fill-mode: forwards;
+      }
+
+      @-webkit-keyframes zoom
+      {
+        0% {
+          -webkit-transform: rotateX(  100deg ) ;
+        }
+        100% {
+          -webkit-transform: rotateX(  200deg ) ;
+        }
+
+      }
 
   body(data-spy="scroll", data-target=".navbar")
 
-    //
-         Part 1: Wrap all page content here 
     #wrap
-
-      .navbar.navbar-fixed-top#navbar
+      .navbar.navbar-fixed-top
         .navbar-inner
-          .container
-            //
-               Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. 
-            a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-            a.brand(href='#')
 
-            //
-               Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. 
-            .nav-collapse.collapse
-              ul.nav.pull-right
-                li.active
-                  a(href='#home') Briefing
-                li
-                  a(href='#mission') Mission
-                li
-                  a(href='#clients') Clients
+          //
+             Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. 
+          a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='#')
 
-      block pre-content
+          //
+             Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
+          .nav-collapse.collapse
+            ul.nav.pull-right
+              li.active
+                a(href='#what') What
+              li
+                a(href='#why') Why
+              li
+                a(href='#how') How
+              li
+                a(href='#who') Who
 
       block content
 
       #push
-    
+
       #footer
         .container
           p.credit
@@ -70,62 +77,58 @@ html(lang='en')
 
 
     #contact
-      .container
 
-        .contact-form
-          | <!-- start contact -->
-          | <script data-sil-id='20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff'> (function() { var u='http://htmlcontactbox.com/widget/contact/20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff?page=',e,s=document.createElement("script"); s.type="text/javascript"; s.src=u+encodeURIComponent(window.location+''); s.async=true; e=document.getElementsByTagName("script");e=e[e.length-1]; e.parentNode.insertBefore(s, e); })(); </script><link rel="stylesheet" type="text/css" href="http://htmlcontactbox.com/bootstrap/css/bootstrap-widget.css" />
-          | <div class='sil-widget-contact sil-widget' id='sil-widget-20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff'><a href='http://htmlcontactbox.com'>contact is loading <img class='sil-loading' src='http://htmlcontactbox.com/loading.gif'/>.</a></div>
-          | <!-- end contact -->
-        .close-contact
-          i.icon-remove
+      .contact-form
+        | <!-- start contact -->
+        | <script data-sil-id='20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff'> (function() { var u='http://htmlcontactbox.com/widget/contact/20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff?page=',e,s=document.createElement("script"); s.type="text/javascript"; s.src=u+encodeURIComponent(window.location+''); s.async=true; e=document.getElementsByTagName("script");e=e[e.length-1]; e.parentNode.insertBefore(s, e); })(); </script><link rel="stylesheet" type="text/css" href="http://htmlcontactbox.com/bootstrap/css/bootstrap-widget.css" />
+        | <div class='sil-widget-contact sil-widget' id='sil-widget-20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff'><a href='http://htmlcontactbox.com'>contact is loading <img class='sil-loading' src='http://htmlcontactbox.com/loading.gif'/>.</a></div>
+        | <!-- end contact -->
+      .close-contact
+        i.icon-remove
+      
+      .contact-info
+        a(href='tel:7787091230')
+          i.icon.icon-phone
+          |  778.709.1230
+        a(href='mailto:info@countable.ca')
+          i.icon.icon-envelope
+          |  info@countable.ca
 
-        p.pull-left.contact-details
+      p.pull-right
+        a.contact-us.contact-toggle MAKE CONTACT
 
-            a(href='tel:7787091230')
-              i.icon.icon-phone
-              |  778.709.1230
-            a(href='mailto:info@countable.ca')
-              i.icon.icon-envelope
-              |  info@countable.ca
-
-        p.pull-right
-          a.contact-us.contact-us1 Communicator
-
-        .clearfix
+      .clearfix
 
     script(src="/javascripts/jquery-1.9.1.min.js")
     script(src="/javascripts/bootstrap.min.js")
+    script(src="/javascripts/waypoints.min.js")
     script(src='/javascripts/jquery.scrollTo-1.4.3.1.js')
     script(src="/jparallax/js/jquery.parallax.js")
 
-    script
+    :coffeescript
+      $ ->
 
-      !function ($) {
-        $(function(){
+        #smoothAnchors();
+        # carousel demo
+        $(".nav").localScroll {}
+        
+        $(".carousel").carousel()
+        
+        $(".parallax-layer").parallax mouseport: $(".parallax-viewport")
 
-          //smoothAnchors();
-          // carousel demo
-          $('.nav').localScroll({
-            });
-          $('#myCarousel').carousel()
+        $(window).resize(->
+          $(".resize-page").css "min-height", $("body").height() + "px"
+          $("[data-spy=\"scroll\"]").each ->
+            $spy = $(this).scrollspy("refresh")
+        ).resize()
 
-          $( '.parallax-layer' ).parallax( { mouseport: $(".parallax-viewport") } );
+        $(".contact-us").click ->
+          $("#contact").addClass "open"
 
-          $(window).resize(function(){
-            $('.resize-page').css('min-height',$('body').height()+'px');
-            $("[data-spy=\"scroll\"]").each(function () {
-              var $spy = $(this).scrollspy('refresh')
-            });
-          }).resize();
-          $(".contact-us").click(function(){
-            $("#contact").addClass("open")
-          });
-          $("#contact .close-contact").click(function(){
-            $("#contact").removeClass("open")
-          }); 
-        })
+        $("#contact .close-contact").click ->
+          $("#contact").removeClass "open"
 
-
-
-      }(window.jQuery)
+        $(".logo").animate({
+          "margin-top":"-260px",
+          width:"960px"
+        }, 2000)

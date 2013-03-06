@@ -2,11 +2,37 @@
 body {
   font: 14px "webfontregular", Helvetica, Arial, sans-serif;
   color: #000;
-  background-color: #000;
-  cursor: url("/images/badge.png") 4 0, auto;
+  background-color: #011d28;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+h1 {
+  font-size: 130px;
+  line-height: 110px;
+}
+h2 {
+  font-size: 100px;
+  line-height: 90px;
+}
+h3 {
+  font-size: 50px;
+  line-height: 40px;
+}
+h4 {
+  font-size: 30px;
+  line-height: 25px;
+}
+a,
+a:hover,
+a:visited {
+  color: #0cbce3;
+  cursor: pointer;
+}
+a:hover {
+  color: #011d28;
 }
 .resize-page {
-  background-color: #fff;
+  background-color: #eff1e6;
   padding: 50px 0 50px 0;
   text-align: center;
 }
@@ -16,146 +42,37 @@ body {
 .page-shade {
   box-shadow: inset 0 0 100px 0 rgba(0,0,0,0.1);
 }
-a,
-a:hover,
-a:visited {
-  color: #666;
-  cursor: pointer;
-}
-a:hover {
-  color: #000;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-/* PARALLAX */
-ul.parallax-viewport {
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background: url("/images/background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  list-style: none;
-  margin: 0;
-  min-height: 650px;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  width: 100%;
-}
-ul.parallax-viewport li.parallax-layer {
-  bottom: 0;
-  top: 0;
-  position: absolute;
-  width: 100%;
-}
-ul.parallax-viewport li.parallax-layer.layer1 {
-  background: url("/images/layer1.png") repeat-x 0 100%;
-  width: 2020px;
-}
-ul.parallax-viewport li.parallax-layer.layer2 {
-  background: url("/images/layer2.png") repeat-x 0 100%;
-  width: 2120px;
-}
-/*
-ul.parallax-viewport li.parallax-layer.layer3
-
-  background:url(/images/layer3.png) repeat-x 0 100%;
-  width:2320px;
-
-ul.parallax-viewport li.parallax-layer.layer3 .tree-left
-
-  bottom:0;
-  height:1161px;
-  left:0;
-  position:absolute;
-  width:357px;
-
-
-ul.parallax-viewport li.parallax-layer.layer3 .tree-right
-
-  bottom:0;
-  height:1170px;
-  position:absolute;
-  right:0;
-  width:357px;
-*/
-/* Carousel base class */
-.carousel {
-  z-index: 100;
-  position: absolute;
-  top: 0px;
-  margin-bottom: 60px;
-}
-.carousel .container {
-  position: relative;
-  z-index: 9;
-  text-align: center;
-}
-.carousel .carousel-inner {
-  position: relative;
-}
-.carousel .carousel-control {
-  height: 80px;
-  margin-top: 0;
-  font-size: 120px;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.4);
-  background-color: transparent;
-  border: 0;
-  color: #fff;
-}
-.carousel .carousel-control:hover {
-  color: #fff;
-}
-.carousel .item {
-  height: 600px;
-}
-.carousel .item .huge {
-  opacity: 0.8;
-  font-size: 100px;
-}
-.carousel .carousel-col {
-  float: left;
-  width: 25%;
-  text-align: center;
-}
-.carousel .carousel-caption {
-  background-color: transparent;
-  position: static;
-  padding: 0 20px 0 20px;
-  top: 0;
-  left: 40px;
-  right: 40px;
-  position: absolute;
-}
-.carousel .carousel-caption h1,
-.carousel .carousel-caption h2,
-.carousel .carousel-caption p {
-  padding-bottom: 10px;
-  margin: 0;
-  color: #fff;
-  line-height: 1.25;
-  text-shadow: 0 4px 4px #000;
-}
-.carousel .carousel-caption h1 a,
-.carousel .carousel-caption h2 a,
-.carousel .carousel-caption p a {
-  color: #fff;
-  text-decoration: underline;
-}
-.carousel .carousel-caption h1,
-.carousel .carousel-caption h2 {
-  opacity: 0.7;
-}
-.carousel .carousel-caption h1 {
-  padding: 50px 0 0 0;
-}
-.carousel .carousel-caption p {
+.navbar {
+  height: 50px;
   font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
-.carousel .carousel-caption .btn {
-  margin-top: 10px;
+.navbar .navbar-inner {
+  background: #eff1e6;
+  height: 50px;
+  box-shadow: 0 5px 0 0 rgba(0,0,0,0.1);
 }
-.carousel .logo-massive {
-  opacity: 0.6;
+.navbar .nav li a {
+  letter-spacing: 3px;
+  font-size: 15px;
+  padding: 17px 20px 0 20px;
+  margin: 0 10px 0 0;
+  color: #0cbce3;
+}
+.navbar .nav li.active a,
+.navbar .nav li.active a:hover {
+  background-color: #eff1e6;
+  box-shadow: none;
+  color: #011d28 !important;
+  border-bottom: 2px solid #0cbce3;
+}
+.navbar a.brand {
+  background: #011d28 url("/images/countable-title.png") 0 0 no-repeat;
+  width: 253px;
+  height: 36px;
+  padding: 0;
+  margin: 9px 0;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -176,104 +93,54 @@ body {
 #push,
 #footer {
   height: 80px;
-  color: #fff;
+  color: #eff1e6;
 }
-#mission .container {
+#why .container {
   background-image: url("/images/voyager-translucent.png");
   background-position: 0 260px;
   background-repeat: no-repeat;
   text-align: left;
 }
-#mission .container section {
+#why .container section {
   padding-top: 30px;
   clear: both;
 }
-#mission .container section:before {
+#why .container section:before {
   content: "{";
   float: left;
   font-size: 120px;
   line-height: 110px;
   color: #ddd;
 }
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
-  #footer {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-a.brand {
-  background: url("/images/logos/COUNTABLE-LOGO-5.png") 0 9px no-repeat;
-  width: 300px;
-  height: 50px;
-}
-#navbar {
-  font-weight: normal;
-  height: 50px;
-  text-transform: uppercase;
-  font-size: 16px;
-  background-color: #fff;
-}
-#navbar .navbar-inner {
-  background-color: #fff;
-  height: 50px;
-  box-shadow: 0 5px 0 0 rgba(0,0,0,0.1);
-}
-#navbar .nav li a {
-  font-size: 12px;
-  letter-spacing: 0.5em;
-  padding-top: 15px;
-  padding-bottom: 11px;
-  border-top: 4px solid #ddd;
-  color: #aaa;
-}
-#navbar .nav li.active a {
-  box-shadow: none;
-  border-top: 4px solid #000;
-  color: #000;
-}
-#navbar .nav li:hover a {
-  color: #000;
-}
-h1 {
-  font-size: 130px;
-  line-height: 110px;
-}
-h2 {
-  font-size: 100px;
-  line-height: 90px;
-}
-h3 {
-  font-size: 50px;
-  line-height: 40px;
-}
-h4 {
-  font-size: 30px;
-  line-height: 25px;
-}
-.client {
+#who .client {
   min-height: 240px;
 }
-.client .repr {
+#who .client .repr {
   height: 110px;
   padding: 10px;
 }
 #contact {
-  letter-spacing: 0.5em;
   z-index: 500;
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 20px;
-  background-color: #fff;
-  box-shadow: 0 -5px 0 0 rgba(0,0,0,0.1);
-  padding: 17px;
+  height: 50px;
+  background: url("/images/diag-bg.png") repeat;
+  letter-spacing: 0.5em;
+}
+#contact .contact-toggle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  padding: 15px 40px 0 40px;
+  background-color: #eff1e6;
+  font-size: 18px;
 }
 #contact .contact-form,
-#contact .close-contact {
+#contact .close-contact,
+#contact .contact-info {
   display: none;
 }
 #contact .contact-form textarea {
@@ -288,31 +155,16 @@ h4 {
 }
 #contact .contact-form button {
   background: #000;
-  color: #fff;
-}
-#contact p a {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: normal;
-  color: #000;
-}
-#contact .contact-details i {
-  font-size: 16px;
-}
-#contact .contact-details a {
-  margin-right: 50px;
+  color: #eff1e6;
 }
 #contact.open {
   height: 210px;
 }
 #contact.open .container {
-  background-image: url("/images/shokunin_World_Map.png");
-  background-position: 620px 0;
-  background-repeat: no-repeat;
   position: relative;
   height: 210px;
 }
-#contact.open .contact-us1 {
+#contact.open .contact-toggle {
   display: none;
 }
 #contact.open .contact-form {
@@ -326,7 +178,7 @@ h4 {
   font-family: Arial;
   padding: 5px;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #eff1e6;
 }
 #contact.open .contact-form label {
   display: none;
@@ -340,11 +192,123 @@ h4 {
   font-size: 30px;
   cursor: pointer;
 }
+/* PARALLAX */
+ul.parallax-viewport {
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background: #011d28;
+  background-size: cover;
+  list-style: none;
+  margin: 0;
+  min-height: 650px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+ul.parallax-viewport li.overlay {
+  z-index: 1000;
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+ul.parallax-viewport li.overlay .logo {
+  width: 1px;
+}
+ul.parallax-viewport li.parallax-layer {
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+}
+ul.parallax-viewport li.parallax-layer.layer1 {
+  background: url("/images/layer1.png") repeat 0 100%;
+  width: 2020px;
+}
+ul.parallax-viewport li.parallax-layer.layer2 {
+  background: url("/images/layer2.png") repeat-x 0 100%;
+  width: 2120px;
+}
+ul.parallax-viewport li.parallax-layer.layer3 {
+  background: url("/images/layer3.png") repeat-x 0 100%;
+  width: 2320px;
+}
+ul.parallax-viewport li.parallax-layer.layer3 .overflow-left,
+ul.parallax-viewport li.parallax-layer.layer3 .overflow-right {
+  bottom: 0;
+  position: absolute;
+  width: 357px;
+  height: 1170px;
+}
+ul.parallax-viewport li.parallax-layer.layer3 .overflow-left {
+  left: 0;
+}
+ul.parallax-viewport li.parallax-layer.layer3 .overflow-right {
+  right: 0;
+}
+/* Carousel base class */
+.carousel .container {
+  position: relative;
+  z-index: 9;
+  text-align: center;
+}
+.carousel .carousel-inner {
+  position: relative;
+}
+.carousel .carousel-control {
+  height: 80px;
+  margin-top: 0;
+  font-size: 120px;
+  text-shadow: 0 2px 0px rgba(0,0,0,0.4);
+  background-color: transparent;
+  border: 0;
+  color: #000;
+}
+.carousel .carousel-control:hover {
+  color: #888;
+}
+.carousel .item {
+  height: 600px;
+}
+.carousel .item .huge {
+  font-size: 100px;
+}
+.carousel .carousel-col {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.carousel .carousel-caption {
+  position: static;
+  padding: 0 20px 0 20px;
+  top: 0;
+  left: 40px;
+  right: 40px;
+  background-color: transparent;
+}
+.carousel .carousel-caption h1,
+.carousel .carousel-caption h2,
+.carousel .carousel-caption p {
+  padding-bottom: 10px;
+  margin: 0;
+  line-height: 1.25;
+}
+.carousel .carousel-caption h1 a,
+.carousel .carousel-caption h2 a,
+.carousel .carousel-caption p a {
+  text-decoration: underline;
+}
+.carousel .carousel-caption p {
+  font-size: 16px;
+  color: #000;
+}
 /* RESPONSIVE CSS */
 @media (max-width: 979px) {
   .nav-collapse {
     top: -14px;
-    background-color: #fff;
+    background-color: #eff1e6;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
   }
   .nav-collapse .nav>li>a {
@@ -388,9 +352,5 @@ h4 {
   }
   .contact-details a {
     display: block;
-  }
-  .carousel-replacement {
-    color: #fff;
-    text-shadow: 0 1px 3px #000;
   }
 }

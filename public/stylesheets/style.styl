@@ -1,236 +1,16 @@
 /* GLOBAL STYLES */
-body 
-  font 14px "webfontregular", Helvetica, Arial, sans-serif;
+
+fridge-white=#eff1e6
+space-blue=#011d28
+neon-blue=#0cbce3
+
+// User agent overrides
+body
+  font 14px "webfontregular", Helvetica, Arial, sans-serif
   color black
-  background-color black
-  cursor url("/images/badge.png") 4 0, auto
-
-.resize-page
-  background-color white
-  padding 50px 0 50px 0
-  text-align center
-  h1:first-child
-    padding-top 100px
-
-.page-shade
-  box-shadow inset 0 0 100px 0 rgba(0,0,0,0.1)
-
-a, a:hover, a:visited
-  color #666
-  cursor pointer
-
-a:hover
-  color black
-  text-shadow 1px 1px 3px rgba(0,0,0,0.1)
-
-/* PARALLAX */
-ul.parallax-viewport
-
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  -webkit-background-size:cover;
-  background:url(/images/background.jpg) no-repeat center center fixed;
-  background-size:cover;
-  list-style:none;
-  margin:0;
-  min-height:650px;
-  overflow:hidden;
-  padding:0;
-  position:relative;
-  width:100%;
-
-
-ul.parallax-viewport li.parallax-layer
-  bottom:0;
-  top:0;
-  position:absolute;
-  width:100%;
-
-
-ul.parallax-viewport li.parallax-layer.layer1
-
-  background:url(/images/layer1.png) repeat-x 0 100%;
-  width:2020px;
-
-
-ul.parallax-viewport li.parallax-layer.layer2
-
-  background:url(/images/layer2.png) repeat-x 0 100%;
-  width:2120px;
-
-
-/*
-ul.parallax-viewport li.parallax-layer.layer3
-
-  background:url(/images/layer3.png) repeat-x 0 100%;
-  width:2320px;
-
-ul.parallax-viewport li.parallax-layer.layer3 .tree-left
-
-  bottom:0;
-  height:1161px;
-  left:0;
-  position:absolute;
-  width:357px;
-
-
-ul.parallax-viewport li.parallax-layer.layer3 .tree-right
-
-  bottom:0;
-  height:1170px;
-  position:absolute;
-  right:0;
-  width:357px;
-*/
-
-/* Carousel base class */
-.carousel
-  z-index 100
-  position absolute
-  top 0px
-  margin-bottom: 60px;
-
-  .container 
-    position: relative;
-    z-index: 9;
-    text-align center
-  
-  .carousel-inner 
-    position relative
-  
-  .carousel-control 
-
-    height: 80px;
-    margin-top: 0;
-    font-size: 120px;
-    text-shadow: 0 1px 1px rgba(0,0,0,.4);
-    background-color: transparent;
-    border: 0;
-    color white
-
-  .carousel-control:hover
-    color white
-
-  .item 
-    height: 600px;
-    .huge
-      opacity 0.8
-      font-size 100px
-      
-  .carousel-col
-    float left
-    width 25%
-    text-align center
-
-  .carousel-caption
-    background-color transparent
-    position static
-    padding 0 20px 0 20px
-    top 0
-    left 40px
-    right 40px
-    position absolute
-    
-    h1, h2, p
-      a
-        color white
-        text-decoration underline
-      padding-bottom 10px
-      margin 0
-      color white
-      line-height 1.25
-      text-shadow 0 4px 4px black
-    h1, h2
-      opacity 0.7
-    h1
-      padding 50px 0 0 0
-    p
-      font-size 16px
-    
-  .carousel-caption .btn
-    margin-top: 10px
-    
-  .logo-massive
-    opacity 0.6
-  
-
-/* Sticky footer styles
--------------------------------------------------- */
-
-html, body 
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
-
-
-/* Wrapper for page content to push down footer */
-#wrap 
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  /* Negative indent footer by it's height */
-  margin: 0 auto -60px;
-
-
-/* Set the fixed height of the footer here */
-#push, #footer 
-  height 80px
-  color white
-
-#mission
-  .container
-    background-image url("/images/voyager-translucent.png")
-    background-position 0 260px
-    background-repeat no-repeat
-    text-align left
-    section
-      padding-top 30px
-      clear both
-
-    section:before
-        content: "{"
-        float left
-        font-size 120px
-        line-height 110px
-        color #ddd
-
-
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) 
-  #footer
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-a.brand
-  background url("/images/logos/COUNTABLE-LOGO-5.png") 0 9px no-repeat
-  width 300px
-  height 50px
-
-#navbar
-  font-weight normal
-  height 50px
-  text-transform uppercase
-  font-size 16px
-  background-color white
-  .navbar-inner
-    background-color white
-    height 50px
-    box-shadow 0 5px 0 0 rgba(0,0,0,0.1)
-  .nav
-    li a
-      font-size 12px
-      letter-spacing 0.5em
-      padding-top 15px
-      padding-bottom 11px
-      border-top 4px solid #ddd
-      color #aaa
-    li.active a
-      box-shadow none
-      border-top 4px solid black
-      color black
-    li:hover a
-      color black
+  background-color space-blue
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
 
 h1
   font-size 130px
@@ -248,28 +28,133 @@ h4
   font-size 30px
   line-height 25px
 
-.client
-  min-height 240px
-  .repr
-    height 110px
-    padding 10px
+a, a:hover, a:visited
+  color neon-blue
+  cursor pointer
+
+a:hover
+  color space-blue
+
+// Global styles
+.resize-page
+  background-color fridge-white
+  padding 50px 0 50px 0
+  text-align center
+  h1:first-child
+    padding-top 100px
+
+.page-shade
+  box-shadow inset 0 0 100px 0 rgba(0,0,0,0.1)
+
+// Bootstrap overrides.
+
+.navbar
+  height 50px
+
+  font-size 16px
+  font-weight normal
+  text-transform uppercase
+  
+  .navbar-inner
+    background fridge-white
+    height 50px
+    box-shadow 0 5px 0 0 rgba(0,0,0,0.1)
+  
+  .nav
+    li a
+      letter-spacing 3px
+      font-size 15px
+      padding 17px 20px 0 20px
+      margin 0 10px 0 0
+      color neon-blue
+    li.active a, li.active a:hover
+      background-color fridge-white
+      box-shadow none
+      color space-blue !important
+      border-bottom 2px solid neon-blue
+
+  a.brand
+    background space-blue url("/images/countable-title.png") 0 0 no-repeat
+    width 253px
+    height 36px
+    padding 0
+    margin 9px 0
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html, body
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+
+
+/* Wrapper for page content to push down footer */
+#wrap
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+
+/* Set the fixed height of the footer here */
+#push, #footer
+  height 80px
+  color fridge-white
+
+#why
+
+  .container
+    background-image url("/images/voyager-translucent.png")
+    background-position 0 260px
+    background-repeat no-repeat
+    text-align left
+    section
+      padding-top 30px
+      clear both
+
+    section:before
+        content: "{"
+        float left
+        font-size 120px
+        line-height 110px
+        color #ddd
+
+
+#who
+  .client
+    min-height 240px
+    .repr
+      height 110px
+      padding 10px
 
 #contact
-  letter-spacing 0.5em
+  
   z-index 500
   position fixed
-  
   left 0
   right 0
   bottom 0
+  height 50px
   
-  height 20px
-  background-color white
-  box-shadow 0 -5px 0 0 rgba(0,0,0,0.1)
+  background url("/images/diag-bg.png") repeat
+  
+  letter-spacing 0.5em
 
-  padding 17px
-  .contact-form, .close-contact
+  .contact-toggle
+
+    position absolute
+    bottom 0
+    right 0
+    top 0
+    padding 15px 40px 0 40px
+
+    background-color fridge-white
+
+    font-size 18px
+
+  .contact-form, .close-contact, .contact-info
     display none
+
   .contact-form
     textarea
       height 60px
@@ -279,30 +164,14 @@ h4
       border 2px solid black
     button
       background black
-      color white
-  p
-    a
-      font-size 12px
-      text-transform uppercase
-      font-weight normal
-      color black
-
-  .contact-details
-    i
-      font-size 16px
-    a
-      margin-right 50px
-
+      color fridge-white
 
 #contact.open
   height 210px
   .container
-    background-image url("/images/shokunin_World_Map.png")
-    background-position 620px 0
-    background-repeat no-repeat
     position relative
     height 210px
-  .contact-us1
+  .contact-toggle
     display none
 
   .contact-form
@@ -319,7 +188,7 @@ h4
 
     padding 5px
     border-radius 5px
-    background-color white
+    background-color fridge-white
 
   .close-contact
     display block
@@ -331,13 +200,125 @@ h4
     cursor pointer
 
 
+
+/* PARALLAX */
+ul.parallax-viewport
+
+  -moz-background-size:cover
+  -o-background-size:cover
+  -webkit-background-size:cover
+  //background:url(/images/background.jpg) no-repeat center center fixed
+  background space-blue
+  background-size:cover
+  list-style:none
+  margin:0
+  min-height:650px
+  overflow:hidden
+  padding:0
+  position:relative
+  width:100%
+
+  li.overlay
+
+    z-index 1000
+    margin-top 0
+    position absolute
+    top 50%
+    width 100%
+    .logo
+      width 1px
+
+  li.parallax-layer
+    bottom:0
+    top:0
+    position:absolute
+    width:100%
+
+  li.parallax-layer.layer1
+    background:url(/images/layer1.png) repeat 0 100%
+    width:2020px
+
+  li.parallax-layer.layer2
+    background:url(/images/layer2.png) repeat-x 0 100%
+    width:2120px
+
+  li.parallax-layer.layer3
+    background:url(/images/layer3.png) repeat-x 0 100%
+    width:2320px
+
+  li.parallax-layer.layer3
+    .overflow-left, .overflow-right
+      bottom 0
+      position absolute
+      width:357px
+      height:1170px
+    .overflow-left
+      left:0
+    .overflow-right
+      right:0
+
+
+/* Carousel base class */
+.carousel
+
+  .container 
+    position: relative
+    z-index: 9
+    text-align center
+  
+  .carousel-inner 
+    position relative
+  
+  .carousel-control 
+
+    height 80px
+    margin-top 0
+    font-size 120px
+    text-shadow 0 2px 0px rgba(0,0,0,.4)
+    background-color transparent
+    border 0
+    color black
+
+  .carousel-control:hover
+    color #888
+
+  .item 
+    height: 600px
+    .huge
+      font-size 100px
+      
+  .carousel-col
+    float left
+    width 25%
+    text-align center
+
+  .carousel-caption
+    position static
+    
+    padding 0 20px 0 20px
+    top 0
+    left 40px
+    right 40px
+
+    background-color transparent
+
+    h1, h2, p
+      padding-bottom 10px
+      margin 0
+      line-height 1.25
+      a
+        text-decoration underline
+    p
+      font-size 16px
+      color black
+    
 /* RESPONSIVE CSS */
 
 @media (max-width: 979px)
   
   .nav-collapse
     top -14px // works because position is relative
-    background-color white
+    background-color fridge-white
     box-shadow 0 0 10px 0 rgba(0,0,0,0.2)
     .nav>li>a
       font-weight normal
@@ -374,7 +355,3 @@ h4
 
   .contact-details a
     display block 
-
-  .carousel-replacement
-    color white
-    text-shadow 0 1px 3px black
