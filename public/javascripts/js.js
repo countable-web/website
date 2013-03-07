@@ -11,14 +11,13 @@
   };
 
   $(function() {
-    var event, lastMouseCheck, t, theta, v, xx, yy;
     $(".nav").localScroll({});
     $(".carousel").carousel();
     $(".parallax-layer").parallax({
       mouseport: $(".parallax-viewport")
     });
     $(window).resize(function() {
-      $(".resize-page").css("min-height", $("body").height() + "px");
+      $(".resize-page").css("min-height", $("body").height() - 20 + "px");
       return $("[data-spy=\"scroll\"]").each(function() {
         var $spy;
         return $spy = $(this).scrollspy("refresh");
@@ -38,37 +37,7 @@
     setTimeout(function() {
       return $(".slogan").show().addClass("sloganimate");
     }, 1000);
-    lastMouseCheck = (new Date()).valueOf();
-    xx = 0;
-    yy = 0;
-    event = null;
-    t = 0;
-    v = 0;
-    theta = 0;
-    $('body').mousemove(function(e) {
-      var curMouseMove, lastMouseMove;
-      if (!((curMouseMove = (new Date()).valueOf()) - lastMouseCheck > 40)) {
-        return;
-      }
-      lastMouseMove = curMouseMove;
-      return event = e;
-    });
-    return setInterval(function() {
-      var dx;
-      if (!event) {
-        return;
-      }
-      t += 1;
-      dx = event.pageX - xx;
-      xx = event.pageX;
-      v = (v + dx) * .9;
-      theta += v * Math.PI / 1800;
-      return $('.howto').each(function() {
-        var x, y;
-        y = Math.sin(theta + ($(this).attr('phase') || 0)) * 100;
-        return x = Math.cos(theta + ($(this).attr('phase') || 0)) * 100;
-      });
-    }, 60);
+    return skrollr.init();
   });
 
 }).call(this);

@@ -41,47 +41,47 @@ html(lang='en')
 
       .howto:hover
       {
-        -webkit-animation: grow 1s;
+        -webkit-animation: spin 60s;
         -webkit-animation-fill-mode: forwards;
       }
 
-      @-webkit-keyframes a
+      @-webkit-keyframes spin
       {
         0% {
           -webkit-transform: scale(  1, 1 ) rotateZ(0);
         }
         100% {
-          -webkit-transform: scale( 1.2, 1.2 ) rotateZ(90deg);
+          -webkit-transform: scale( 1, 1 ) rotateZ(7200deg);
         }
 
       }
 
   body(data-spy="scroll", data-target=".navbar")
 
+    .navbar.navbar-fixed-top
+      .navbar-inner
+
+        //
+           Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. 
+        a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.brand(href='#')
+
+        //
+           Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
+        .nav-collapse.collapse
+          ul.nav.pull-right
+            li.active
+              a(href='#what') What
+            li
+              a(href='#why') Why
+            li
+              a(href='#how') How
+            li
+              a(href='#who') Who
     #wrap
-      .navbar.navbar-fixed-top
-        .navbar-inner
-
-          //
-             Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. 
-          a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.brand(href='#')
-
-          //
-             Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
-          .nav-collapse.collapse
-            ul.nav.pull-right
-              li.active
-                a(href='#what') What
-              li
-                a(href='#why') Why
-              li
-                a(href='#how') How
-              li
-                a(href='#who') Who
 
       block content
 
@@ -94,7 +94,7 @@ html(lang='en')
 
 
     #contact
-      .contact-bar
+      .contact-bar(data-0="background:!url('/images/diag-bg.png')", data-100="background:!#eff1e6")
         a.contact-us.contact-toggle MAKE CONTACT
         .close-contact
           | X
@@ -115,7 +115,7 @@ html(lang='en')
 
     script(src="/javascripts/jquery-1.9.1.min.js")
     script(src="/javascripts/bootstrap.min.js")
-    script(src="/javascripts/waypoints.min.js")
+    script(src="/javascripts/skrollr.min.js")
     script(src='/javascripts/jquery.scrollTo-1.4.3.1.js')
     script(src="/jparallax/js/jquery.parallax.js")
     script(src="/javascripts/js.js")

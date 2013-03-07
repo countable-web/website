@@ -2,9 +2,7 @@
 body {
   font: 14px "webfontregular", Helvetica, Arial, sans-serif;
   color: #000;
-  background-color: #011d28;
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
+  background-color: #000;
 }
 h1,
 h2,
@@ -38,12 +36,17 @@ a:hover {
   color: #011d28;
 }
 .resize-page {
+  position: relative;
   background-color: #eff1e6;
   padding: 50px 0 50px 0;
   text-align: center;
 }
 .resize-page h1:first-child {
   padding-top: 100px;
+}
+.resize-page .marker {
+  position: absolute;
+  top: 0;
 }
 .page-shade {
   box-shadow: inset 0 0 100px 0 rgba(0,0,0,0.1);
@@ -150,6 +153,12 @@ body {
   color: #011d28;
   text-transform: uppercase;
 }
+#credits {
+  color: #eff1e6;
+}
+#credits h1 {
+  color: #eff1e6;
+}
 #contact {
   z-index: 500;
   position: fixed;
@@ -157,6 +166,7 @@ body {
   right: 0;
   bottom: 0;
   height: 50px;
+  box-shadow: 0 -4px 0 rgba(0,0,0,0.3);
 }
 #contact .contact-bar {
   position: absolute;
@@ -269,9 +279,9 @@ ul.parallax-viewport {
   width: 100%;
 }
 ul.parallax-viewport li.overlay {
+  position: absolute;
   z-index: 300;
   margin-top: 0;
-  position: absolute;
   top: 50%;
   width: 100%;
 }

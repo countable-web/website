@@ -8,9 +8,7 @@ neon-blue=#0cbce3
 body
   font 14px "webfontregular", Helvetica, Arial, sans-serif
   color black
-  background-color space-blue
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
+  background-color black
 
 h1, h2, h3
   color #221
@@ -41,11 +39,16 @@ a:hover
 
 // Global styles
 .resize-page
+  position relative
   background-color fridge-white
   padding 50px 0 50px 0
   text-align center
   h1:first-child
     padding-top 100px
+  
+  .marker
+    position absolute
+    top 0
 
 .page-shade
   box-shadow inset 0 0 100px 0 rgba(0,0,0,0.1)
@@ -154,6 +157,11 @@ html, body
     text-transform uppercase
 }
 
+#credits
+  color fridge-white
+  h1
+    color fridge-white
+
 #contact
   
   z-index 500
@@ -162,7 +170,7 @@ html, body
   right 0
   bottom 0
   height 50px
-  
+  box-shadow 0 -4px 0 rgba(0,0,0,0.3)
   .contact-bar
     position absolute
     top 0
@@ -266,7 +274,6 @@ ul.parallax-viewport
   -moz-background-size:cover
   -o-background-size:cover
   -webkit-background-size:cover
-  //background:url(/images/background.jpg) no-repeat center center fixed
   background space-blue
   background-size:cover
   list-style:none
@@ -278,10 +285,9 @@ ul.parallax-viewport
   width:100%
 
   li.overlay
-
+    position absolute
     z-index 300
     margin-top 0
-    position absolute
     top 50%
     width 100%
     .logo

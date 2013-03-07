@@ -16,30 +16,27 @@ block content
           | TOMORROW'S
         p.web-apps
           | WEB APPS
-    //
-      img.overflow-left(src='/images/overflow_left.png', width='731', height='1161')
-      img.overflow-right(src='/images/overflow_right.png', width='357', height='1170')
 
   .resize-page.services.page-shade#why
 
     .container
-      h1 Why
+      h1(data-bottom-top="opacity:0", data-center-bottom="opacity:1") Why
       p (why us?)
       .row
         .span5
           br
         .span7
-          section
+          section(data-bottom-top="transform: translate(700px,0px)", data-center-bottom="transform:translate(0px,0px)")
             h3 Your Web App.
             p  Your web application will push the boundaries of today's Web into a new era of superior online experience to delight your customers.
-          section
+          section(data-bottom-top="transform: translate(700px,0px)", data-center-top="transform:translate(0px,0px)")
             h3 Our Obsession.
-            p Our obsession is to establish you a leader in your industry's place on the internet.
-            p A dedicated team of Vancouer's best and brightest, with decades of experience building modern software solutions, we are the ones for the job.
+            p Our obsession is to establish you as a leader in your industry's place on the internet.
+            p A dedicated team of Vancouver's best and brightest, with decades of experience building modern software solutions, we are the ones for the job.
 
 
   .resize-page.page-shade#how
-    h1 How
+    h1(data-bottom-top="opacity:0", data-center-bottom="opacity:1") How
     p (how we do it.)
     .carousel.slide#how-carousel
       .carousel-inner
@@ -47,9 +44,10 @@ block content
         .item.active
           .container
             .carousel-caption
-              h3 How to make Web Apps
+              h3
+               | How to make Web Apps
               .anchor
-                .howto.wireframes
+                .howto.wireframes(data-bottom-bottom="border-radius:0px", data-top-top="border-radius:75px")
                   p.title Wireframes
                   p.illustration
                     i.icon.icon-th
@@ -89,13 +87,13 @@ block content
                 img(src="/images/logo-halftone.png")
               p 
                 | We believe the problem space of revolutionizing business domains with web technology is "countable" in the mathematical sense.
-                | This means we have faith that taking consistent, orderly steps we will always arrive at the solution.
+                | This means we have faith that by taking consistent, orderly steps we will always arrive at the solution.
       a.left.carousel-control(href='#how-carousel', data-slide='prev') ‹
             a.right.carousel-control(href='#how-carousel', data-slide='next') ›
 
-  .resize-page.projects.marketing.page-shade#who
+  .resize-page.page-shade#who
     .container
-      h1 Who
+      h1(data-bottom-top="opacity:0", data-center-bottom="opacity:1") Who
       p
         | (who we've had the pleasure of writing software for.)
 
@@ -114,11 +112,11 @@ block content
             h4 Ecotrust Canada
             p.repr
               img(src='/images/thisfish.png')
-            p Ecotrust is a non-profit in BC, Canada with a focus on commerical fisheries and First Nations land use, title and rights. We have developed 
-              a(href="thisfish.info") ThisFish
+            p Ecotrust is a non-profit in BC, Canada with a focus on commercial fisheries and First Nations land use, title and rights. We have developed 
+              a(href="http://thisfish.info") ThisFish
               |  traceability software, Electronic commerical fishery monitoring software, web based atlases and an ebook reader.
             p.visit
-              a(href="http://www.thisfish.info", target="_blank") Visit site &rsaquo;
+              a(href="http://thisfish.info", target="_blank") Visit site &rsaquo;
 
         .span4
           .client
@@ -126,10 +124,15 @@ block content
             p.repr
               img(src='/images/mr-b-listed.png')
             p
-              | Mr. B-Listed is web based real estate brokerage that aims to make it accessible, safe and affortable to sell real estate 
+              | Mr. B-Listed is web based real estate brokerage that aims to make it accessible, safe and affordable to sell real estate 
               a(href="http://mrblisted.ca", target="_blank") for sale by owner
               | .
             p.visit
               a(href="http://mrblisted.ca", target="_blank") Visit site &rsaquo;
 
-
+  .resize-page.page-shade#credits(data-bottom-top="background-color:rgb(255,255,255)", data-center-top="background-color:rgb(0,0,0)")
+    .container
+      h1 credits
+      p Web design by
+      p
+        img(src="/images/nbt.png")
