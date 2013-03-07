@@ -6,6 +6,11 @@ body {
   -webkit-perspective: 1000;
   -webkit-backface-visibility: hidden;
 }
+h1,
+h2,
+h3 {
+  color: #221;
+}
 h1 {
   font-size: 130px;
   line-height: 110px;
@@ -15,6 +20,7 @@ h2 {
   line-height: 90px;
 }
 h3 {
+  font-weight: normal;
   font-size: 50px;
   line-height: 40px;
 }
@@ -101,16 +107,21 @@ body {
   background-repeat: no-repeat;
   text-align: left;
 }
+#why .container .row {
+  min-height: 500px;
+}
 #why .container section {
-  padding-top: 30px;
+  padding: 30px 0 0 0;
   clear: both;
 }
 #why .container section:before {
   content: "{";
   float: left;
+  padding: 0 20px 0 0;
   font-size: 120px;
+  font-family: serif;
   line-height: 110px;
-  color: #ddd;
+  color: #ccb;
 }
 #who .client {
   min-height: 240px;
@@ -119,6 +130,26 @@ body {
   height: 110px;
   padding: 10px;
 }
+::-webkit-input-placeholder {
+/* WebKit browsers */
+  color: #011d28;
+  text-transform: uppercase;
+}
+:-moz-placeholder {
+/* Mozilla Firefox 4 to 18 */
+  color: #011d28;
+  text-transform: uppercase;
+}
+::-moz-placeholder {
+/* Mozilla Firefox 19+ */
+  color: #011d28;
+  text-transform: uppercase;
+}
+:-ms-input-placeholder {
+/* Internet Explorer 10+ */
+  color: #011d28;
+  text-transform: uppercase;
+}
 #contact {
   z-index: 500;
   position: fixed;
@@ -126,71 +157,101 @@ body {
   right: 0;
   bottom: 0;
   height: 50px;
+}
+#contact .contact-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
   background: url("/images/diag-bg.png") repeat;
-  letter-spacing: 0.5em;
 }
 #contact .contact-toggle {
   position: absolute;
   bottom: 0;
   right: 0;
   top: 0;
-  padding: 15px 40px 0 40px;
+  padding: 15px 80px 0 80px;
   background-color: #eff1e6;
-  font-size: 18px;
+  font-size: 20px;
 }
-#contact .contact-form,
-#contact .close-contact,
+#contact .contact-body {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background-color: #0cbce3;
+}
 #contact .contact-info {
+  font-size: 40px;
+  position: absolute;
+  top: 40px;
+  left: 80px;
+}
+#contact .contact-info a {
+  color: #fff;
+  font-weight: bold;
+}
+#contact .contact-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px 40px 0 0;
+  width: 240px;
+  font-family: Arial;
+}
+#contact .contact-form label {
   display: none;
 }
 #contact .contact-form textarea {
   height: 60px;
 }
-#contact .contact-form input {
-  height: 25px;
-}
 #contact .contact-form input,
 #contact .contact-form textarea {
-  border: 2px solid #000;
-}
-#contact .contact-form button {
-  background: #000;
-  color: #eff1e6;
-}
-#contact.open {
-  height: 210px;
-}
-#contact.open .container {
-  position: relative;
-  height: 210px;
-}
-#contact.open .contact-toggle {
-  display: none;
-}
-#contact.open .contact-form {
-  z-index: 550;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 260px;
-  font-family: Arial;
   padding: 5px;
-  border-radius: 5px;
+  display: block;
+  width: 100%;
+  margin: 0 0 5px 0;
   background-color: #eff1e6;
 }
-#contact.open .contact-form label {
+#contact .contact-form button,
+#contact .contact-form input,
+#contact .contact-form textarea {
+  border-width: 0px;
+  border-radius: 0px;
+}
+#contact .contact-form button {
+  position: absolute;
+  right: 250px;
+  bottom: 10px;
+  padding: 25px 15px;
+  background: #011d28;
+  color: #eff1e6;
+  font-size: 20px;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+#contact .close-contact {
   display: none;
+  position: absolute;
+  top: 11px;
+  right: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #011d28;
+  cursor: pointer;
+}
+#contact.open {
+  height: 230px;
 }
 #contact.open .close-contact {
   display: block;
-  top: 0;
-  right: 10px;
-  position: absolute;
-  z-index: 600;
-  font-size: 30px;
-  cursor: pointer;
+}
+#contact.open .contact-body {
+  display: block;
 }
 /* PARALLAX */
 ul.parallax-viewport {
@@ -208,7 +269,7 @@ ul.parallax-viewport {
   width: 100%;
 }
 ul.parallax-viewport li.overlay {
-  z-index: 1000;
+  z-index: 300;
   margin-top: 0;
   position: absolute;
   top: 50%;
@@ -216,6 +277,36 @@ ul.parallax-viewport li.overlay {
 }
 ul.parallax-viewport li.overlay .logo {
   width: 1px;
+}
+ul.parallax-viewport li.overlay .slogan {
+  display: none;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 10px 15px rgba(0,0,0,0.5);
+}
+ul.parallax-viewport li.overlay .slogan p.we {
+  margin-left: 40px;
+  font-size: 70px;
+  letter-spacing: 60px;
+  line-height: 100px;
+  color: #0cbce3;
+}
+ul.parallax-viewport li.overlay .slogan p.tomorrows {
+  font-size: 95px;
+  line-height: 130px;
+  letter-spacing: 12px;
+  color: #eff1e6;
+}
+ul.parallax-viewport li.overlay .slogan p.web-apps {
+  margin-left: 10px;
+  font-size: 140px;
+  line-height: 140px;
+  letter-spacing: 17px;
+  color: #eff1e6;
 }
 ul.parallax-viewport li.parallax-layer {
   bottom: 0;
@@ -228,11 +319,11 @@ ul.parallax-viewport li.parallax-layer.layer1 {
   width: 2020px;
 }
 ul.parallax-viewport li.parallax-layer.layer2 {
-  background: url("/images/layer2.png") repeat-x 0 100%;
+  background: url("/images/layer2.png") repeat 0 100%;
   width: 2120px;
 }
 ul.parallax-viewport li.parallax-layer.layer3 {
-  background: url("/images/layer3.png") repeat-x 0 100%;
+  background: url("/images/layer3.png") repeat 0 100%;
   width: 2320px;
 }
 ul.parallax-viewport li.parallax-layer.layer3 .overflow-left,
@@ -261,43 +352,41 @@ ul.parallax-viewport li.parallax-layer.layer3 .overflow-right {
   height: 80px;
   margin-top: 0;
   font-size: 120px;
-  text-shadow: 0 2px 0px rgba(0,0,0,0.4);
   background-color: transparent;
   border: 0;
+  opacity: 1;
   color: #000;
 }
-.carousel .carousel-control:hover {
-  color: #888;
-}
+.carousel .carousel-control:hover,
 .carousel .item {
   height: 600px;
 }
-.carousel .item .huge {
-  font-size: 100px;
-}
-.carousel .carousel-col {
+.carousel .howto {
+  height: 100px;
+  border: 2px dashed #000;
+  border-radius: 75px;
+  padding: 25px;
   float: left;
-  width: 25%;
-  text-align: center;
+  width: 100px;
+  margin: 10px 0 0 50px;
+}
+.carousel .howto i {
+  font-size: 80px;
+}
+.carousel .howto i.smaller {
+  font-size: 40px;
 }
 .carousel .carousel-caption {
-  position: static;
   padding: 0 20px 0 20px;
   top: 0;
   left: 40px;
   right: 40px;
   background-color: transparent;
 }
-.carousel .carousel-caption h1,
-.carousel .carousel-caption h2,
-.carousel .carousel-caption p {
-  padding-bottom: 10px;
-  margin: 0;
-  line-height: 1.25;
+.carousel .carousel-caption h3 {
+  margin-bottom: 0.5em;
 }
-.carousel .carousel-caption h1 a,
-.carousel .carousel-caption h2 a,
-.carousel .carousel-caption p a {
+.carousel .carousel-caption a {
   text-decoration: underline;
 }
 .carousel .carousel-caption p {

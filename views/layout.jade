@@ -22,19 +22,36 @@ html(lang='en')
       script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
     link(rel='shortcut icon', href='/favicon.ico')
     style
-      .logo-none
+      .sloganimate
       {
-        -webkit-animation: zoom 1s;
+        -webkit-animation: up 1s;
         -webkit-animation-fill-mode: forwards;
       }
 
-      @-webkit-keyframes zoom
+      @-webkit-keyframes up
       {
         0% {
-          -webkit-transform: rotateX(  100deg ) ;
+          -webkit-transform: scale(  1, 1 ) translate( 0, 1000px );
         }
         100% {
-          -webkit-transform: rotateX(  200deg ) ;
+          -webkit-transform: scale( 1, 1 ) translate ( 0, 0 );
+        }
+
+      }
+
+      .howto:hover
+      {
+        -webkit-animation: grow 1s;
+        -webkit-animation-fill-mode: forwards;
+      }
+
+      @-webkit-keyframes a
+      {
+        0% {
+          -webkit-transform: scale(  1, 1 ) rotateZ(0);
+        }
+        100% {
+          -webkit-transform: scale( 1.2, 1.2 ) rotateZ(90deg);
         }
 
       }
@@ -77,58 +94,29 @@ html(lang='en')
 
 
     #contact
-
-      .contact-form
-        | <!-- start contact -->
-        | <script data-sil-id='20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff'> (function() { var u='http://htmlcontactbox.com/widget/contact/20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff?page=',e,s=document.createElement("script"); s.type="text/javascript"; s.src=u+encodeURIComponent(window.location+''); s.async=true; e=document.getElementsByTagName("script");e=e[e.length-1]; e.parentNode.insertBefore(s, e); })(); </script><link rel="stylesheet" type="text/css" href="http://htmlcontactbox.com/bootstrap/css/bootstrap-widget.css" />
-        | <div class='sil-widget-contact sil-widget' id='sil-widget-20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff'><a href='http://htmlcontactbox.com'>contact is loading <img class='sil-loading' src='http://htmlcontactbox.com/loading.gif'/>.</a></div>
-        | <!-- end contact -->
-      .close-contact
-        i.icon-remove
-      
-      .contact-info
-        a(href='tel:7787091230')
-          i.icon.icon-phone
-          |  778.709.1230
-        a(href='mailto:info@countable.ca')
-          i.icon.icon-envelope
-          |  info@countable.ca
-
-      p.pull-right
+      .contact-bar
         a.contact-us.contact-toggle MAKE CONTACT
+        .close-contact
+          | X
 
-      .clearfix
+      .contact-body
+        .contact-info
+          p
+            a.phone(href='mailto:info@countable.ca') info@countable.ca
+          p
+            a.phone(href='tel:7787091230') 778.709.1230
+
+        .contact-form
+          | <!-- start contact -->
+          | <script data-sil-id='20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff'> (function() { var u='http://htmlcontactbox.com/widget/contact/20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff?page=',e,s=document.createElement("script"); s.type="text/javascript"; s.src=u+encodeURIComponent(window.location+''); s.async=true; e=document.getElementsByTagName("script");e=e[e.length-1]; e.parentNode.insertBefore(s, e); })(); </script><link rel="stylesheet" type="text/css" href="http://htmlcontactbox.com/bootstrap/css/bootstrap-widget.css" />
+          | <div class='sil-widget-contact sil-widget' id='sil-widget-20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff'><a href='http://htmlcontactbox.com'>contact is loading <img class='sil-loading' src='http://htmlcontactbox.com/loading.gif'/>.</a></div>
+          | <!-- end contact -->
+
 
     script(src="/javascripts/jquery-1.9.1.min.js")
     script(src="/javascripts/bootstrap.min.js")
     script(src="/javascripts/waypoints.min.js")
     script(src='/javascripts/jquery.scrollTo-1.4.3.1.js')
     script(src="/jparallax/js/jquery.parallax.js")
+    script(src="/javascripts/js.js")
 
-    :coffeescript
-      $ ->
-
-        #smoothAnchors();
-        # carousel demo
-        $(".nav").localScroll {}
-        
-        $(".carousel").carousel()
-        
-        $(".parallax-layer").parallax mouseport: $(".parallax-viewport")
-
-        $(window).resize(->
-          $(".resize-page").css "min-height", $("body").height() + "px"
-          $("[data-spy=\"scroll\"]").each ->
-            $spy = $(this).scrollspy("refresh")
-        ).resize()
-
-        $(".contact-us").click ->
-          $("#contact").addClass "open"
-
-        $("#contact .close-contact").click ->
-          $("#contact").removeClass "open"
-
-        $(".logo").animate({
-          "margin-top":"-260px",
-          width:"960px"
-        }, 2000)

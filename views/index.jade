@@ -9,6 +9,13 @@ block content
     li.parallax-layer.layer3
     li.overlay
       img.logo(src="/images/giant-infinity.png")
+      .slogan
+        p.we
+          | WE WRITE
+        p.tomorrows
+          | TOMORROW'S
+        p.web-apps
+          | WEB APPS
     //
       img.overflow-left(src='/images/overflow_left.png', width='731', height='1161')
       img.overflow-right(src='/images/overflow_right.png', width='357', height='1170')
@@ -17,6 +24,7 @@ block content
 
     .container
       h1 Why
+      p (why us?)
       .row
         .span5
           br
@@ -31,76 +39,56 @@ block content
 
 
   .resize-page.page-shade#how
+    h1 How
+    p (how we do it.)
     .carousel.slide#how-carousel
       .carousel-inner
+        
         .item.active
           .container
             .carousel-caption
-              h1 The Web.
-              h2 The Final Frontier.
-              p Thank you for visiting our website! Have a look around, or 
-                a.contact-us(href="#") say hi.
-
-        .item
-          .container
-            .carousel-caption
-              h1 How
-              p Web Apps and Widget Development
-              .carousel-cols
-                .carousel-col
-                  p
-                    | Wireframes
-                  p.huge
+              h3 How to make Web Apps
+              .anchor
+                .howto.wireframes
+                  p.title Wireframes
+                  p.illustration
                     i.icon.icon-th
-                .carousel-col
-                  p
-                    | User Interfaces
-                  p.huge
+                .howto.user-interfaces
+                  p.title User Interfaces
+                  p.illustration
                     i.icon.icon-columns
-                .carousel-col
-                  p
-                    | Prototypes
-                  p.huge
+                .howto.prototypes
+                  p.title Prototypes
+                  p.illustration
                     i.icon.icon-plane
-                .carousel-col
-                  p
-                    | Search Engine Visibility
-                  p.huge
+                .howto.seo
+                  p.title Search Engine Visibility
+                  p.illustration
                     i.icon.icon-eye-open
+                .howto.responsive
+                  p.title Responsive Design
+                  i.icon.icon-desktop.smaller
+                  i.icon.icon-laptop.smaller
+                  i.icon.icon-tablet.smaller
+                  i.icon.icon-mobile-phone.smaller
 
         .item
           .container
             .carousel-caption
-              h1 Technology
+              h3 How the Apps Tick
               p Web technology is a tool used to delight our customers, so we choose the best fit for each project. Favourites include:
-              .carousel-cols
-                .carousel-col
-                  p
-                    | HTML 5
-                  p
-                    img(src="/images/HTML5_Logo_200.png")
-                .carousel-col
-                  p
-                    | NodeJS
-                  p
-                    img(src="/images/nodejs-light.png")
-                .carousel-col
-                  p
-                    | MongoDB
-                  p
-                    img( src="/images/mongodb-leaf.png")
-                .carousel-col
-                  p
-                    | CSS3
-                  p
-                    img(src="/images/HTML5_Styling_256.png")
-                .clearfix
+              img(src="/images/howto-postgresql.png", width="200")
+              img(src="/images/howto-nodejs.png", width="200")
+              img(src="/images/howto-mongodb.png", width="200")
+              img(src="/images/howto-html5-css3.png", width="200")
         .item
           .container
             .carousel-caption
-              h1 Countable
+              h3 How we Always Find a Way
+              p
+                img(src="/images/logo-halftone.png")
               p 
-                | We believe the problem space of apply web technology to business problems is "countable" in the mathematical sense.
+                | We believe the problem space of revolutionizing business domains with web technology is "countable" in the mathematical sense.
                 | This means we have faith that taking consistent, orderly steps we will always arrive at the solution.
       a.left.carousel-control(href='#how-carousel', data-slide='prev') ‹
             a.right.carousel-control(href='#how-carousel', data-slide='next') ›
@@ -109,7 +97,7 @@ block content
     .container
       h1 Who
       p
-        | Some customers we've had the pleasure of writing software for.
+        | (who we've had the pleasure of writing software for.)
 
       .row
         .span4

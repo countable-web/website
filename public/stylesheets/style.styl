@@ -12,6 +12,9 @@ body
   -webkit-perspective: 1000;
   -webkit-backface-visibility: hidden;
 
+h1, h2, h3
+  color #221
+
 h1
   font-size 130px
   line-height 110px
@@ -21,6 +24,7 @@ h2
   line-height 90px
 
 h3
+  font-weight normal
   font-size 50px
   line-height 40px
 
@@ -108,16 +112,22 @@ html, body
     background-position 0 260px
     background-repeat no-repeat
     text-align left
+
+    .row
+      min-height 500px
+
     section
-      padding-top 30px
+      padding 30px 0 0 0
       clear both
 
     section:before
         content: "{"
         float left
+        padding 0 20px 0 0
         font-size 120px
+        font-family serif
         line-height 110px
-        color #ddd
+        color #ccb
 
 
 #who
@@ -126,6 +136,23 @@ html, body
     .repr
       height 110px
       padding 10px
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    space-blue;
+    text-transform uppercase
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    space-blue;
+    text-transform uppercase
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    space-blue;
+    text-transform uppercase
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    space-blue;
+    text-transform uppercase
+}
 
 #contact
   
@@ -136,69 +163,101 @@ html, body
   bottom 0
   height 50px
   
-  background url("/images/diag-bg.png") repeat
+  .contact-bar
+    position absolute
+    top 0
+    left 0
+    right 0
+    height 50px
+    background url("/images/diag-bg.png") repeat
   
-  letter-spacing 0.5em
-
   .contact-toggle
 
     position absolute
     bottom 0
     right 0
     top 0
-    padding 15px 40px 0 40px
-
+    padding 15px 80px 0 80px
     background-color fridge-white
+    font-size 20px
 
-    font-size 18px
-
-  .contact-form, .close-contact, .contact-info
+  .contact-body
     display none
-
-  .contact-form
-    textarea
-      height 60px
-    input
-      height 25px
-    input, textarea
-      border 2px solid black
-    button
-      background black
-      color fridge-white
-
-#contact.open
-  height 210px
-  .container
-    position relative
-    height 210px
-  .contact-toggle
-    display none
-
-  .contact-form
-    z-index 550
-    display block
-    position absolute
+    position absolute  
+    top 50px
+    left 0
     right 0
+    height 180px
+
+    background-color neon-blue
+
+  .contact-info
+    font-size 40px
+    position absolute
+    top 40px
+    left 80px
+    a
+      color white
+      font-weight bold
+
+  .contact-form
+    position absolute
     top 0
+    right 0
     bottom 0
-    width 260px
+
+    padding 20px 40px 0 0
+    width 240px
+
     font-family Arial
+
     label
       display none
+    textarea
+      height 60px
+    input, textarea
 
-    padding 5px
-    border-radius 5px
-    background-color fridge-white
+      padding 5px
+      display block
+      width 100%
+      margin 0 0 5px 0
+
+      background-color fridge-white
+    button, input, textarea
+      border-width 0px
+      border-radius 0px
+    button
+      position absolute
+      right 250px
+      bottom 10px
+      padding 25px 15px
+      
+      background space-blue
+
+      color fridge-white
+      font-size 20px
+      text-shadow none
+      text-transform uppercase
+
+  .close-contact
+    display none
+    position absolute
+    top 11px
+    right 30px
+
+    font-size 24px
+    font-weight bold
+    color space-blue
+    cursor pointer
+
+#contact.open
+  height 230px
 
   .close-contact
     display block
-    top 0
-    right 10px
-    position absolute
-    z-index 600
-    font-size 30px
-    cursor pointer
 
+  .contact-body
+    display block
 
 
 /* PARALLAX */
@@ -220,13 +279,41 @@ ul.parallax-viewport
 
   li.overlay
 
-    z-index 1000
+    z-index 300
     margin-top 0
     position absolute
     top 50%
     width 100%
     .logo
       width 1px
+    .slogan
+      display none
+      position absolute
+
+      top -200px
+      left 0
+      right 0
+
+      text-align center
+      font-weight bold
+      text-shadow 0 10px 15px rgba(0,0,0,0.5)
+      p.we
+        margin-left 40px
+        font-size 70px
+        letter-spacing 60px
+        line-height 100px
+        color neon-blue
+      p.tomorrows
+        font-size 95px
+        line-height 130px
+        letter-spacing 12px
+        color fridge-white
+      p.web-apps
+        margin-left 10px
+        font-size 140px
+        line-height 140px
+        letter-spacing 17px
+        color fridge-white
 
   li.parallax-layer
     bottom:0
@@ -239,11 +326,11 @@ ul.parallax-viewport
     width:2020px
 
   li.parallax-layer.layer2
-    background:url(/images/layer2.png) repeat-x 0 100%
+    background:url(/images/layer2.png) repeat 0 100%
     width:2120px
 
   li.parallax-layer.layer3
-    background:url(/images/layer3.png) repeat-x 0 100%
+    background:url(/images/layer3.png) repeat 0 100%
     width:2320px
 
   li.parallax-layer.layer3
@@ -261,7 +348,7 @@ ul.parallax-viewport
 /* Carousel base class */
 .carousel
 
-  .container 
+  .container
     position: relative
     z-index: 9
     text-align center
@@ -269,31 +356,35 @@ ul.parallax-viewport
   .carousel-inner 
     position relative
   
-  .carousel-control 
-
+  .carousel-control
     height 80px
     margin-top 0
     font-size 120px
-    text-shadow 0 2px 0px rgba(0,0,0,.4)
     background-color transparent
     border 0
+    opacity 1
     color black
 
   .carousel-control:hover
-    color #888
 
   .item 
     height: 600px
-    .huge
-      font-size 100px
-      
-  .carousel-col
+  
+  .howto
+    height 100px
+    border 2px dashed black
+    border-radius 75px
+    padding 25px
     float left
-    width 25%
-    text-align center
+    width 100px
+    margin 10px 0 0 50px
+
+    i
+      font-size 80px
+    i.smaller
+      font-size 40px
 
   .carousel-caption
-    position static
     
     padding 0 20px 0 20px
     top 0
@@ -302,12 +393,10 @@ ul.parallax-viewport
 
     background-color transparent
 
-    h1, h2, p
-      padding-bottom 10px
-      margin 0
-      line-height 1.25
-      a
-        text-decoration underline
+    h3
+      margin-bottom 0.5em
+    a
+      text-decoration underline
     p
       font-size 16px
       color black
