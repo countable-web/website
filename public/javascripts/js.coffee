@@ -16,7 +16,7 @@ $ ->
   $(".parallax-layer").parallax mouseport: $(".parallax-viewport")
 
   $(window).resize(->
-    $(".resize-page").css "min-height", $("body").height() - 20 + "px"
+    $(".resize-page").css "min-height", $("body").height() + "px"
     $("[data-spy=\"scroll\"]").each ->
       $spy = $(this).scrollspy("refresh")
   ).resize()
