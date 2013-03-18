@@ -33,10 +33,27 @@ $ ->
     easing: 'easein',
   , 1000
 
+  $('.scroll-down').click ->
+    sections = ''
+
   setTimeout ->
     $(".slogan").show().addClass("sloganimate")
   , 1000
 
-  skrollr.init()
+  $pages = $('.resize-page')
+  $curpage = $lastpage = $pages.eq(0)
+  
+  skrollr.init
+    render: (args)->
+      $lastpage = $curpage
+      $pages.each ->
+        if args.curTop >= $(this).offset().top
+          $curpage = $(this)
 
+      if $curpage.attr('id') isnt $lastpage.attr('id')
+        cur_page_id = $curpage.attr('id')
+        $(".navbar li").removeClass 'active'
+        $('[href="/#'+cur_page_id+'"]').parent().addClass 'active'
+        window.location.hash = '#'+cur_page_id
+  
 

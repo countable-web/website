@@ -254,6 +254,26 @@ body {
   color: #011d28;
   cursor: pointer;
 }
+#contact .scroll-down {
+  position: absolute;
+  bottom: 60px;
+  right: 10px;
+  height: 60px;
+  min-width: 60px;
+  padding: 10px;
+  border-radius: 40px;
+  opacity: 0.5;
+  background-color: #eff1e6;
+  text-align: center;
+  font-size: 50px;
+  color: #0cbce3;
+}
+#contact .scroll-down b {
+  display: none;
+}
+#contact .scroll-down:hover b {
+  display: inline;
+}
 #contact.open {
   height: 230px;
 }
