@@ -105,13 +105,17 @@ body {
   color: #eff1e6;
 }
 #why .container {
-  background-image: url("/images/voyager-translucent.png");
-  background-position: 0 260px;
-  background-repeat: no-repeat;
   text-align: left;
 }
 #why .container .row {
   min-height: 500px;
+}
+#why .container .nasa {
+  background-image: url("/images/voyager-translucent.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  width: 400px;
 }
 #why .container section {
   padding: 30px 0 0 0;
@@ -167,6 +171,12 @@ body {
   bottom: 0;
   height: 50px;
   box-shadow: 0 -4px 0 rgba(0,0,0,0.3);
+/*.scroll-down:hover
+    //opacity 1
+    b
+      display inline
+      font-size 20px
+      line-height 50px*/
 }
 #contact .contact-bar {
   position: absolute;
@@ -256,7 +266,7 @@ body {
 }
 #contact .scroll-down {
   position: absolute;
-  bottom: 60px;
+  top: -90px;
   right: 10px;
   height: 60px;
   min-width: 60px;
@@ -271,9 +281,6 @@ body {
 }
 #contact .scroll-down b {
   display: none;
-}
-#contact .scroll-down:hover b {
-  display: inline;
 }
 #contact.open {
   height: 230px;

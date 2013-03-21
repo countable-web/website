@@ -15,6 +15,7 @@
 
   $(function() {
     var $curpage, $lastpage, $pages, skrollr_instance;
+    $.localScroll();
     $(".carousel").carousel();
     $(".parallax-layer").parallax({
       mouseport: $(".parallax-viewport")
@@ -38,6 +39,8 @@
       $new_place = $pages.eq($pages.index($curpage) + 1);
       if ($new_place.length) {
         return skrollr_instance.animateTo($new_place.offset().top);
+      } else {
+        return skrollr_instance.animateTo(0);
       }
     });
     setTimeout(function() {
@@ -61,7 +64,12 @@
           if ($curpage.attr('id') !== $lastpage.attr('id')) {
             cur_page_id = $curpage.attr('id');
             $(".navbar li").removeClass('active');
-            return $('[href="/#' + cur_page_id + '"]').parent().addClass('active');
+            $('[href="/#' + cur_page_id + '"]').parent().addClass('active');
+            if ($curpage.attr('id') === 'credits') {
+              return $('.scroll-down i').removeClass('icon-arrow-down').addClass('icon-arrow-up');
+            } else {
+              return $('.scroll-down i').removeClass('icon-arrow-up').addClass('icon-arrow-down');
+            }
           }
         }
       });

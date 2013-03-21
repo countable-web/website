@@ -24,12 +24,12 @@ block content
       p (why us?)
       .row
         .span5
-          br
+          .nasa(data-bottom-top="transform:translateX(-600px) rotateZ(-161deg);", data-center-top="transform:translateX(0px) rotateZ(0deg);")
         .span7
-          section(data-bottom-top="opacity:0", data-center-bottom="opacity:1")
+          section(data-center-top="transform[bounce]:rotateZ(0deg);", data-top-top="transform[bounce]:rotateZ(-7deg);")
             h3 Your Web App.
             p  Your web application will push the boundaries of today's Web into a new era of superior online experience to delight your customers.
-          section(data-bottom-top="opacity:0", data-center-top="opacity:1")
+          section(data-center-top="transform[bounce]:rotateZ(0deg);", data-top-top="transform[bounce]:rotateZ(-10deg);")
             h3 Our Obsession.
             p Our obsession is to establish you as a leader in your industry's place on the internet.
             p A dedicated team of Vancouver's best and brightest, with decades of experience building modern software solutions, we are the ones for the job.
@@ -47,23 +47,23 @@ block content
               h3
                | How to make Web Apps
               .anchor
-                .howto.wireframes(data-bottom-bottom="border-radius:0px", data-top-top="border-radius:75px")
+                .howto.wireframes(data-bottom-bottom="transform:rotateZ(-90deg);", data-top-top="transform:rotateZ(0deg);")
                   p.title Wireframes
                   p.illustration
                     i.icon.icon-th
-                .howto.user-interfaces
+                .howto.user-interfaces(data-bottom-bottom="transform:rotateZ(-90deg);", data-top-top="transform:rotateZ(0deg);")
                   p.title User Interfaces
                   p.illustration
                     i.icon.icon-columns
-                .howto.prototypes
+                .howto.prototypes(data-bottom-bottom="transform:rotateZ(-90deg);", data-top-top="transform:rotateZ(0deg);")
                   p.title Prototypes
                   p.illustration
                     i.icon.icon-plane
-                .howto.seo
+                .howto.seo(data-bottom-bottom="transform:rotateZ(-90deg);", data-top-top="transform:rotateZ(0deg);")
                   p.title Search Engine Visibility
                   p.illustration
                     i.icon.icon-eye-open
-                .howto.responsive
+                .howto.responsive(data-bottom-bottom="transform:rotateZ(-90deg);", data-top-top="transform:rotateZ(0deg);")
                   p.title Responsive Design
                   i.icon.icon-desktop.smaller
                   i.icon.icon-laptop.smaller
@@ -151,8 +151,7 @@ block content
             p.visit
               a(href="http://kmc.countable.ca/", target="_blank") View App &rsaquo;
       h3 Sub-Contracts
-      p Are you our competitor? Maybe, but then again we write a lot of code for other
-        |  local developers. Is your team missing a javascript ninja or backend guru? We can help!
+      p We write a lot of code for other local developers. Is your team missing a javascript ninja or backend guru? We can help!
 
   .resize-page.page-shade#credits(data-bottom-top="background-color:rgb(255,255,255)", data-center-top="background-color:rgb(0,0,0)")
     .container

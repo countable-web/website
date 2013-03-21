@@ -10,17 +10,14 @@ $.fn.screenOffset = ->
 $(".resize-page").css "min-height", $(window).height() + "px"
 
 $ ->
-
-  #$(".nav").localScroll {}
   
+  $.localScroll()
   $(".carousel").carousel()
   
   $(".parallax-layer").parallax mouseport: $(".parallax-viewport")
 
   $(window).resize(->
     $(".resize-page").css "min-height", $(window).height() + "px"
-    #$("[data-spy=\"scroll\"]").each ->
-    #  $spy = $(this).scrollspy("refresh")
   ).resize()
 
   $(".contact-us").click ->
@@ -39,7 +36,8 @@ $ ->
     $new_place = $pages.eq($pages.index($curpage) + 1)
     if $new_place.length
       skrollr_instance.animateTo $new_place.offset().top
-
+    else
+      skrollr_instance.animateTo 0
 
   setTimeout ->
     $(".slogan").show().addClass("sloganimate")
@@ -64,5 +62,9 @@ $ ->
           $('[href="/#'+cur_page_id+'"]').parent().addClass 'active'
           # [cvo] who cares about the URL. (actually, it's too hard to make it sync up nice without jumping.)
           #window.location.hash = '#'+cur_page_id
+          if $curpage.attr('id') is 'credits'
+            $('.scroll-down i').removeClass('icon-arrow-down').addClass('icon-arrow-up')
+          else
+            $('.scroll-down i').removeClass('icon-arrow-up').addClass('icon-arrow-down')
   , 100
 
