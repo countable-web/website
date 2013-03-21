@@ -7,18 +7,20 @@ $.fn.screenOffset = ->
     left: offs.left
   }
 
+$(".resize-page").css "min-height", $(window).height() + "px"
+
 $ ->
 
-  $(".nav").localScroll {}
+  #$(".nav").localScroll {}
   
   $(".carousel").carousel()
   
   $(".parallax-layer").parallax mouseport: $(".parallax-viewport")
 
   $(window).resize(->
-    $(".resize-page").css "min-height", $("body").height() + "px"
-    $("[data-spy=\"scroll\"]").each ->
-      $spy = $(this).scrollspy("refresh")
+    $(".resize-page").css "min-height", $(window).height() + "px"
+    #$("[data-spy=\"scroll\"]").each ->
+    #  $spy = $(this).scrollspy("refresh")
   ).resize()
 
   $(".contact-us").click ->
@@ -34,7 +36,10 @@ $ ->
   , 1000
 
   $('.scroll-down').click ->
-    sections = ''
+    $new_place = $pages.eq($pages.index($curpage) + 1)
+    if $new_place.length
+      skrollr_instance.animateTo $new_place.offset().top
+
 
   setTimeout ->
     $(".slogan").show().addClass("sloganimate")
@@ -42,18 +47,22 @@ $ ->
 
   $pages = $('.resize-page')
   $curpage = $lastpage = $pages.eq(0)
-  
-  skrollr.init
-    render: (args)->
-      $lastpage = $curpage
-      $pages.each ->
-        if args.curTop >= $(this).offset().top
-          $curpage = $(this)
+  skrollr_instance = undefined
 
-      if $curpage.attr('id') isnt $lastpage.attr('id')
-        cur_page_id = $curpage.attr('id')
-        $(".navbar li").removeClass 'active'
-        $('[href="/#'+cur_page_id+'"]').parent().addClass 'active'
-        window.location.hash = '#'+cur_page_id
-  
+  setTimeout ->
+    skrollr_instance = skrollr.init
+      render: (args)->
+        $lastpage = $curpage
+        for page in $pages.toArray()
+          if args.curTop >= $(page).offset().top
+            $curpage = $(page)
+        
+        # implement our own scrollSpy.
+        if $curpage.attr('id') isnt $lastpage.attr('id') # and args.curTop > args.lastTop
+          cur_page_id = $curpage.attr('id')
+          $(".navbar li").removeClass 'active'
+          $('[href="/#'+cur_page_id+'"]').parent().addClass 'active'
+          # [cvo] who cares about the URL. (actually, it's too hard to make it sync up nice without jumping.)
+          #window.location.hash = '#'+cur_page_id
+  , 100
 

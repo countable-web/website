@@ -11,19 +11,16 @@
     };
   };
 
+  $(".resize-page").css("min-height", $(window).height() + "px");
+
   $(function() {
-    var $curpage, $lastpage, $pages;
-    $(".nav").localScroll({});
+    var $curpage, $lastpage, $pages, skrollr_instance;
     $(".carousel").carousel();
     $(".parallax-layer").parallax({
       mouseport: $(".parallax-viewport")
     });
     $(window).resize(function() {
-      $(".resize-page").css("min-height", $("body").height() + "px");
-      return $("[data-spy=\"scroll\"]").each(function() {
-        var $spy;
-        return $spy = $(this).scrollspy("refresh");
-      });
+      return $(".resize-page").css("min-height", $(window).height() + "px");
     }).resize();
     $(".contact-us").click(function() {
       return $("#contact").addClass("open");
@@ -37,31 +34,38 @@
       easing: 'easein'
     }, 1000);
     $('.scroll-down').click(function() {
-      var sections;
-      return sections = '';
+      var $new_place;
+      $new_place = $pages.eq($pages.index($curpage) + 1);
+      if ($new_place.length) {
+        return skrollr_instance.animateTo($new_place.offset().top);
+      }
     });
     setTimeout(function() {
       return $(".slogan").show().addClass("sloganimate");
     }, 1000);
     $pages = $('.resize-page');
     $curpage = $lastpage = $pages.eq(0);
-    return skrollr.init({
-      render: function(args) {
-        var cur_page_id;
-        $lastpage = $curpage;
-        $pages.each(function() {
-          if (args.curTop >= $(this).offset().top) {
-            return $curpage = $(this);
+    skrollr_instance = void 0;
+    return setTimeout(function() {
+      return skrollr_instance = skrollr.init({
+        render: function(args) {
+          var cur_page_id, page, _i, _len, _ref;
+          $lastpage = $curpage;
+          _ref = $pages.toArray();
+          for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            page = _ref[_i];
+            if (args.curTop >= $(page).offset().top) {
+              $curpage = $(page);
+            }
           }
-        });
-        if ($curpage.attr('id') !== $lastpage.attr('id')) {
-          cur_page_id = $curpage.attr('id');
-          $(".navbar li").removeClass('active');
-          $('[href="/#' + cur_page_id + '"]').parent().addClass('active');
-          return window.location.hash = '#' + cur_page_id;
+          if ($curpage.attr('id') !== $lastpage.attr('id')) {
+            cur_page_id = $curpage.attr('id');
+            $(".navbar li").removeClass('active');
+            return $('[href="/#' + cur_page_id + '"]').parent().addClass('active');
+          }
         }
-      }
-    });
+      });
+    }, 100);
   });
 
 }).call(this);

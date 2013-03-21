@@ -267,6 +267,7 @@ body {
   text-align: center;
   font-size: 50px;
   color: #0cbce3;
+  cursor: pointer;
 }
 #contact .scroll-down b {
   display: none;
