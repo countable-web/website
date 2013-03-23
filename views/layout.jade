@@ -55,6 +55,22 @@ html(lang='en')
         }
 
       }*/
+      ::-webkit-input-placeholder { /* WebKit browsers */
+          color:    #0cbce3 !important;
+          text-transform: uppercase;
+      }
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color:    #0cbce3 !important;
+          text-transform: uppercase;
+      }
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color:    #0cbce3 !important;
+          text-transform: uppercase;
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10+ */
+          color:    #0cbce3 !important;
+          text-transform: uppercase;
+      }
 
   body(data-spy="scroll", data-target=".navbar")
 
@@ -74,13 +90,13 @@ html(lang='en')
         .nav-collapse.collapse
           ul.nav.pull-right
             li.active
-              a(href='/#what') What
+              a.local(href='/#what') What
             li
-              a(href='/#why') Why
+              a.local(href='/#why') Why
             li
-              a(href='/#how') How
+              a.local.local(href='/#how') How
             li
-              a(href='/#who') Who
+              a.local(href='/#who') Who
     #wrap
 
       block content
