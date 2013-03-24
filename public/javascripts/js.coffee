@@ -42,11 +42,9 @@ $ ->
   skrollrPages
     onpage:
       'credits': (opts)->
-        console.log 'credits'
         $(opts.scroll_down_el).hide()
         $(opts.scroll_top_el).show()
     offpage:
       'credits': (opts)->
-        console.log 'off'
         $(opts.scroll_down_el).show()
         $(opts.scroll_top_el).hide()
