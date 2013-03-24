@@ -14,7 +14,6 @@
   $(".resize-page").css("min-height", $(window).height() + "px");
 
   $(function() {
-    var scrollPages;
     $('.navbar').localScroll({
       hash: true
     });
@@ -39,73 +38,22 @@
     setTimeout(function() {
       return $(".slogan").show().addClass("sloganimate");
     }, 1000);
-    scrollPages = function(opts) {
-      var $curpage, $lastpage, $pages, setHash, skrollr_instance;
-      opts = $.extend({
-        scroll_down_el: '.scroll-down',
-        page_el: '.resize-page'
-      }, opts);
-      setHash = function(hash) {
-        var fx, node;
-        hash = hash.replace(/^#/, "");
-        fx = void 0;
-        node = $("#" + hash);
-        if (node.length) {
-          node.attr("id", "");
-          fx = $("<div></div>").css({
-            position: "absolute",
-            visibility: "hidden",
-            top: $(document).scrollTop() + "px"
-          }).attr("id", hash).appendTo(document.body);
+    return skrollrPages({
+      onpage: {
+        'credits': function(opts) {
+          console.log('credits');
+          $(opts.scroll_down_el).hide();
+          return $(opts.scroll_top_el).show();
         }
-        document.location.hash = hash;
-        if (node.length) {
-          fx.remove();
-          return node.attr("id", hash);
+      },
+      offpage: {
+        'credits': function(opts) {
+          console.log('off');
+          $(opts.scroll_down_el).show();
+          return $(opts.scroll_top_el).hide();
         }
-      };
-      $(opts.scroll_down_el).click(function() {
-        var $new_place;
-        $new_place = $pages.eq($pages.index($curpage) + 1);
-        if ($new_place.length) {
-          return skrollr_instance.animateTo($new_place.offset().top);
-        } else {
-          return skrollr_instance.animateTo(0);
-        }
-      });
-      $pages = $(opts.page_el);
-      $curpage = $lastpage = $pages.eq(0);
-      skrollr_instance = void 0;
-      return setTimeout(function() {
-        skrollr_instance = skrollr.init({
-          render: function(args) {
-            var cur_page_id, old_page_id, page, _i, _len, _ref;
-            $lastpage = $curpage;
-            _ref = $pages.toArray();
-            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-              page = _ref[_i];
-              if (args.curTop >= $(page).offset().top) {
-                $curpage = $(page);
-              }
-            }
-            if ($curpage.attr('id') !== $lastpage.attr('id')) {
-              cur_page_id = $curpage.attr('id');
-              old_page_id = $lastpage.attr('id');
-              $('[href="/#' + old_page_id + '"]').parent().removeClass('active');
-              $('[href="/#' + cur_page_id + '"]').parent().addClass('active');
-              setHash(cur_page_id);
-              if ($curpage.attr('id') === 'credits') {
-                return $(opts.scroll_down_el).find(i).removeClass('icon-arrow-down').addClass('icon-arrow-up');
-              } else {
-                return $(opts.scroll_down_el).find(i).removeClass('icon-arrow-up').addClass('icon-arrow-down');
-              }
-            }
-          }
-        });
-        return typeof opts.callback === "function" ? opts.callback(skrollr_instance) : void 0;
-      }, 1);
-    };
-    return scrollPages();
+      }
+    });
   });
 
 }).call(this);

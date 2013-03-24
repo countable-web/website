@@ -160,12 +160,6 @@ p.credit {
   bottom: 0;
   height: 50px;
   box-shadow: 0 -4px 0 rgba(0,0,0,0.3);
-/*.scroll-down:hover
-    //opacity 1
-    b
-      display inline
-      font-size 20px
-      line-height 50px*/
 }
 #contact .contact-bar {
   position: absolute;
@@ -253,7 +247,8 @@ p.credit {
   color: #011d28;
   cursor: pointer;
 }
-#contact .scroll-down {
+#contact .scroll-page-down,
+#contact .scroll-page-top {
   position: absolute;
   top: -90px;
   right: 10px;
@@ -268,7 +263,7 @@ p.credit {
   color: #0cbce3;
   cursor: pointer;
 }
-#contact .scroll-down b {
+#contact .scroll-page-top {
   display: none;
 }
 #contact.open {
