@@ -32,11 +32,13 @@
     $(".logo").animate({
       "margin-top": "-240px",
       width: "960px",
-      opacity: 0.2,
       easing: 'easein'
     }, 1000);
     setTimeout(function() {
-      return $(".slogan").show().addClass("sloganimate");
+      $(".slogan").show().addClass("sloganimate");
+      return $(".logo").animate({
+        opacity: 0.2
+      }, 1000);
     }, 1000);
     return skrollrPages({
       onpage: {

@@ -32,12 +32,15 @@ $ ->
   $(".logo").animate
     "margin-top":"-240px",
     width:"960px",
-    opacity: 0.2,
     easing: 'easein',
   , 1000
 
   setTimeout ->
     $(".slogan").show().addClass("sloganimate")
+    $(".logo").animate
+      opacity:0.2,
+    , 1000
+      
   , 1000
     
   skrollrPages
