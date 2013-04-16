@@ -1,6 +1,12 @@
 /* GLOBAL STYLES */
+@font-face {
+  font-family: 'novecento-book';
+  src: url("/font/Novecentowide-Book.otf?v=1");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  font: 14px "webfontregular", Helvetica, Arial, sans-serif;
+  font: 14px "novecento-book", Helvetica, Arial, sans-serif;
   color: #000;
   background-color: #000;
 }
@@ -323,6 +329,7 @@ ul.parallax-viewport li.overlay .slogan p.tomorrows {
   line-height: 130px;
   letter-spacing: 12px;
   color: #eff1e6;
+  text-shadow: 1px 0 0 #ede88c, 0 1px 0 #ede88c, 0 -1px 0 #ede88c, 1px 1px 0 #ede88c, -1px 1px 0 #ede88c, -1px 0 0 #ede88c, -1px -1px 0 #ede88c, 1px -1px 0 #ede88c, 0 10px 15px rgba(0,0,0,0.5);
 }
 ul.parallax-viewport li.overlay .slogan p.web-apps {
   margin-left: 10px;
@@ -330,6 +337,7 @@ ul.parallax-viewport li.overlay .slogan p.web-apps {
   line-height: 140px;
   letter-spacing: 17px;
   color: #eff1e6;
+  text-shadow: 1px 0 0 #ede88c, 0 1px 0 #ede88c, 0 -1px 0 #ede88c, 1px 1px 0 #ede88c, -1px 1px 0 #ede88c, -1px 0 0 #ede88c, -1px -1px 0 #ede88c, 1px -1px 0 #ede88c, 0 10px 15px rgba(0,0,0,0.5);
 }
 ul.parallax-viewport li.parallax-layer {
   bottom: 0;

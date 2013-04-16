@@ -32,6 +32,7 @@ $ ->
   $(".logo").animate
     "margin-top":"-240px",
     width:"960px",
+    opacity: 0.2,
     easing: 'easein',
   , 1000
 

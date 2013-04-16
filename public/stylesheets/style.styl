@@ -3,10 +3,18 @@
 fridge-white=#eff1e6
 space-blue=#011d28
 neon-blue=#0cbce3
+highlight-yellow=#ede88c
+
+@font-face{
+  font-family:'novecento-book';
+  src:url('/font/Novecentowide-Book.otf?v=1');
+  font-weight:normal;
+  font-style:normal;
+}
 
 // User agent overrides
 body
-  font 14px "webfontregular", Helvetica, Arial, sans-serif
+  font 14px "novecento-book", Helvetica, Arial, sans-serif
   color black
   background-color black
 
@@ -306,13 +314,10 @@ ul.parallax-viewport
     .slogan
       display none
       position absolute
-
       top -200px
       left 0
       right 0
-
       padding 0 0 0 10px
-      
       text-align center
       font-weight bold
       text-shadow 0 10px 15px rgba(0,0,0,0.5)
@@ -327,13 +332,18 @@ ul.parallax-viewport
         line-height 130px
         letter-spacing 12px
         color fridge-white
+        text-shadow 1px 0 0 highlight-yellow, 0 1px 0 highlight-yellow, 0 -1px 0 highlight-yellow, 
+        1px 1px 0 highlight-yellow, -1px 1px 0 highlight-yellow, -1px 0 0 highlight-yellow, 
+        -1px -1px 0 highlight-yellow, 1px -1px 0 highlight-yellow, 0 10px 15px rgba(0,0,0,0.5)
       p.web-apps
         margin-left 10px
         font-size 140px
         line-height 140px
         letter-spacing 17px
         color fridge-white
-
+        text-shadow 1px 0 0 highlight-yellow, 0 1px 0 highlight-yellow, 0 -1px 0 highlight-yellow, 
+        1px 1px 0 highlight-yellow, -1px 1px 0 highlight-yellow, -1px 0 0 highlight-yellow, 
+        -1px -1px 0 highlight-yellow, 1px -1px 0 highlight-yellow, 0 10px 15px rgba(0,0,0,0.5)
   li.parallax-layer
     bottom:0
     top:0
