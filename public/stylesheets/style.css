@@ -68,7 +68,6 @@ a:hover {
 .navbar {
   height: 50px;
   z-index: 500;
-  -webkit-transform: translateZ(1500px);
   font-size: 16px;
   font-weight: normal;
   text-transform: uppercase;
@@ -168,7 +167,6 @@ p.credit {
   text-align: center;
 }
 #contact {
-  -webkit-transform: translateZ(1500px);
   z-index: 500;
   position: fixed;
   left: 0;
