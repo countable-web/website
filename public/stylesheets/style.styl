@@ -15,11 +15,11 @@ highlight-yellow=#ede88c
 // User agent overrides
 body
   font 14px "novecento-book", Helvetica, Arial, sans-serif
-  color black
+  color white
   background-color black
 
 h1, h2, h3
-  color #221
+  color fridge-white
 
 h1
   font-size 130px
@@ -44,11 +44,13 @@ a, a:hover, a:visited
 
 a:hover
   color space-blue
+  text-decoration none
 
 // Global styles
 .resize-page
   position relative
-  background-color fridge-white
+  overflow hidden
+  color fridge-white
   padding 50px 0 50px 0
   text-align center
   h1:first-child
@@ -67,6 +69,8 @@ a:hover
   font-family Arial
   a
     color black
+
+
 
 .navbar
   height 50px
@@ -98,7 +102,7 @@ a:hover
     width 253px
     height 36px
     padding 0
-    margin 9px 0
+    margin 9px 0 0 40px
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -147,6 +151,12 @@ html, body
         line-height 110px
         color #ccb
 
+#how
+  .crazybig
+    font-size 140px
+    line-height 140px
+    text-align center
+
 
 #who
   .client
@@ -164,13 +174,13 @@ p.credit
   text-align center
 
 #contact
-  
+  -webkit-transform: translateZ(1500px)
   z-index 500
   position fixed
   left 0
   right 0
-  bottom 0
-  height 50px
+  bottom -180px
+  height 230px
   box-shadow 0 -4px 0 rgba(0,0,0,0.3)
   .contact-bar
     position absolute
@@ -191,13 +201,11 @@ p.credit
     font-size 20px
 
   .contact-body
-    display none
     position absolute  
     top 50px
     left 0
     right 0
     height 180px
-
     background-color neon-blue
 
   .contact-info
@@ -219,6 +227,9 @@ p.credit
     width 240px
 
     font-family Arial
+
+    .sil-widget>div>div>a
+      display none
 
     label
       display none
@@ -249,129 +260,75 @@ p.credit
       text-transform uppercase
 
   .close-contact
-    display none
     position absolute
     top 11px
     right 30px
-
+    display none
     font-size 24px
     font-weight bold
     color space-blue
     cursor pointer
 
-  .scroll-page-down, .scroll-page-top
-    position absolute
-    top -90px
-    right 10px
-    height 60px
-    min-width 60px
-    padding 10px
-    //border 2px solid neon-blue
-    border-radius 40px
-    opacity 0.5
-    background-color fridge-white
-    text-align center
-    font-size 50px
-    color neon-blue
-    cursor pointer
-  .scroll-page-top
-    display none
-    
 #contact.open
-  height 230px
-
+  bottom 0
   .close-contact
     display block
 
-  .contact-body
-    display block
+#contact.opening
+  -webkit-animation-name opener
+  -webkit-animation-duration 1s
 
+#contact.closing
+  -webkit-animation-name opener
+  -webkit-animation-duration 1s
+  -webkit-animation-direction reverse
 
-/* PARALLAX */
-ul.parallax-viewport
+.overlay
+  position absolute
+  z-index 300
+  margin-top -50px
+  top 50%
+  width 100%
+  .logo
+    width 1px
+      
+  .sloganimate
+    -webkit-animation up 1s
+    -webkit-animation-fill-mode forwards
 
-  -moz-background-size:cover
-  -o-background-size:cover
-  -webkit-background-size:cover
-  background space-blue
-  background-size:cover
-  list-style:none
-  margin:0
-  min-height:650px
-  overflow:hidden
-  padding:0
-  position:relative
-  width:100%
-
-  li.overlay
+  .slogan
+    display none
     position absolute
-    z-index 300
-    margin-top 0
-    top 50%
-    width 100%
-    .logo
-      width 1px
-    .slogan
-      display none
-      position absolute
-      top -200px
-      left 0
-      right 0
-      padding 0 0 0 10px
-      text-align center
-      font-weight bold
-      text-shadow 0 10px 15px rgba(0,0,0,0.5)
-      p.we
-        margin-left 40px
-        font-size 70px
-        letter-spacing 60px
-        line-height 100px
-        color neon-blue
-      p.tomorrows
-        font-size 95px
-        line-height 130px
-        letter-spacing 12px
-        color fridge-white
-        text-shadow 1px 0 0 highlight-yellow, 0 1px 0 highlight-yellow, 0 -1px 0 highlight-yellow, 
-        1px 1px 0 highlight-yellow, -1px 1px 0 highlight-yellow, -1px 0 0 highlight-yellow, 
-        -1px -1px 0 highlight-yellow, 1px -1px 0 highlight-yellow, 0 10px 15px rgba(0,0,0,0.5)
-      p.web-apps
-        margin-left 10px
-        font-size 140px
-        line-height 140px
-        letter-spacing 17px
-        color fridge-white
-        text-shadow 1px 0 0 highlight-yellow, 0 1px 0 highlight-yellow, 0 -1px 0 highlight-yellow, 
-        1px 1px 0 highlight-yellow, -1px 1px 0 highlight-yellow, -1px 0 0 highlight-yellow, 
-        -1px -1px 0 highlight-yellow, 1px -1px 0 highlight-yellow, 0 10px 15px rgba(0,0,0,0.5)
-  li.parallax-layer
-    bottom:0
-    top:0
-    position:absolute
-    width:100%
-
-  li.parallax-layer.layer1
-    background:url(/images/layer1.png) repeat 0 100%
-    width:2020px
-
-  li.parallax-layer.layer2
-    background:url(/images/layer2.png) repeat 0 100%
-    width:2120px
-
-  li.parallax-layer.layer3
-    background:url(/images/layer3.png) repeat 0 100%
-    width:2320px
-
-  li.parallax-layer.layer3
-    .overflow-left, .overflow-right
-      bottom 0
-      position absolute
-      width:357px
-      height:1170px
-    .overflow-left
-      left:0
-    .overflow-right
-      right:0
+    top -200px
+    left 0
+    right 0
+    padding 0 0 0 10px
+    text-align center
+    font-weight bold
+    text-shadow 0 10px 15px rgba(0,0,0,0.5)
+    p.we
+      margin-left 40px
+      font-size 70px
+      letter-spacing 60px
+      line-height 100px
+      color neon-blue
+    p.tomorrows
+      font-size 95px
+      line-height 130px
+      letter-spacing 12px
+      color fridge-white
+      text-shadow 1px 0 0 highlight-yellow, 0 1px 0 highlight-yellow, 0 -1px 0 highlight-yellow, 
+      1px 1px 0 highlight-yellow, -1px 1px 0 highlight-yellow, -1px 0 0 highlight-yellow, 
+      -1px -1px 0 highlight-yellow, 1px -1px 0 highlight-yellow, 0 10px 15px rgba(0,0,0,0.5)
+    p.web-apps
+      margin-left 10px
+      font-size 140px
+      line-height 140px
+      letter-spacing 17px
+      color fridge-white
+      text-shadow 1px 0 0 highlight-yellow, 0 1px 0 highlight-yellow, 0 -1px 0 highlight-yellow, 
+      1px 1px 0 highlight-yellow, -1px 1px 0 highlight-yellow, -1px 0 0 highlight-yellow, 
+      -1px -1px 0 highlight-yellow, 1px -1px 0 highlight-yellow, 0 10px 15px rgba(0,0,0,0.5)
 
 
 /* Carousel base class */
@@ -392,7 +349,7 @@ ul.parallax-viewport
     background-color transparent
     border 0
     opacity 1
-    color black
+    color white
 
   .carousel-control:hover
 
@@ -401,7 +358,7 @@ ul.parallax-viewport
   
   .howto
     height 100px
-    border 2px dashed black
+    border 2px dashed white
     border-radius 75px
     padding 25px
     float left
@@ -412,6 +369,7 @@ ul.parallax-viewport
       font-size 80px
     i.smaller
       font-size 40px
+
 
   .carousel-caption
     
@@ -428,7 +386,7 @@ ul.parallax-viewport
       text-decoration underline
     p
       font-size 16px
-      color black
+      color white
     
 /* RESPONSIVE CSS */
 
@@ -459,6 +417,7 @@ ul.parallax-viewport
         margin-bottom 0
     .container
       background-position 0 20px
+
 
 @media (max-width: 767px) 
   

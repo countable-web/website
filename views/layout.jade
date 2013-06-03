@@ -22,39 +22,7 @@ html(lang='en')
       script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
     link(rel='shortcut icon', href='/favicon.ico')
     style
-      .sloganimate
-      {
-        -webkit-animation: up 1s;
-        -webkit-animation-fill-mode: forwards;
-      }
 
-      @-webkit-keyframes up
-      {
-        0% {
-          -webkit-transform: scale(  1, 1 ) translate( 0, 1000px );
-        }
-        100% {
-          -webkit-transform: scale( 1, 1 ) translate ( 0, 0 );
-        }
-
-      }
-
-      /*.howto:hover
-      {
-        -webkit-animation: spin 60s;
-        -webkit-animation-fill-mode: forwards;
-      }
-
-      @-webkit-keyframes spin
-      {
-        0% {
-          -webkit-transform: scale(  1, 1 ) rotateZ(0);
-        }
-        100% {
-          -webkit-transform: scale( 1, 1 ) rotateZ(7200deg);
-        }
-
-      }*/
       ::-webkit-input-placeholder { /* WebKit browsers */
           color:    #0cbce3 !important;
           text-transform: uppercase;
@@ -71,6 +39,70 @@ html(lang='en')
           color:    #0cbce3 !important;
           text-transform: uppercase;
       }
+
+
+      @-webkit-keyframes up
+      {
+        0% {
+          -webkit-transform: scale(  1, 1 ) translate( 0, 1000px );
+        }
+        100% {
+          -webkit-transform: scale( 1, 1 ) translate ( 0, 0 );
+        }
+
+      }
+
+      
+      /* Contact drawer opener. */
+      @-webkit-keyframes opener
+      {
+        0% {
+          bottom: -170px;
+        }
+        100% {
+          bottom: 0;
+        }
+
+      }
+
+      /* Star background animation */
+      @-webkit-keyframes stars {
+        0% { -webkit-transform: scale(1); opacity: 0.1}
+        30% {opacity: 1}
+        100%   {-webkit-transform: scale(12); opacity: 0}
+      }
+
+    :stylus
+
+      body
+        background black
+
+      .stars
+        z-index -1
+        background url(/images/layer1.png)
+        opacity 0
+        -webkit-animation-name stars
+        -webkit-animation-duration 12s
+        -webkit-animation-timing-function cubic-bezier(0.7,0,0.7,0)
+        -webkit-animation-iteration-count infinite
+
+        position fixed
+        top 0
+        left 0
+        right 0
+        bottom 0
+        background-color black
+
+      .layer02
+        background url(/images/layer1.png)
+        background-position 50px 25px
+        -webkit-animation-delay -4s
+
+      .layer03
+        background url(/images/layer1.png)
+        background-position 25px 50px
+        -webkit-animation-delay -8s
+
 
   body(data-spy="scroll", data-target=".navbar")
 
@@ -97,22 +129,29 @@ html(lang='en')
               a.local.local(href='/#how') How
             li
               a.local(href='/#who') Who
+    
+    .stars.layer01
+    .stars.layer03
+    .stars.layer02
+
     #wrap
 
       block content
 
-      #push
-
       #footer
         .container
           p.credit
+
             | &copy; 2013 Countable Web Produtions
             |  | 
             a(href="/privacy-policy/") Privacy Policy
+            |  | 
+            a(href="/links") Links
+
 
 
     #contact
-      .contact-bar(data-0="background:!url('/images/diag-bg.png')", data-100="background:!#eff1e6")
+      .contact-bar(style="background:url(/images/diag-bg.png)")
         a.contact-us.contact-toggle MAKE CONTACT
         .close-contact
           | X
@@ -129,11 +168,6 @@ html(lang='en')
           | <script data-sil-id='20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff'> (function() { var u='http://htmlcontactbox.com/widget/contact/20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff?page=',e,s=document.createElement("script"); s.type="text/javascript"; s.src=u+encodeURIComponent(window.location+''); s.async=true; e=document.getElementsByTagName("script");e=e[e.length-1]; e.parentNode.insertBefore(s, e); })(); </script><link rel="stylesheet" type="text/css" href="http://htmlcontactbox.com/bootstrap/css/bootstrap-widget.css" />
           | <div class='sil-widget-contact sil-widget' id='sil-widget-20d3d7a0-70b2-11e2-ba4f-770fb4d5a0ff'><a href='http://htmlcontactbox.com'>contact is loading <img class='sil-loading' src='http://htmlcontactbox.com/loading.gif'/>.</a></div>
           | <!-- end contact -->
-      .scroll-page-down
-        i.icon.icon-arrow-down
-      .scroll-page-top
-        i.icon.icon-arrow-up
-
 
     script(src="/javascripts/jquery-1.9.1.min.js")
     script(src="/javascripts/bootstrap.min.js")
