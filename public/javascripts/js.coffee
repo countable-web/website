@@ -1,13 +1,4 @@
 
-$.fn.screenOffset = ->
-  offs = $(this).offset()
-
-  return {
-    top: offs.top - $(window).scrollTop(),
-    left: offs.left
-  }
-
-$(".resize-page").css "min-height", $(window).height() + "px"
 
 $ ->
   
@@ -16,7 +7,7 @@ $ ->
 
   $(".carousel").carousel()
   
-  $(".parallax-layer").parallax mouseport: $(".parallax-viewport")
+  #$(".parallax-layer").parallax mouseport: $(".parallax-viewport")
 
   $(window).resize(->
     $(".resize-page").css "min-height", $(window).height() + "px"
@@ -24,10 +15,17 @@ $ ->
   
   #Contact
   $(".contact-us").click ->
-    $("#contact").addClass "open"
+    unless $("#contact").hasClass "open"
+      $("#contact").addClass("opening").addClass("open")
+      setTimeout ->
+        $("#contact").removeClass("opening")
+      , 1000
 
   $("#contact .close-contact").click ->
-    $("#contact").removeClass "open"
+    $("#contact").addClass("closing").removeClass("open")
+    setTimeout ->
+      $("#contact").removeClass("closing")
+    , 1000
 
   $(".logo").animate
     "margin-top":"-240px",
@@ -43,7 +41,8 @@ $ ->
       
   , 1000
     
-  skrollrPages
+  skrollrPages()
+  ###
     onpage:
       'credits': (opts)->
         $(opts.scroll_down_el).hide()
@@ -52,3 +51,4 @@ $ ->
       'credits': (opts)->
         $(opts.scroll_down_el).show()
         $(opts.scroll_top_el).hide()
+  ###

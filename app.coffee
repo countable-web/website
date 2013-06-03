@@ -26,11 +26,17 @@ app.configure "development", ->
 app.get "/", (req,res)->
   res.render "index"
 
+app.get "/links", (req,res)->
+  res.render "links"
+
 app.get "/privacy-policy/", (req,res)->
   res.render "privacy-policy"
 
 app.get "/portfolio/", (req,res)->
   res.redirect "/"
+
+app.get "/flight/?", (req,res)->
+  res.render "flight"
 
 http.createServer(app).listen app.get("port"), ->
   console.log "Express server listening on port " + app.get("port")
