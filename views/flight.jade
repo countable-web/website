@@ -1,0 +1,47 @@
+
+html
+  head
+    
+    style
+
+      @-webkit-keyframes roll {
+        0% { -webkit-transform: scale(1); opacity: 0.1}
+        30% {opacity: 1}
+        100%   {-webkit-transform: scale(12); opacity: 0}
+      }
+
+    :stylus
+
+      body
+        background black
+
+      .stars
+        background url(/images/layer1.png)
+        opacity 0
+        -webkit-animation-name roll
+        -webkit-animation-duration 12s
+        -webkit-animation-timing-function cubic-bezier(0.7,0,0.7,0)
+        -webkit-animation-iteration-count infinite
+
+        position fixed
+        top 0
+        left 0
+        right 0
+        bottom 0
+        background-color black
+
+      .layer2
+        background url(/images/layer1.png)
+        background-position 50px 25px
+        -webkit-animation-delay -4s
+
+      .layer3
+        background url(/images/layer1.png)
+        background-position 25px 50px
+        -webkit-animation-delay -8s
+
+  body
+
+    .stars.layer1
+    .stars.layer2
+    .stars.layer3
