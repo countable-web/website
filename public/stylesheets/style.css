@@ -65,6 +65,13 @@ a:hover {
 .sil-widget a {
   color: #000;
 }
+.page,
+#footer {
+  visibility: hidden;
+}
+#what {
+  visibility: visible;
+}
 .navbar {
   height: 50px;
   z-index: 500;
