@@ -15,6 +15,7 @@ module=
           scroll_top_el: '.scroll-page-top'
           scroll_bottom_el: '.scroll-page-bottom'
           page_el: '.page'
+          offset: 200
         , opts
 
       #Update page hash without scrolling.
@@ -62,7 +63,7 @@ module=
         render: (args)->
           $lastpage = $curpage
           for page in $pages.toArray()
-            if args.curTop > $(page).offset().top
+            if args.curTop > $(page).offset().top - opts.offset
               $curpage = $(page)
 
           # implement our own scrollSpy.
