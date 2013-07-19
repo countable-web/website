@@ -62,9 +62,9 @@ module=
         render: (args)->
           $lastpage = $curpage
           for page in $pages.toArray()
-            if args.curTop >= $(page).offset().top
+            if args.curTop > $(page).offset().top
               $curpage = $(page)
-          
+
           # implement our own scrollSpy.
           if $curpage.attr('id') isnt $lastpage.attr('id') # and args.curTop > args.lastTop
             
@@ -72,8 +72,8 @@ module=
             last_page_id = $lastpage.attr 'id'
 
             # Activate links.
-            $('[href="/#'+last_page_id+'"]').parent().removeClass 'active'
-            $('[href="/#'+cur_page_id+'"]').parent().addClass 'active'
+            $('a').parent().removeClass 'active'
+            $('a[href="/#'+cur_page_id+'"]').parent().addClass 'active'
 
             # Update the URL hash.
             setHash cur_page_id

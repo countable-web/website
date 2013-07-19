@@ -34,9 +34,16 @@ $ ->
   , 1000
 
   setTimeout ->
+    
     $(".slogan").show().addClass("sloganimate")
+    
     $(".logo").animate
       opacity:0.2,
+    , 1000
+
+    setTimeout ->
+      $('.page,#footer').css
+        visibility: 'visible'
     , 1000
       
   , 1000
