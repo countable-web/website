@@ -1,0 +1,151 @@
+
+<html>
+ <head><title>Clark's Resume</title><script>
+/*
+
+ THIS RESUME IS A QUINE, WHICH MEANS IT IS A PROGRAM WHICH OUTPUTS ITS OWN SOURCE CODE.
+ THERE IS NO WARRANTY FOR THE RESUME, TO THE EXTENT PERMITTED BY APPLICABLE LAW.
+
+
+ RESUME 2014-05-04
+ =================
+ 
+ @author
+ 	Clark Van Oyen
+ @email
+ 	clark@countable.ca
+ @phone 
+ 	+1.778.709.1230
+ @address
+ 	204 - 831 ELLIOT ST, NEW WESTMINSTER, V3L 5C9, BC, CANADA
+ @birthyear
+ 	1985
+
+ @employers
+ 
+	 ECOTRUST CANADA, Chief Technology Officer, 2014
+	     Providing technology leadership, including: technology direction of products; identifying emergent 
+	     opportunities; mentoring junior programmers; representing the organization's technology in written
+	     proposals and other media. I still write my share of code, and never want that to change.
+
+	 COUNTABLE WEB PRODUCTIONS, Director, 2008
+	     Consulted from my own company, typically with one other employee, on a large number of products in a wide
+	     variety of web technologies from Django to .NET to client heavy web apps.
+
+	 REBACK NETWORKS / ERICSSON, ATM Protocol Developer, 2007
+	     Contributed to the ATM protocol stack in a carrier class router.
+
+	 RADISYS, SIP Protocol Developer, 2006
+	     Wrote the unit test suite for a 3rd party SIP stack integrated by our media server.
+
+	 CONVEDIA CORPORATION, Automation Specialist, 2005
+	     Developed an automated test manager that configured and utilized a lab full of carrier class computing
+	     hardware at night when otherwise idle, to test embedded media server product and report results through 
+	     flexible web based visualizations.
+
+	 < 2003
+	     Developed games and other programs for my siblings and classmates.
+
+
+ @education
+
+	 UNIVERSITY OF BRITISH COLUMBIA 2008
+	    BSc in Physics and Computer Science
+	    NSERC Undergraduate Student Research Award
+
+	 BOUNDARY CENTRAL SECONDARY SCHOOL 2003
+	    Principal's Honour Roll
+	    Jr. and Sr. Art Awards
+
+	 GULF ISLANDS FILM AND TV SCHOOL 2002
+	    Classical Animation Intensive Course
+
+
+ @qualifications
+
+	 Languages:
+	 	javascript, CSS, HTML, (front end preprocessors), (client MVC), JQuery, openGL, PHP, python,
+	 	Google App Engine, Django, SQL, TCL, Latex, C, C++
+	 Software:
+	 	Linux web servers, photoshop, GIT, MongoDB
+	 Domains:
+	 	full stack web technology, automation, shell scripting, data mining and parsing, WYSIWYG tools, UI design.
+
+
+ @interests
+
+	 AI, game design, Web 2.0, computability, physics, algorithms, genetics, natural
+	 languages, maths, programming languages, sports, cooking, nutrition, electronics,
+	 art, complex systems, neuroscience, game theory, and trying new things.
+*/
+
+// It's simple to make an HTML document with javascript into a "quine" by injecting the head into the body.
+// The head can contain anything as long as it contains the following snippet.
+// The use of <pre> tags limit formatting but allows us to preserve the code's whitespace.
+(function(me){me.addEventListener("DOMContentLoaded", function() {
+	// Let's color the non-quine content differently.
+	var format = function(txtdata) {
+		lines = txtdata.split("\n");
+		return lines.slice(0,5).join("\n")
+			+ "</pre><pre class='meat'>\n\n" + lines.slice(5,lines.length-71).join("\n") + "</pre><pre>"
+			+ "</pre><pre class='code'>\n" + lines.slice(-71,lines.length-54).join("\n") + "\n</pre><pre>"
+			+ lines.slice(lines.length-54,lines.length).join("\n");
+	}
+	var meat = format(me.firstChild.innerHTML.replace(/&/g,"&amp;").replace(/</g,"&lt;"));
+	me.body.innerHTML += "<pre>&lt;html>\n " + meat + "&lt;/html></pre>";
+}, false)})(document);
+
+</script><style>
+	/* the following stuff is just for looks */
+	body {font-size:16px;}
+	.cycle {
+		position: fixed;
+		top: 50px;
+		right: 50px;
+		border-radius: 50%;
+		width: 150px;
+		height: 150px;
+		background-color: transparent;
+		border: 20px solid red;
+		-webkit-animation: r 5s linear 0 infinite;
+	}
+	.cycle:before, .cycle:after {
+		position: absolute;
+		content: "";
+	}
+	.cycle:before {
+		width: 100px;
+		height: 80px;
+		background-color: white;
+		top:-35px;
+		left:-15px;
+		-webkit-transform: rotate(120deg);
+	}
+	.cycle:after {
+		width: 0;
+		height: 0;
+		border: 30px solid transparent;
+		border-top-color: red;
+		top:-17px;
+		left:-15px;
+		background-color:transparent;
+		-webkit-transform: rotate(210deg);
+	}
+	@-webkit-keyframes r
+	{
+		from {-webkit-transform: rotate(0);}
+		to {-webkit-transform: rotate(360deg);}
+	}
+	pre {/*quine content*/
+		margin: 0;
+		color:#aaa;
+		font-family: "Courier New", sans-serif;
+	}
+	.meat {/*non-quine content*/
+		color:#444;
+		font-family:"Helvetica Neue", Helvetica, arial, sans-serif;
+	}
+	.code {/*highlight the part that makes it work*/
+		color:#88f;
+	}
+</style></head><body><div class="cycle"></div></body></html>
