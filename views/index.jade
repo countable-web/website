@@ -1,6 +1,14 @@
 extends layout
 
 
+block title
+  | Django and javascript Web App Developer in Vancouver, BC · Countable
+
+
+block meta
+  meta(name='description', content='Vancouver web App and widget developer.')
+
+
 block content
   
   .resize-page.page.page-shade#what
@@ -21,11 +29,11 @@ block content
       p (why us?)
       section
         h3 Your Web App.
-        p  Your web application will push the boundaries of today's Web into a new era of superior online experience to delight your customers.
+        p  Your web application will push the boundaries of today's Web with a superior online experience.
       section
         h3 Our Obsession.
-        p Our obsession is to establish you as a leader in your industry's place on the internet.
-        p A dedicated team of Vancouver's best and brightest, with decades of experience building modern software solutions, we are the ones for the job.
+        p Let us help you lead your industry in web based tech.
+        p We're a dedicated team of Vancouver's most driven web technology engineers with decades of experience in full stack web applications using tools like Django (python) and javascript.
 
 
   .page.resize-page.page-shade#how(data-bottom-top="opacity:0", data-center-center="opacity:1", data-top-bottom="opacity:0")
@@ -67,16 +75,18 @@ block content
         .item
           .container
             .carousel-caption
-              h3 How the Apps Tick
-              p As web technology enthusiasts, we're confident in choosing the best tools for your project. Favourites include:
+              h3 Tchnology
+              p As web technology enthusiasts, we recognize that choosing the best tools for your project is a key ingredient to success. Favourites include:
               a(href="http://www.postgresql.org/", target="_blank")
-                img(src="/images/howto-postgresql.png", width="200")
+                img(src="/images/howto-postgresql.png", width="150")
+              a(href="http://djangoproject.com/", target="_blank")
+                img(src="/images/django-logo-negative.png", width="150")
               a(href="http://nodejs.org/", target="_blank")
-                img(src="/images/howto-nodejs.png", width="200")
+                img(src="/images/howto-nodejs.png", width="150")
               a(href="http://www.mongodb.org/", target="_blank")
-                img(src="/images/howto-mongodb.png", width="200")
+                img(src="/images/howto-mongodb.png", width="150")
               a(href="http://webdesignledger.com/tips/html5-css3-take-your-design-to-another-level", target="_blank")
-                img(src="/images/howto-html5-css3.png", width="200")
+                img(src="/images/howto-html5-css3.png", width="150")
         .item
           .container
             .carousel-caption
@@ -92,13 +102,12 @@ block content
             .carousel-caption
               h3 How much?
               p
-                | Hiring Vancouver's most experienced talent will often cost less, because we do it faster, and at a reasonable hourly rate.
+                | We offer competitive pricing, and lower total project cost by executing the work faster.
               p
                 span.crazybig $99
                 | per hour
               p
-                | Half the price many agencies charge. We also save on project management overhead 
-                | with agile workflows where our developer works directly with you.
+                | Word directly with the developer in an agile development workflow.
               p
                 | Don't be shy, we offer free consultations!
       
@@ -126,7 +135,7 @@ block content
               img(src='/images/thisfish.png')
             p Ecotrust is a non-profit in BC, Canada with a focus on commercial fisheries and First Nations land use, title and rights. We have developed 
               a(href="http://thisfish.info") ThisFish
-              |  traceability software, Electronic commerical fishery monitoring software, web based atlases and an ebook reader.
+              |  traceability system (Django) ; Electronic commerical fishery monitoring software, Django based web atlases and an ebook reader.
             p.visit
               a(href="http://thisfish.info", target="_blank") Visit site &rsaquo;
 
@@ -135,7 +144,7 @@ block content
             p.repr
               img(src='/images/mr-b-listed.png')
             p
-              | Mr. B-Listed is web based real estate brokerage that aims to make it accessible, safe and affordable to sell real estate 
+              | WelListed is web based real estate brokerage that aims to make it accessible, safe and affordable to sell real estate 
               a(href="http://mrblisted.ca", target="_blank") for sale by owner
               | .
             p.visit
@@ -163,11 +172,13 @@ block content
             p.repr
               img(src='/images/kmc.png')
             p
-              | Real-time shift scheduling and take-a-number web applications.
+              | Shift scheduling and take-a-number Django applications.
             p.visit
               a(href="http://kmc.countable.ca/", target="_blank") View App &rsaquo;
+      
       h3 Sub-Contracts
-      p We write a lot of code for other local developers. Is your team missing a javascript ninja or backend guru? We can help!
+      
+      p We write a lot of code for other local developers. Is your team missing a javascript ninja or Django guru? We can help!
 
   .page.resize-page.page-shade#credits(data-bottom-top="opacity:0", data-center-center="opacity:1")
     .container
