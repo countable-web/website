@@ -29,10 +29,13 @@ app.get "/", (req,res)->
 app.get "/links", (req,res)->
   res.render "links"
 
-app.get "/privacy-policy/", (req,res)->
+app.get "/privacy-policy", (req,res)->
   res.render "privacy-policy"
 
-app.get "/portfolio/", (req,res)->
+app.get "/comments", (req,res)->
+  res.render "comments"
+
+app.get "/portfolio", (req,res)->
   res.redirect "/"
 
 app.get "/flight/?", (req,res)->
