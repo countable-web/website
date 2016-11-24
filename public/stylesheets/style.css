@@ -13,7 +13,7 @@
   font-style: normal;
 }
 body {
-  font: 14px "NovecentowideBookRegular", Helvetica, Arial, sans-serif;
+  font: 14px Helvetica, Arial, sans-serif;
   color: #fff;
   background-color: #000;
 }
@@ -220,7 +220,7 @@ p.credit {
   top: 0;
   right: 0;
   bottom: 0;
-  padding: 20px 40px 0 0;
+  padding: 10px 40px 0 0;
   width: 240px;
   font-family: Arial;
 }
@@ -247,10 +247,10 @@ p.credit {
   border-width: 0px;
   border-radius: 0px;
 }
-#contact .contact-form button {
+#contact .contact-form .btn {
   position: absolute;
   right: 250px;
-  bottom: 10px;
+  bottom: 20px;
   padding: 25px 15px;
   background: #011d28;
   color: #eff1e6;

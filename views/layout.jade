@@ -1,4 +1,4 @@
-!!! 5
+doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
@@ -20,7 +20,7 @@ html(lang='en')
     //if lt IE 9
       script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
     link(rel='shortcut icon', href='/favicon.ico')
-    style
+    style.
 
       ::-webkit-input-placeholder { /* WebKit browsers */
           color:    #0cbce3 !important;
@@ -69,12 +69,10 @@ html(lang='en')
         30% {opacity: 1}
         100%   {-webkit-transform: scale(12); opacity: 0}
       }
-
-    :stylus
-
+    style
+     :stylus
       body
         background black
-
       .stars
         z-index -1
         background url(/images/layer1.png)
@@ -83,30 +81,23 @@ html(lang='en')
         -webkit-animation-duration 12s
         -webkit-animation-timing-function cubic-bezier(0.7,0,0.7,0)
         -webkit-animation-iteration-count infinite
-
         position fixed
         top 0
         left 0
         right 0
         bottom 0
         background-color black
-
       .layer02
         background url(/images/layer1.png)
         background-position 50px 25px
         -webkit-animation-delay -4s
-
       .layer03
         background url(/images/layer1.png)
         background-position 25px 50px
         -webkit-animation-delay -8s
-
-
   body(data-spy="scroll", data-target=".navbar")
-
     .navbar.navbar-fixed-top
       .navbar-inner
-
         //
            Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. 
         a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
