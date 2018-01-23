@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    image: node:4
+    working_dir: /code/
+    volumes:
+      - .:/code/
+    command: /code/start.sh
+    ports:
+      - 3011:3011
