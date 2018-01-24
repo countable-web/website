@@ -101,3 +101,11 @@
   }
 
 }).call(this);
+
+// For page scroll
+$(document).on('click', '.nav.pull-right li a[href^="#"]', function (event) {
+  event.preventDefault();
+  $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+  }, 500);
+});
