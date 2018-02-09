@@ -128,11 +128,11 @@ a:hover {
 
 .navbar a.brand {
 	background: #011d28 url(/images/countable-title.png) 0px 0px no-repeat;
-    width: 250px;
-    height: 36px;
-    padding: 0;
-    margin: 11px 0 0 40px;
-    box-shadow: inset -1px 1px 1px 1px #eff2e6;
+  width: 250px;
+  height: 36px;
+  padding: 0;
+  margin: 11px 0 0 40px;
+  box-shadow: inset -1px 1px 1px 1px #eff2e6;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
