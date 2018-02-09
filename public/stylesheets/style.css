@@ -6,124 +6,146 @@
   font-style:normal;
 }*/
 @font-face {
-  font-family: 'NovecentowideBookRegular';
+	font-family: 'NovecentowideBookRegular';
   src: url("/font/novecentowide_book/Novecentowide-Book-webfont.eot");
   src: url("/font/novecentowide_book/Novecentowide-Book-webfont.eot?#iefix") format('embedded-opentype'), url("/font/novecentowide_book/Novecentowide-Book-webfont.woff") format('woff'), url("/font/novecentowide_book/Novecentowide-Book-webfont.ttf") format('truetype'), url("/font/novecentowide_book/Novecentowide-Book-webfont.svg#NovecentowideBookRegular") format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
 body {
-  font: 14px Helvetica, Arial, sans-serif;
-  color: #fff;
-  background-color: #000;
+	font: 14px Helvetica, Arial, sans-serif;
+	color: #fff;
+	background-color: #000;
 }
+
 h1,
 h2,
 h3 {
-  color: #eff1e6;
+	color: #eff1e6;
 }
+
 h1 {
-  font-size: 130px;
-  line-height: 110px;
+	font-size: 130px;
+	line-height: 110px;
 }
+
 h2 {
-  font-size: 100px;
-  line-height: 90px;
+	font-size: 100px;
+	line-height: 90px;
 }
+
 h3 {
-  font-weight: normal;
-  font-size: 50px;
-  line-height: 40px;
+	font-weight: normal;
+	font-size: 50px;
+	line-height: 40px;
 }
+
 h4 {
-  font-size: 30px;
-  line-height: 25px;
+	font-size: 30px;
+	line-height: 25px;
 }
+
 a,
 a:hover,
 a:visited {
-  color: #0cbce3;
-  cursor: pointer;
+	color: #0cbce3;
+	cursor: pointer;
 }
+
 a:hover {
-  color: #011d28;
-  text-decoration: none;
+	color: #011d28;
+	text-decoration: none;
 }
+
 .resize-page {
-  position: relative;
-  overflow: hidden;
-  color: #eff1e6;
-  padding: 50px 0 50px 0;
-  text-align: center;
+	position: relative;
+	overflow: hidden;
+	color: #eff1e6;
+	padding: 50px 0 50px 0;
+	text-align: center;
 }
+
 .resize-page h1:first-child {
-  padding-top: 100px;
+	padding-top: 100px;
 }
+
 .resize-page .marker {
-  position: absolute;
-  top: 0;
+	position: absolute;
+	top: 0;
 }
+
 .page-shade {
-  box-shadow: inset 0 0 100px 0 rgba(0,0,0,0.1);
+	box-shadow: inset 0 0 100px 0 rgba(0,0,0,0.1);
 }
+
 .sil-widget {
-  font-family: Arial;
+	font-family: Arial;
 }
+
 .sil-widget a {
-  color: #000;
+	color: #000;
 }
+
 .page,
 #footer {
-  visibility: hidden;
+	visibility: hidden;
 }
+
 #what {
-  visibility: visible;
+	visibility: visible;
 }
+
 .navbar {
-  height: 50px;
-  z-index: 500;
-  font-size: 16px;
-  font-weight: normal;
-  text-transform: uppercase;
+	height: 50px;
+	z-index: 500;
+	font-size: 16px;
+	font-weight: normal;
+	text-transform: uppercase;
 }
+
 .navbar .navbar-inner {
-  background: #eff1e6;
-  height: 50px;
-  box-shadow: 0 5px 0 0 rgba(0,0,0,0.1);
+	background: #eff1e6;
+	height: 50px;
+	box-shadow: 0 5px 0 0 rgba(0,0,0,0.1);
 }
+
 .navbar .nav li a {
-  letter-spacing: 3px;
-  font-size: 15px;
-  padding: 17px 20px 0 20px;
-  margin: 0 10px 0 0;
-  color: #0cbce3;
+	letter-spacing: 3px;
+	font-size: 15px;
+	padding: 17px 20px 0 20px;
+	margin: 0 10px 0 0;
+	color: #0cbce3;
 }
+
 .navbar .nav li.active a,
 .navbar .nav li.active a:hover {
-  background-color: #eff1e6;
-  box-shadow: none;
-  color: #011d28 !important;
-  border-bottom: 2px solid #0cbce3;
+	background-color: #eff1e6;
+	box-shadow: none;
+	color: #011d28 !important;
+	border-bottom: 2px solid #0cbce3;
 }
+
 .navbar a.brand {
-  background: #011d28 url("/images/countable-title.png") 0 0 no-repeat;
-  width: 253px;
+	background: #011d28 url(/images/countable-title.png) 0px 0px no-repeat;
+  width: 250px;
   height: 36px;
   padding: 0;
-  margin: 9px 0 0 40px;
+  margin: 11px 0 0 40px;
+  box-shadow: inset -1px 1px 1px 1px #eff2e6;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
 html,
 body {
-  height: 100%;
-/* The html and body elements cannot have any padding or margin. */
+	height: 100%;
+/* The html and body elements cannot have any padding or margin. */;
 }
 /* Wrapper for page content to push down footer */
 #wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
 /* Negative indent footer by it's height */
   margin: 0 auto -60px;
 }
@@ -342,6 +364,8 @@ p.credit {
 .carousel .carousel-control {
   height: 80px;
   margin-top: 0;
+  top: 25%;
+  z-index: 10;
   font-size: 120px;
   background-color: transparent;
   border: 0;
@@ -386,8 +410,21 @@ p.credit {
 }
 /* RESPONSIVE CSS */
 @media (max-width: 979px) {
+  .navbar-fixed-top {
+    position: fixed;
+  }
+  .nav-collapse.collapse {
+    z-index: 2;
+  }
+  .resize-page h1:first-child {
+    padding-top: 20px;
+  }
+  .navbar .btn {
+    margin-top: 11px;
+    margin-right: 15px;
+  }
   .nav-collapse {
-    top: -14px;
+    top: 6px;
     background-color: #eff1e6;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
   }
@@ -401,8 +438,8 @@ p.credit {
     margin: 0;
   }
   #navbar .navbar-inner {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   #navbar .brand {
     margin-left: 5px;
@@ -417,20 +454,112 @@ p.credit {
   #contact.open .container {
     background-position: 0 20px;
   }
+  #who .client .repr {
+    height: auto;
+  }
+  .overlay .slogan {
+    top: -150px;
+  }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   h1 {
-    font-size: 80px;
-    line-height: 70px;
+    font-size: 62px;
+    line-height: 62px;
   }
   h2 {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 52px;
+    line-height: 52px;
   }
   body {
     padding: 0;
   }
   .contact-details a {
     display: block;
+  }
+  .navbar-fixed-top .navbar-inner {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .anchor {
+    text-align: center;
+  }
+  .carousel .howto {
+    margin: 10px 0 0 10px;
+    display: inline-block;
+    float: unset;
+  }
+  .overlay .slogan p.we {
+    font-size: 40px;
+    letter-spacing: 30px;
+    line-height: 1.25em;
+  }
+  .overlay .slogan p.tomorrows {
+    font-size: 60px;
+    letter-spacing: 30px;
+    line-height: 1.25em;
+  }
+  .overlay .slogan p.web-apps {
+    font-size: 80px;
+    line-height: 1.25em;
+    letter-spacing: 10px;
+  }
+  #how .crazybig {
+    font-size: 80px;
+    line-height: 1.2em;
+  }
+  h3 {
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+@media (max-width: 725px) {
+  .container {
+    width: 92%;
+  }
+  .overlay {
+    top: 60%;
+  }
+  .overlay .slogan p.we {
+    font-size: 32px;
+    letter-spacing: 10px;
+    line-height: 1.25em;
+    margin-left: 15px;
+  }
+  .overlay .slogan p.tomorrows {
+    font-size: 42px;
+    letter-spacing: 10px;
+    line-height: 1.25em;
+  }
+  .overlay .slogan p.web-apps {
+    font-size: 52px;
+    line-height: 1.25em;
+    letter-spacing: 10px;
+  }
+  #who .container img {
+    max-width: 65%;
+  }
+}
+@media (max-width: 380px) {
+  .overlay .slogan p.we {
+    font-size: 30px;
+    letter-spacing: 10px;
+    line-height: 1.25em;
+  }
+  .overlay .slogan p.tomorrows {
+    font-size: 36px;
+    letter-spacing: 10px;
+    line-height: 1.25em;
+  }
+  .overlay .slogan p.web-apps {
+    font-size: 42px;
+    line-height: 1.25em;
+    letter-spacing: 10px;
   }
 }
