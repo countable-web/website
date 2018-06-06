@@ -146,14 +146,16 @@ a:hover {
 }
 
 .navbar a.brand {
-  background: #eff1e6 url(/images/countable-logo.png) 0px 0px no-repeat;
-  background-size: contain;
   width: 250px;
   height: 36px;
   padding: 0;
   margin: 7px 0 0 40px;
   box-shadow: inset -1px 1px 1px 1px #eff2e6;
-  vertical-align: center;
+}
+
+.navbar a.brand img {
+  width: auto;
+  height: 100%;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
