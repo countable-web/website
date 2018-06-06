@@ -15,15 +15,16 @@
 
 @font-face {
   font-family: 'Gotham-Medium';
-  src: url("/font/gotham/GothamMedium.ttf") format('truetype');
+  src: url("/font/gotham/Gotham-Medium.otf") format("opentype"),
+       url("/font/gotham/GothamMedium.ttf") format('truetype');
   font-weight: normal;
   font-style: normal; 
 }
 
 @font-face {
   font-family: 'Gotham-Light';
-  src: url("/font/gotham/GothamLight.ttf") format('truetype'),
-       url("/font/gotham/Gotham-Light.otf") format("otf");
+  src: url("/font/gotham/Gotham-Light.otf") format("opentype"),
+       url("/font/gotham/GothamLight.ttf") format('truetype');
   font-weight: normal;
   font-style: normal; 
 }
