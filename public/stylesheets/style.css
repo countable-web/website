@@ -13,10 +13,29 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url("/font/gotham/GothamMedium.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url("/font/gotham/GothamLight.ttf") format('truetype'),
+       url("/font/gotham/Gotham-Light.otf") format("otf");
+  font-weight: bold;
+  font-style: normal; 
+}
+
 body {
-	font: 14px Helvetica, Arial, sans-serif;
+	font: 14px Gotham-Light, Helvetica, Arial, sans-serif;
 	color: #fff;
 	background-color: #000;
+}
+
+h1,h2,h3,h4,h5,h6, .slogan {
+  font-family: "Gotham-Medium, Helvetica, Arial, sans-serif" !important;
 }
 
 h1,
@@ -127,12 +146,14 @@ a:hover {
 }
 
 .navbar a.brand {
-	background: #011d28 url(/images/countable-title.png) 0px 0px no-repeat;
+  background: #eff1e6 url(/images/countable-logo.png) 0px 0px no-repeat;
+  background-size: contain;
   width: 250px;
   height: 36px;
   padding: 0;
-  margin: 11px 0 0 40px;
+  margin: 7px 0 0 40px;
   box-shadow: inset -1px 1px 1px 1px #eff2e6;
+  vertical-align: center;
 }
 /* Sticky footer styles
 -------------------------------------------------- */
