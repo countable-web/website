@@ -354,7 +354,7 @@ p.credit {
 .overlay .slogan p.we {
   margin-left: 40px;
   font-size: 70px;
-  letter-spacing: 60px;
+  letter-spacing: 30px;
   line-height: 100px;
   color: #0cbce3;
 }
@@ -569,7 +569,7 @@ p.credit {
 }
 @media (max-width: 380px) {
   .overlay .slogan p.we {
-    font-size: 30px;
+    font-size: 24px;
     letter-spacing: 10px;
     line-height: 1.25em;
   }
@@ -582,5 +582,8 @@ p.credit {
     font-size: 42px;
     line-height: 1.25em;
     letter-spacing: 10px;
+  }
+  .navbar a.brand {
+    width: 100px;
   }
 }
