@@ -249,6 +249,11 @@ html, body {
     height: 100px;
 }
 
+#who h3 {
+    text-align: center;
+    color: #eff1e6;
+}
+
 #credits {
     color: #eff1e6;
 }
