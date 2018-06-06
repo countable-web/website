@@ -22,11 +22,11 @@ block content
         p.web-apps
           | TODAY
 
-  .page.resize-page#why(
-            data-bottom-top="transform:translateX(-30%)",
-            data-center-center="transform:translateX(-10%)",
-            data-top-bottom="transform:translateX(-30%)")
-    .page-inner
+  .page.resize-page#why
+    .page-inner(
+              data-bottom-top="transform:scale(0.5); opacity: 0.5",
+              data-center-center="transform:scale(1); opacity: 1",
+              data-top-bottom="transform:scale(2); opacity: 1")
         h3 WHY US?
         p
             | Building a world class web development
@@ -34,7 +34,10 @@ block content
             | Let us take care of that so it can amplify
             | your business instead of pulling away
             | resources.
-
+    .page-inner(
+              data-bottom-top="transform:scale(0.5); opacity: 0.5",
+              data-center-center="transform:scale(1); opacity: 1",
+              data-top-bottom="transform:scale(1); opacity: 0")
         .row-fluid
             .span6
                 h4 Cloudify Your Product
@@ -68,11 +71,11 @@ block content
                     li Content marketing strategy
 
   .page.resize-page#how(
-            data-bottom-top="transform:translateX(20%)",
-            data-center-center="transform:translateX(10%)",
-            data-top-bottom="transform:translateX(20%)")
+            data-bottom-top="transform:scale(0.5); opacity: 0.5",
+            data-center-center="transform:scale(1); opacity: 1",
+            data-top-bottom="transform:scale(2); opacity: 0")
     .page-inner
-      h3 Technology
+      h3 TECHNOLOGY
       a(href="http://www.postgresql.org/", target="_blank")
         img(src="/images/howto-postgresql.png")
       a(href="http://djangoproject.com/", target="_blank")
@@ -80,11 +83,11 @@ block content
       a(href="http://nodejs.org/", target="_blank")
         img(src="/images/howto-nodejs.png")
       a(href='', target="_blank")
-        img(src="/images/howto-html5-css3.png")
+        img(src="/images/howto-html5-css3.png", style='max-width:400px;')
 
   .page.resize-page#who
     .page-inner
-      h3 Clients
+      h3 CLIENTS
       .container
           .row
             .span4

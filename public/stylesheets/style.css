@@ -38,6 +38,7 @@ body {
 
 h1, h2, h3, .slogan p {
     font-family: "Gotham-Medium";
+    text-align: center;
 }
 
 h4 {
@@ -100,7 +101,7 @@ a:hover {
 #how, #why, #who {}
 
 #how .page-inner, #why .page-inner {
-    background-color: rgba(255, 255, 230, 0.9);
+    background-color: #eff1e6;
     padding: 50px;
 }
 
@@ -108,13 +109,13 @@ a:hover {
     background-color: #0cbce3;
 }*/
 
-#why .page-inner {
+/*#why .page-inner {
     padding-left: 30%;
 }
 
 #how .page-inner {
     padding-right: 20%
-}
+}*/
 
 .resize-page h1:first-child {
     padding-top: 40px;
@@ -240,17 +241,18 @@ html, body {
 
 #who .client {
     min-height: 240px;
-    color: white;
+    color: #eff1e6;
     padding: 25px;
 }
 
 #who .client .repr {
     text-align: center;
     height: 100px;
+    object-position: 50% 50%;
+    object-fit: contain;
 }
 
 #who h3 {
-    text-align: center;
     color: #eff1e6;
 }
 
