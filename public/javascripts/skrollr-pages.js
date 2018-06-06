@@ -76,12 +76,12 @@
                                 $curpage = $(page);
                             }
                         }
-                        if ($curpage.attr('id') !== $lastpage.attr('id') && $lastpage.attr('id') !== 'credits') {
+                        if ($curpage.attr('id') !== $lastpage.attr('id')) {
                             cur_page_id = $curpage.attr('id');
                             last_page_id = $lastpage.attr('id');
                             $('a').parent().removeClass('active');
                             $('a[href="/#' + cur_page_id + '"]').parent().addClass('active');
-                            setHash(cur_page_id);
+                            //setHash(cur_page_id);
                             if ((_ref1 = opts.onpage) != null) {
                                 if (typeof _ref1[_name = $curpage.attr('id')] === "function") {
                                     _ref1[_name](opts);
