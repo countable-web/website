@@ -24,18 +24,23 @@
   font-family: 'Gotham-Light';
   src: url("/font/gotham/GothamLight.ttf") format('truetype'),
        url("/font/gotham/Gotham-Light.otf") format("otf");
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal; 
 }
 
 body {
-	font: 14px Gotham-Light, Helvetica, Arial, sans-serif;
+	font: 14px "Gotham-Light, Helvetica, Arial, sans-serif";
 	color: #fff;
 	background-color: #000;
 }
 
-h1,h2,h3,h4,h5,h6, .slogan {
-  font-family: "Gotham-Medium, Helvetica, Arial, sans-serif" !important;
+h1,h2,h3,h4,h5,h6,
+.slogan p {
+  font-family: "Gotham-Medium";
+}
+
+a, p {
+  font-family: "Gotham-Light";
 }
 
 h1,
@@ -267,7 +272,7 @@ p.credit {
   bottom: 0;
   padding: 10px 40px 0 0;
   width: 240px;
-  font-family: Arial;
+  font-family: "Gotham-Light";
 }
 #contact .contact-form .sil-widget>div>div>a {
   display: none;
