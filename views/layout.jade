@@ -7,13 +7,13 @@ html(lang='en')
         | Django and javascript Web App Developer in Vancouver, BC · Countable
     block meta
       meta(name='description', content='Vancouver web App and widget developer.')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')      
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='author', content='Countable Web Productions')
 
     link(href="/stylesheets/bootstrap-combined.no-icons.min.css", rel="stylesheet")
     link(href='/stylesheets/font-awesome.min.css', rel='stylesheet')
-    
+
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel="stylesheet", href="/font/futura/stylesheet.css")
 
@@ -22,7 +22,7 @@ html(lang='en')
     link(rel='shortcut icon', href='/favicon.ico')
     style.
 
-      ::-webkit-input-placeholder { /* WebKit browsers */
+      ::input-placeholder { /* WebKit browsers */
           color:    #0cbce3 !important;
           text-transform: uppercase;
       }
@@ -40,20 +40,20 @@ html(lang='en')
       }
 
 
-      @-webkit-keyframes up
+      @keyframes up
       {
         0% {
-          -webkit-transform: scale(  1, 1 ) translate( 0, 1000px );
+          transform: scale(  1, 1 ) translate( 0, 1000px );
         }
         100% {
-          -webkit-transform: scale( 1, 1 ) translate ( 0, 0 );
+          transform: scale( 1, 1 ) translate ( 0, 0 );
         }
 
       }
 
-      
+
       /* Contact drawer opener. */
-      @-webkit-keyframes opener
+      @keyframes opener
       {
         0% {
           bottom: -170px;
@@ -64,10 +64,10 @@ html(lang='en')
       }
 
       /* Star background animation */
-      @-webkit-keyframes stars {
-        0% { -webkit-transform: scale(1); opacity: 0.1}
+      @keyframes stars {
+        0% { transform: scale(1); opacity: 0.1}
         30% {opacity: 1}
-        100%   {-webkit-transform: scale(12); opacity: 0}
+        100%   {transform: scale(12); opacity: 0}
       }
     style
      :stylus
@@ -77,10 +77,10 @@ html(lang='en')
         z-index -1
         background url(/images/layer1.png)
         opacity 0
-        -webkit-animation-name stars
-        -webkit-animation-duration 12s
-        -webkit-animation-timing-function cubic-bezier(0.7,0,0.7,0)
-        -webkit-animation-iteration-count infinite
+        animation-name stars
+        animation-duration 24s
+        animation-timing-function cubic-bezier(0.7,0,0.7,0)
+        animation-iteration-count infinite
         position fixed
         top 0
         left 0
@@ -90,16 +90,16 @@ html(lang='en')
       .layer02
         background url(/images/layer1.png)
         background-position 50px 25px
-        -webkit-animation-delay -4s
+        animation-delay -8s
       .layer03
         background url(/images/layer1.png)
         background-position 25px 50px
-        -webkit-animation-delay -8s
+        animation-delay -16s
   body(data-spy="scroll", data-target=".navbar")
     .navbar.navbar-fixed-top
       .navbar-inner
         //
-           Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. 
+           Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize.
         a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
           span.icon-bar
           span.icon-bar
@@ -121,7 +121,7 @@ html(lang='en')
               a.local(href='#who',data-toggle='collapse',data-target='.nav-collapse') Who
             li
               a.local(href='/files/countablecv.pdf',data-toggle='collapse',data-target='.nav-collapse') CV
-    
+
     .stars.layer01
     .stars.layer03
     .stars.layer02
@@ -135,16 +135,16 @@ html(lang='en')
           p.credit
 
             | &copy; 2018 Countable Web Productions
-            |  | 
+            |  |
             a(href="/privacy-policy/") Privacy Policy
-            |  | 
+            |  |
             a(href="/links") Links
 
     #contact
       .contact-bar(style="background:url(/images/diag-bg.png)")
         a.contact-us.contact-toggle MAKE CONTACT
         .close-contact
-          | &times; 
+          | &times;
 
       .contact-body
         .contact-info
@@ -165,7 +165,7 @@ html(lang='en')
     script(src="/javascripts/skrollr-pages.js")
     script(src='/javascripts/jquery.scrollTo-1.4.3.1.js')
     script(src="/javascripts/js.js")
-    
+
     | <script type="text/javascript">
     |  var _gaq = _gaq || [];
     |  _gaq.push(['_setAccount', 'UA-8351010-1']);

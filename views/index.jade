@@ -10,8 +10,8 @@ block meta
 
 
 block content
-  
-  .resize-page.page.page-shade#what
+
+  .resize-page.page#what
     .overlay
       img.logo(src="/images/giant-infinity.png")
       .slogan
@@ -22,152 +22,133 @@ block content
         p.web-apps
           | TODAY
 
-  .page.resize-page.page-shade#why(data-bottom-top="opacity:0", data-center-center="opacity:1", data-top-bottom="opacity:0")
+  .page.resize-page#why(
+            data-bottom-top="transform:translateX(-30%)",
+            data-center-center="transform:translateX(-10%)",
+            data-top-bottom="transform:translateX(-30%)")
+    .page-inner
+        h3 WHY US?
+        p
+            | Building a world class web development
+            | team and cloud infrastructure is hard.
+            | Let us take care of that so it can amplify
+            | your business instead of pulling away
+            | resources.
 
-    .container
-      h1 Why
-      p (why us?)
-      section
-        h3 Your Cloud Platform.
-        p Your web technology strategy will push the boundaries of today's internet.
-      section
-        h3 Our Obsession.
-        p Let us help you lead your industry in web based tech.
-        p We're a dedicated team of Vancouver's most driven web technology experts with decades of experience in full stack web applications using tools like Django (python) and javascript.
+        .services(style="display: flex")
+            div(style='flex:1')
+                h4 Product
+                ul
+                    li Cloudify an existing product to get an edge in the market
+                    li Web interfaces: Lead generation funnels, dashboards, core product UI
+                    li APIs
+                    li Device-specific apps
+                    li Cloud-based infrastructure design
+            div(style="flex:1")
+                h4 Dev Capacity
+                ul
+                    li Build a world class in-house web development team
+                    li Coding standards and 12 factor architecture conventions
+                    li Continuous integration testing and deployment
+                    li Agile / scrum workflow
+                    li Hiring and training
+        .services(style="display: flex")
+            div(style='flex:1')
+                h4 Operations
+                ul
+                    li Process automation
+                    li Real time monitoring
+                    li Big data collection and visualization
+                    li Custom PLM, CRM, ERP built for your business on open source tooling
+            div(style='flex:1')
+                h4 Marketing
+                ul
+                    li SEO: Keyword analysis and strategy
+                    li Growth hacking
+                    li Engineering as marketing
+                    li Content marketing strategy
 
+  .page.resize-page#how(
+            data-bottom-top="transform:translateX(20%)",
+            data-center-center="transform:translateX(10%)",
+            data-top-bottom="transform:translateX(20%)")
+    .page-inner
+      h3 Technology
+      a(href="http://www.postgresql.org/", target="_blank")
+        img(src="/images/howto-postgresql.png")
+      a(href="http://djangoproject.com/", target="_blank")
+        img(src="/images/django-logo-negative.png")
+      a(href="http://nodejs.org/", target="_blank")
+        img(src="/images/howto-nodejs.png")
+      a(href='', target="_blank")
+        img(src="/images/howto-html5-css3.png")
 
-  .page.resize-page.page-shade#how(data-bottom-top="opacity:0", data-center-center="opacity:1", data-top-bottom="opacity:0")
-    h1 How
-    p (how we do it.)
-    .carousel.slide#how-carousel
-      .carousel-inner
-        
-        .item.active
-          .container
-            .carousel-caption
-              h3
-               | How to make Web Apps
-              .anchor
-                .howto.wireframes(data-bottom-bottom="transform:rotateZ(-90deg);", data-top-top="transform:rotateZ(90deg);")
-                  p.title Wireframes
-                  p.illustration
-                    i.icon.icon-th
-                .howto.user-interfaces(data-bottom-bottom="transform:rotateZ(90deg);", data-top-top="transform:rotateZ(-90deg);")
-                  p.title User Interfaces
-                  p.illustration
-                    i.icon.icon-columns
-                .howto.prototypes(data-bottom-bottom="transform:rotateZ(-90deg);", data-top-top="transform:rotateZ(90deg);")
-                  p.title Prototypes
-                  p.illustration
-                    i.icon.icon-plane
-                .howto.seo(data-bottom-bottom="transform:rotateZ(90deg);", data-top-top="transform:rotateZ(-90deg);")
-                  p.title Search Engine Visibility
-                  p.illustration
-                    i.icon.icon-eye-open
-                .howto.responsive(data-bottom-bottom="transform:rotateZ(-90deg);", data-top-top="transform:rotateZ(90deg);")
-                  p.title Responsive Design
-                  i.icon.icon-desktop.smaller
-                  i.icon.icon-laptop.smaller
-                  i.icon.icon-tablet.smaller
-                  i.icon.icon-mobile-phone.smaller
-
-
-        .item
-          .container
-            .carousel-caption
-              h3 Technology
-              p As web technology enthusiasts, we recognize that choosing the best tools for your project is a key ingredient to success. Favourites include:
-              a(href="http://www.postgresql.org/", target="_blank")
-                img(src="/images/howto-postgresql.png", width="150")
-              a(href="http://djangoproject.com/", target="_blank")
-                img(src="/images/django-logo-negative.png", width="150")
-              a(href="http://nodejs.org/", target="_blank")
-                img(src="/images/howto-nodejs.png", width="150")
-              a(href="http://www.mongodb.org/", target="_blank")
-                img(src="/images/howto-mongodb.png", width="150")
-              a(href="http://webdesignledger.com/tips/html5-css3-take-your-design-to-another-level", target="_blank")
-                img(src="/images/howto-html5-css3.png", width="150")
-        .item
-          .container
-            .carousel-caption
-              p
-                img(src="/images/logo-halftone.png")
-              p 
-                | We believe the problem space of revolutionizing business domains with web technology is "countable" in the mathematical sense.
-                | This means we have faith that by taking consistent, orderly steps we will always arrive at the solution.
-        
-        .item
-          .container
-            .carousel-caption
-              h3 How much?
-              p
-                | We can often provide a lower total project cost by executing the work faster.
-              p
-                span.crazybig $50 to $150
-                | per hour
-              p
-                | Dependent on specific service needed.
-              p
-                | Don't be shy, we offer free consultations!
-      
-      a.left.carousel-control(href='#how-carousel', data-slide='prev') ‹
-      a.right.carousel-control(href='#how-carousel', data-slide='next') ›
-
-  .page.resize-page.page-shade#who(data-bottom-top="opacity:0", data-center-center="opacity:1", data-top-bottom="opacity:0")
-    .container
-      h1 Who
+  .page.resize-page#who
+    .page-inner
+      h3 Clients
       p
-        | (who we've had the pleasure of writing software for.)
-
       .row
         .span4
-          .client
+          .client(
+                    data-bottom-top="transform:scale(0.6)",
+                    data-center-center="transform:scale(1.1)",
+                    data-top-bottom="transform:scale(1.2)")
             p.repr(style='position:relative')
-              img(src='/images/bawksbox.png' style='width:60%;') 
+              img(src='/images/bawksbox.png' style='width:60%;')
             p HCB is a free, simple to use comments widget used on over a million web pages.
             p.visit
               a(href="http://www.htmlcommentbox.com", target="_blank") Visit site &rsaquo;
 
         .span4
-          .client
+          .client(
+                    data-bottom-top="transform:scale(0.4)",
+                    data-center-center="transform:scale(1.1)",
+                    data-top-bottom="transform:scale(1.2)")
             p.repr
               img(src='/images/thisfish.png')
-            p Ecotrust is a non-profit in BC, Canada with a focus on commercial fisheries and First Nations land use, title and rights. We have developed 
+            p For Ecotrust Canada:
               a(href="http://thisfish.info") ThisFish
-              |  traceability system (Django) ; Electronic commerical fishery monitoring software, Django based web atlases and an ebook reader.
+              |  traceability system (Django) ; Electronic commerical fishery monitoring software; Fisheries Diversification Model.
             p.visit
               a(href="http://thisfish.info", target="_blank") Visit site &rsaquo;
-
-        .span4
+        //
+         .span4
           .client
             p.repr
               img(src='/images/corvus.png')
-              
+
             p
               | Marine energy storage experts. Countable developed internal systems and provided SW engineering expertise.
             p.visit
               a(href="http://corvusenergy.com", target="_blank") Visit site &rsaquo;
 
-      .row
         .span4
-          .client
+          .client(
+                    data-bottom-top="transform:scale(0.6)",
+                    data-center-center="transform:scale(1.1)",
+                    data-top-bottom="transform:scale(1.2)")
             p.repr
               img(src='/images/clarius.png')
             p Cloud based ultrasound image capture and device management.
             p.visit
               a(href="http://clarius.me", target="_blank") Visit site &rsaquo;
 
+      .row
         .span4
-          .client
-            p.repr(style='padding-top:50px')
+          .client(
+                    data-bottom-top="transform:scale(0.8)",
+                    data-center-center="transform:scale(1.1)",
+                    data-top-bottom="transform:scale(1.2)")
+            p.repr
               img(src='/images/animatic.svg')
             p WebGL work for global brands.
             p.visit
               a(href="http://www.animaticmedia.com/", target="_blank") Visit site &rsaquo;
-
-        //
-         .span4
-          .client
+        .span4
+          .client(
+                    data-bottom-top="transform:scale(0.6)",
+                    data-center-center="transform:scale(1.1)",
+                    data-top-bottom="transform:scale(1.2)")
             p.repr
               img(src='/images/kmc.png')
             p
@@ -176,23 +157,22 @@ block content
               a(href="http://kmc.countable.ca/", target="_blank") View App &rsaquo;
 
         .span4
-          .client
+          .client(
+                    data-bottom-top="transform:scale(0.4)",
+                    data-center-center="transform:scale(1.1)",
+                    data-top-bottom="transform:scale(1.2)")
             p.repr
               img(src='/images/otono.png')
             p
               | Next generation telecom connectivity.
             p.visit
               a(href="http://otono.com", target="_blank") View App &rsaquo;
-      
-      h3 Sub-Contracts
-      
-      p We write a lot of code for other local developers. Is your team missing a javascript ninja or Django guru? We can help!
 
-  .page.resize-page.page-shade#credits(data-bottom-top="opacity:0", data-center-center="opacity:1")
-    .container
+
+  .page.resize-page#credits(data-bottom-top="opacity:0", data-center-center="opacity:1")
+    .page-inner
       h1 credits
       p Web design by
       p
         a(href="http://newbrandthing.com", target="_blank")
           img(src="/images/nbt.png")
-

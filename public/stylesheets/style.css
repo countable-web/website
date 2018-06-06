@@ -1,597 +1,603 @@
 /* GLOBAL STYLES */
+
 /*@font-face{
   font-family:'novecento-book';
   src:url('/font/Novecentowide-Book.otf?v=1');
   font-weight:normal;
   font-style:normal;
 }*/
+
+/*@font-face {
+    font-family: 'NovecentowideBookRegular';
+    src: url("/font/novecentowide_book/Novecentowide-Book-webfont.eot");
+    src: url("/font/novecentowide_book/Novecentowide-Book-webfont.eot?#iefix") format('embedded-opentype'), url("/font/novecentowide_book/Novecentowide-Book-webfont.woff") format('woff'), url("/font/novecentowide_book/Novecentowide-Book-webfont.ttf") format('truetype'), url("/font/novecentowide_book/Novecentowide-Book-webfont.svg#NovecentowideBookRegular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
 @font-face {
-	font-family: 'NovecentowideBookRegular';
-  src: url("/font/novecentowide_book/Novecentowide-Book-webfont.eot");
-  src: url("/font/novecentowide_book/Novecentowide-Book-webfont.eot?#iefix") format('embedded-opentype'), url("/font/novecentowide_book/Novecentowide-Book-webfont.woff") format('woff'), url("/font/novecentowide_book/Novecentowide-Book-webfont.ttf") format('truetype'), url("/font/novecentowide_book/Novecentowide-Book-webfont.svg#NovecentowideBookRegular") format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Gotham-Medium';
+    src: url("/font/gotham/Gotham-Medium.otf") format("opentype"), url("/font/gotham/GothamMedium.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham-Medium';
-  src: url("/font/gotham/Gotham-Medium.otf") format("opentype"),
-       url("/font/gotham/GothamMedium.ttf") format('truetype');
-  font-weight: normal;
-  font-style: normal; 
-}
-
-@font-face {
-  font-family: 'Gotham-Light';
-  src: url("/font/gotham/Gotham-Light.otf") format("opentype"),
-       url("/font/gotham/GothamLight.ttf") format('truetype');
-  font-weight: normal;
-  font-style: normal; 
+    font-family: 'Gotham-Light';
+    src: url("/font/gotham/Gotham-Light.otf") format("opentype"), url("/font/gotham/GothamLight.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-	font: 14px "Gotham-Light, Helvetica, Arial, sans-serif";
-	color: #fff;
-	background-color: #000;
+    font-family: "Gotham-Light", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
 }
 
-h1,h2,h3,h4,h5,h6,
-.slogan p {
-  font-family: "Gotham-Medium";
-}
-
-a, p {
-  font-family: "Gotham-Light";
-}
-
-h1,
-h2,
-h3 {
-	color: #eff1e6;
-}
-
-h1 {
-	font-size: 130px;
-	line-height: 110px;
-}
-
-h2 {
-	font-size: 100px;
-	line-height: 90px;
-}
-
-h3 {
-	font-weight: normal;
-	font-size: 50px;
-	line-height: 40px;
+h1, h2, h3, .slogan p {
+    font-family: "Gotham-Medium";
 }
 
 h4 {
-	font-size: 30px;
-	line-height: 25px;
+    font-family: "Gotham-Light";
 }
 
-a,
-a:hover,
-a:visited {
-	color: #0cbce3;
-	cursor: pointer;
+a, p {
+    font-family: "Gotham-Light";
+    font-size: 16px;
+}
+
+.page-inner p {
+    line-height: 1.5;
+    margin-top: 1em;
+}
+
+h1 {
+    font-size: 130px;
+    line-height: 110px;
+}
+
+h2 {
+    font-size: 100px;
+    line-height: 90px;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 30px;
+    line-height: 25px;
+}
+
+a, a:hover, a:visited {
+    color: #0cbce3;
+    cursor: pointer;
 }
 
 a:hover {
-	color: #011d28;
-	text-decoration: none;
+    color: #011d28;
+    text-decoration: none;
 }
 
 .resize-page {
-	position: relative;
-	overflow: hidden;
-	color: #eff1e6;
-	padding: 50px 0 50px 0;
-	text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    padding: 50px 25px 50px 25px;
+    text-align: center;
+}
+
+.page-inner {
+    text-align: left;
+}
+
+#how, #why, #who {}
+
+#how .page-inner, #why .page-inner {
+    background-color: rgba(255, 255, 230, 0.9);
+    padding: 50px;
+}
+
+/*#why .page-inner {
+    background-color: #0cbce3;
+}*/
+
+#why .page-inner {
+    padding-left: 30%;
+}
+
+#how .page-inner {
+    padding-right: 20%
 }
 
 .resize-page h1:first-child {
-	padding-top: 100px;
+    padding-top: 40px;
 }
 
 .resize-page .marker {
-	position: absolute;
-	top: 0;
-}
-
-.page-shade {
-	box-shadow: inset 0 0 100px 0 rgba(0,0,0,0.1);
+    position: absolute;
+    top: 0;
 }
 
 .sil-widget {
-	font-family: "Gotham-Light";
+    font-family: "Gotham-Light";
 }
 
 .sil-widget a {
-	color: #000;
+    color: #000;
 }
 
-.page,
-#footer {
-	visibility: hidden;
+.page, #footer {
+    visibility: hidden;
 }
 
 #what {
-	visibility: visible;
+    visibility: visible;
 }
 
 .navbar {
-	height: 50px;
-	z-index: 500;
-	font-size: 16px;
-	font-weight: normal;
-	text-transform: uppercase;
+    height: 50px;
+    z-index: 500;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 .navbar .navbar-inner {
-	background: #eff1e6;
-	height: 50px;
-	box-shadow: 0 5px 0 0 rgba(0,0,0,0.1);
+    background: #eff1e6;
+    height: 50px;
+    box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .navbar .nav li a {
-	letter-spacing: 3px;
-	font-size: 15px;
-	padding: 17px 20px 0 20px;
-	margin: 0 10px 0 0;
-	color: #0cbce3;
+    letter-spacing: 3px;
+    font-size: 15px;
+    padding: 17px 20px 0 20px;
+    margin: 0 10px 0 0;
+    color: #0cbce3;
+    font-weight: bold;
 }
 
-.navbar .nav li.active a,
-.navbar .nav li.active a:hover {
-	background-color: #eff1e6;
-	box-shadow: none;
-	color: #011d28 !important;
-	border-bottom: 2px solid #0cbce3;
+.navbar .nav li.active a, .navbar .nav li.active a:hover {
+    background-color: #eff1e6;
+    box-shadow: none;
+    color: #011d28 !important;
+    border-bottom: 2px solid #0cbce3;
 }
 
 .navbar a.brand {
-  width: 250px;
-  height: 36px;
-  padding: 0;
-  margin: 7px 0 0 40px;
-  box-shadow: inset -1px 1px 1px 1px #eff2e6;
+    width: 250px;
+    height: 36px;
+    padding: 0;
+    margin: 7px 0 0 40px;
+    box-shadow: inset -1px 1px 1px 1px #eff2e6;
 }
 
 .navbar a.brand img {
-  width: auto;
-  height: 100%;
+    width: auto;
+    height: 100%;
 }
+
 /* Sticky footer styles
 -------------------------------------------------- */
-html,
-body {
-	height: 100%;
-/* The html and body elements cannot have any padding or margin. */;
+
+html, body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+    ;
 }
+
 /* Wrapper for page content to push down footer */
+
 #wrap {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-/* Negative indent footer by it's height */
-  margin: 0 auto -60px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px;
 }
+
 /* Set the fixed height of the footer here */
-#push,
-#footer {
-  height: 80px;
-  color: #eff1e6;
+
+#push, #footer {
+    height: 80px;
+    color: #eff1e6;
 }
+
 #why .container {
-  text-align: left;
+    text-align: left;
 }
+
 #why .container .row {
-  min-height: 500px;
+    min-height: 500px;
 }
+
 #why .container .nasa {
-  background-image: url("/images/voyager-translucent.png");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  min-height: 500px;
-  width: 400px;
+    background-image: url("/images/voyager-translucent.png");
+    margin-right: 9vw;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    width: 400px;
 }
+
 #why .container section {
-  padding: 30px 0 0 0;
-  clear: both;
+    padding: 30px 0 0 0;
+    clear: both;
 }
+
 #how .crazybig {
-  font-size: 140px;
-  line-height: 140px;
-  text-align: center;
-}
-#who .client {
-  min-height: 240px;
-}
-#who .client .repr {
-  height: 110px;
-  padding: 10px;
-}
-#credits {
-  color: #eff1e6;
-}
-#credits h1 {
-  color: #eff1e6;
-}
-p.credit {
-  text-align: center;
-}
-#contact {
-  z-index: 500;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: -180px;
-  height: 230px;
-  box-shadow: 0 -4px 0 rgba(0,0,0,0.3);
-}
-#contact .contact-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
-  background: url("/images/diag-bg.png") repeat;
-}
-#contact .contact-toggle {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  padding: 15px 80px 0 80px;
-  background-color: #eff1e6;
-  font-size: 20px;
-}
-#contact .contact-body {
-  position: absolute;
-  top: 50px;
-  left: 0;
-  right: 0;
-  height: 180px;
-  background-color: #0cbce3;
-}
-#contact .contact-info {
-  font-size: 40px;
-  position: absolute;
-  top: 40px;
-  left: 80px;
-}
-#contact .contact-info a {
-  color: #fff;
-  font-weight: bold;
-}
-#contact .contact-form {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  padding: 10px 40px 0 0;
-  width: 240px;
-  font-family: "Gotham-Light";
-}
-#contact .contact-form .sil-widget>div>div>a {
-  display: none;
-}
-#contact .contact-form label {
-  display: none;
-}
-#contact .contact-form textarea {
-  height: 60px;
-}
-#contact .contact-form input,
-#contact .contact-form textarea {
-  padding: 5px;
-  display: block;
-  width: 100%;
-  margin: 0 0 5px 0;
-  background-color: #eff1e6;
-}
-#contact .contact-form button,
-#contact .contact-form input,
-#contact .contact-form textarea {
-  border-width: 0px;
-  border-radius: 0px;
-}
-#contact .contact-form .btn {
-  position: absolute;
-  right: 250px;
-  bottom: 20px;
-  padding: 25px 15px;
-  background: #011d28;
-  color: #eff1e6;
-  font-size: 20px;
-  text-shadow: none;
-  text-transform: uppercase;
-}
-#contact .close-contact {
-  position: absolute;
-  top: 11px;
-  right: 30px;
-  display: none;
-  font-size: 24px;
-  font-weight: bold;
-  color: #011d28;
-  cursor: pointer;
-}
-#contact.open {
-  bottom: 0;
-}
-#contact.open .close-contact {
-  display: block;
-}
-#contact.opening {
-  -webkit-animation-name: opener;
-  -webkit-animation-duration: 1s;
-}
-#contact.closing {
-  -webkit-animation-name: opener;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-direction: reverse;
-}
-.overlay {
-  position: absolute;
-  z-index: 300;
-  margin-top: -50px;
-  top: 50%;
-  width: 100%;
-}
-.overlay .logo {
-  width: 1px;
-}
-.overlay .sloganimate {
-  -webkit-animation: up 1s;
-  -webkit-animation-fill-mode: forwards;
-}
-.overlay .slogan {
-  display: none;
-  position: absolute;
-  top: -200px;
-  left: 0;
-  right: 0;
-  padding: 0 0 0 10px;
-  text-align: center;
-  font-weight: bold;
-  text-shadow: 0 10px 15px rgba(0,0,0,0.5);
-}
-.overlay .slogan p.we {
-  margin-left: 40px;
-  font-size: 70px;
-  letter-spacing: 30px;
-  line-height: 100px;
-  color: #0cbce3;
-}
-.overlay .slogan p.tomorrows {
-  font-size: 95px;
-  line-height: 130px;
-  letter-spacing: 12px;
-  color: #eff1e6;
-  text-shadow: 1px 0 0 #ede88c, 0 1px 0 #ede88c, 0 -1px 0 #ede88c, 1px 1px 0 #ede88c, -1px 1px 0 #ede88c, -1px 0 0 #ede88c, -1px -1px 0 #ede88c, 1px -1px 0 #ede88c, 0 10px 15px rgba(0,0,0,0.5);
-}
-.overlay .slogan p.web-apps {
-  margin-left: 10px;
-  font-size: 140px;
-  line-height: 140px;
-  letter-spacing: 17px;
-  color: #eff1e6;
-  text-shadow: 1px 0 0 #ede88c, 0 1px 0 #ede88c, 0 -1px 0 #ede88c, 1px 1px 0 #ede88c, -1px 1px 0 #ede88c, -1px 0 0 #ede88c, -1px -1px 0 #ede88c, 1px -1px 0 #ede88c, 0 10px 15px rgba(0,0,0,0.5);
-}
-/* Carousel base class */
-.carousel .container {
-  position: relative;
-  z-index: 9;
-  text-align: center;
-}
-.carousel .carousel-inner {
-  position: relative;
-}
-.carousel .carousel-control {
-  height: 80px;
-  margin-top: 0;
-  top: 25%;
-  z-index: 10;
-  font-size: 120px;
-  background-color: transparent;
-  border: 0;
-  opacity: 1;
-  color: #fff;
-}
-.carousel .carousel-control:hover,
-.carousel .item {
-  height: 600px;
-}
-.carousel .howto {
-  height: 100px;
-  border: 2px dashed #fff;
-  border-radius: 75px;
-  padding: 25px;
-  float: left;
-  width: 100px;
-  margin: 10px 0 0 50px;
-}
-.carousel .howto i {
-  font-size: 80px;
-}
-.carousel .howto i.smaller {
-  font-size: 40px;
-}
-.carousel .carousel-caption {
-  padding: 0 20px 0 20px;
-  top: 0;
-  left: 40px;
-  right: 40px;
-  background-color: transparent;
-}
-.carousel .carousel-caption h3 {
-  margin-bottom: 0.5em;
-}
-.carousel .carousel-caption a {
-  text-decoration: underline;
-}
-.carousel .carousel-caption p {
-  font-size: 16px;
-  color: #fff;
-}
-/* RESPONSIVE CSS */
-@media (max-width: 979px) {
-  .navbar-fixed-top {
-    position: fixed;
-  }
-  .nav-collapse.collapse {
-    z-index: 2;
-  }
-  .resize-page h1:first-child {
-    padding-top: 20px;
-  }
-  .navbar .btn {
-    margin-top: 11px;
-    margin-right: 15px;
-  }
-  .nav-collapse {
-    top: 6px;
-    background-color: #eff1e6;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
-  }
-  .nav-collapse .nav>li>a {
-    font-weight: normal;
-  }
-  #navbar {
-    position: fixed;
-  }
-  #navbar li a {
-    margin: 0;
-  }
-  #navbar .navbar-inner {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  #navbar .brand {
-    margin-left: 5px;
-  }
-  #contact.open {
-    letter-spacing: 0.25em;
-  }
-  #contact.open .contact-form textarea {
-    height: 35px;
-    margin-bottom: 0;
-  }
-  #contact.open .container {
-    background-position: 0 20px;
-  }
-  #who .client .repr {
-    height: auto;
-  }
-  .overlay .slogan {
-    top: -150px;
-  }
-}
-@media (max-width: 768px) {
-  .navbar-fixed-top,
-  .navbar-fixed-bottom,
-  .navbar-static-top {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  h1 {
-    font-size: 62px;
-    line-height: 62px;
-  }
-  h2 {
-    font-size: 52px;
-    line-height: 52px;
-  }
-  body {
-    padding: 0;
-  }
-  .contact-details a {
-    display: block;
-  }
-  .navbar-fixed-top .navbar-inner {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-  .anchor {
+    font-size: 140px;
+    line-height: 140px;
     text-align: center;
-  }
-  .carousel .howto {
-    margin: 10px 0 0 10px;
-    display: inline-block;
-    float: unset;
-  }
-  .overlay .slogan p.we {
+}
+
+#who .client {
+    min-height: 240px;
+    color: white;
+    padding: 25px;
+}
+
+#who .client .repr {
+    text-align: center;
+    height: 100px;
+}
+
+#credits {
+    color: #eff1e6;
+}
+
+#credits h1 {
+    color: #eff1e6;
+}
+
+#credits .page-inner {
+    text-align: center;
+}
+
+p.credit {
+    text-align: center;
+}
+
+#contact {
+    z-index: 500;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -180px;
+    height: 230px;
+    box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.3);
+}
+
+#contact .contact-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: url("/images/diag-bg.png") repeat;
+}
+
+#contact .contact-toggle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    padding: 15px 80px 0 80px;
+    background-color: #eff1e6;
+    font-size: 20px;
+}
+
+#contact .contact-body {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background-color: #0cbce3;
+}
+
+#contact .contact-info {
     font-size: 40px;
-    letter-spacing: 30px;
-    line-height: 1.25em;
-  }
-  .overlay .slogan p.tomorrows {
-    font-size: 60px;
-    letter-spacing: 30px;
-    line-height: 1.25em;
-  }
-  .overlay .slogan p.web-apps {
-    font-size: 80px;
-    line-height: 1.25em;
-    letter-spacing: 10px;
-  }
-  #how .crazybig {
-    font-size: 80px;
-    line-height: 1.2em;
-  }
-  h3 {
-    font-weight: normal;
-    font-size: 42px;
-    line-height: 42px;
-  }
+    position: absolute;
+    top: 40px;
+    left: 80px;
 }
-@media (max-width: 725px) {
-  .container {
-    width: 92%;
-  }
-  .overlay {
-    top: 60%;
-  }
-  .overlay .slogan p.we {
-    font-size: 32px;
-    letter-spacing: 10px;
-    line-height: 1.25em;
-    margin-left: 15px;
-  }
-  .overlay .slogan p.tomorrows {
-    font-size: 42px;
-    letter-spacing: 10px;
-    line-height: 1.25em;
-  }
-  .overlay .slogan p.web-apps {
-    font-size: 52px;
-    line-height: 1.25em;
-    letter-spacing: 10px;
-  }
-  #who .container img {
-    max-width: 65%;
-  }
+
+#contact .contact-info a {
+    color: #fff;
+    font-weight: bold;
 }
-@media (max-width: 380px) {
-  .overlay .slogan p.we {
+
+#contact .contact-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 40px 0 0;
+    width: 240px;
+    font-family: "Gotham-Light";
+}
+
+#contact .contact-form .sil-widget>div>div>a {
+    display: none;
+}
+
+#contact .contact-form label {
+    display: none;
+}
+
+#contact .contact-form textarea {
+    height: 60px;
+}
+
+#contact .contact-form input, #contact .contact-form textarea {
+    padding: 5px;
+    display: block;
+    width: 100%;
+    margin: 0 0 5px 0;
+    background-color: #eff1e6;
+}
+
+#contact .contact-form button, #contact .contact-form input, #contact .contact-form textarea {
+    border-width: 0px;
+    border-radius: 0px;
+}
+
+#contact .contact-form .btn {
+    position: absolute;
+    right: 250px;
+    bottom: 20px;
+    padding: 25px 15px;
+    background: #011d28;
+    color: #eff1e6;
+    font-size: 20px;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+#contact .close-contact {
+    position: absolute;
+    top: 11px;
+    right: 30px;
+    display: none;
     font-size: 24px;
-    letter-spacing: 10px;
-    line-height: 1.25em;
-  }
-  .overlay .slogan p.tomorrows {
-    font-size: 36px;
-    letter-spacing: 10px;
-    line-height: 1.25em;
-  }
-  .overlay .slogan p.web-apps {
-    font-size: 42px;
-    line-height: 1.25em;
-    letter-spacing: 10px;
-  }
-  .navbar a.brand {
-    width: 100px;
-  }
+    font-weight: bold;
+    color: #011d28;
+    cursor: pointer;
+}
+
+#contact.open {
+    bottom: 0;
+}
+
+#contact.open .close-contact {
+    display: block;
+}
+
+#contact.opening {
+    -webkit-animation-name: opener;
+    -webkit-animation-duration: 1s;
+}
+
+#contact.closing {
+    -webkit-animation-name: opener;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-direction: reverse;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 300;
+    margin-top: -50px;
+    top: 50%;
+    width: 100%;
+}
+
+.overlay .logo {
+    width: 1px;
+}
+
+.overlay .sloganimate {
+    -webkit-animation: up 1s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.overlay .slogan {
+    display: none;
+    position: absolute;
+    top: -150px;
+    left: 0;
+    right: 0;
+    padding: 0 0 0 10px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.overlay .slogan p.we {
+    margin-left: 40px;
+    font-size: 70px;
+    letter-spacing: 30px;
+    line-height: 100px;
+    color: #0cbce3;
+}
+
+.overlay .slogan p.tomorrows {
+    font-size: 95px;
+    line-height: 130px;
+    letter-spacing: 12px;
+    color: #eff1e6;
+    text-shadow: 1px 0 0 #ede88c, 0 1px 0 #ede88c, 0 -1px 0 #ede88c, 1px 1px 0 #ede88c, -1px 1px 0 #ede88c, -1px 0 0 #ede88c, -1px -1px 0 #ede88c, 1px -1px 0 #ede88c, 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.overlay .slogan p.web-apps {
+    margin-left: 10px;
+    font-size: 140px;
+    line-height: 140px;
+    letter-spacing: 17px;
+    color: #eff1e6;
+    text-shadow: 1px 0 0 #ede88c, 0 1px 0 #ede88c, 0 -1px 0 #ede88c, 1px 1px 0 #ede88c, -1px 1px 0 #ede88c, -1px 0 0 #ede88c, -1px -1px 0 #ede88c, 1px -1px 0 #ede88c, 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* RESPONSIVE CSS */
+
+@media (max-width: 979px) {
+    .navbar-fixed-top {
+        position: fixed;
+    }
+    .nav-collapse.collapse {
+        z-index: 2;
+    }
+    .resize-page h1:first-child {
+        padding-top: 20px;
+    }
+    .navbar .btn {
+        margin-top: 11px;
+        margin-right: 15px;
+    }
+    .nav-collapse {
+        top: 6px;
+        background-color: #eff1e6;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    }
+    .nav-collapse .nav>li>a {
+        font-weight: normal;
+    }
+    #navbar {
+        position: fixed;
+    }
+    #navbar li a {
+        margin: 0;
+    }
+    #navbar .navbar-inner {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #navbar .brand {
+        margin-left: 5px;
+    }
+    #contact.open {
+        letter-spacing: 0.25em;
+    }
+    #contact.open .contact-form textarea {
+        height: 35px;
+        margin-bottom: 0;
+    }
+    #contact.open .container {
+        background-position: 0 20px;
+    }
+    #who .client .repr {
+        height: auto;
+    }
+    .overlay .slogan {
+        top: -150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    h1 {
+        font-size: 62px;
+        line-height: 62px;
+    }
+    h2 {
+        font-size: 52px;
+        line-height: 52px;
+    }
+    body {
+        padding: 0;
+    }
+    .contact-details a {
+        display: block;
+    }
+    .navbar-fixed-top .navbar-inner {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .anchor {
+        text-align: center;
+    }
+    .overlay .slogan p.we {
+        font-size: 40px;
+        letter-spacing: 30px;
+        line-height: 1.25em;
+    }
+    .overlay .slogan p.tomorrows {
+        font-size: 60px;
+        letter-spacing: 30px;
+        line-height: 1.25em;
+    }
+    .overlay .slogan p.web-apps {
+        font-size: 80px;
+        line-height: 1.25em;
+        letter-spacing: 10px;
+    }
+    #how .crazybig {
+        font-size: 80px;
+        line-height: 1.2em;
+    }
+    h3 {
+        font-weight: normal;
+        font-size: 42px;
+        line-height: 42px;
+    }
+}
+
+@media (max-width: 725px) {
+    .container {
+        width: 92%;
+    }
+    .overlay {
+        top: 60%;
+    }
+    .overlay .slogan p.we {
+        font-size: 32px;
+        letter-spacing: 10px;
+        line-height: 1.25em;
+        margin-left: 15px;
+    }
+    .overlay .slogan p.tomorrows {
+        font-size: 42px;
+        letter-spacing: 10px;
+        line-height: 1.25em;
+    }
+    .overlay .slogan p.web-apps {
+        font-size: 52px;
+        line-height: 1.25em;
+        letter-spacing: 10px;
+    }
+    #who .container img {
+        max-width: 65%;
+    }
+}
+
+@media (max-width: 380px) {
+    .overlay .slogan p.we {
+        font-size: 24px;
+        letter-spacing: 10px;
+        line-height: 1.25em;
+    }
+    .overlay .slogan p.tomorrows {
+        font-size: 36px;
+        letter-spacing: 10px;
+        line-height: 1.25em;
+    }
+    .overlay .slogan p.web-apps {
+        font-size: 42px;
+        line-height: 1.25em;
+        letter-spacing: 10px;
+    }
+    .navbar a.brand {
+        width: 100px;
+    }
 }
