@@ -14,8 +14,36 @@
     font-weight: normal;
     font-style: normal;
 }*/
+@font-face {
+    font-family: 'Quicksand-Bold';
+    src: url("/font/Quicksand/Quicksand-Bold.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
+    font-family: 'Quicksand-Meduim';
+    src: url("/font/Quicksand/Quicksand-Medium.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url("/font/Quicksand/Quicksand-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quicksand-light';
+    src: url("/font/Quicksand/Quicksand-Light.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* @font-face {
     font-family: 'Gotham-Medium';
     src: url("/font/gotham/Gotham-Medium.otf") format("opentype"), url("/font/gotham/GothamMedium.ttf") format('truetype');
     font-weight: normal;
@@ -27,7 +55,7 @@
     src: url("/font/gotham/Gotham-Light.otf") format("opentype"), url("/font/gotham/GothamLight.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 body {
     font-family: "Gotham-Light", Helvetica, Arial, sans-serif;
@@ -37,16 +65,16 @@ body {
 }
 
 h1, h2, h3, .slogan p {
-    font-family: "Gotham-Medium";
+    font-family: "Quicksand-Bold";
     text-align: center;
 }
 
 h4 {
-    font-family: "Gotham-Light";
+    font-family: "Quicksand-Regular";
 }
 
 a, p {
-    font-family: "Gotham-Light";
+    font-family: "Quicksand-light";
     font-size: 16px;
 }
 
