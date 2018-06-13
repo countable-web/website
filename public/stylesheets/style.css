@@ -185,9 +185,10 @@ a:hover {
 }
 
 .navbar .navbar-inner {
-    background: #eff1e6;
+    background: rgba(30, 53, 58, 0.5);
     height: 50px;
-    box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1);
+    border-width: 0 0 0;
+    /* box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1); */
 }
 
 .navbar .nav li a {
@@ -195,15 +196,20 @@ a:hover {
     font-size: 15px;
     padding: 17px 20px 0 20px;
     margin: 0 10px 0 0;
-    color: #0cbce3;
+    color: rgba(255, 255, 255, 0.1);
     font-weight: bold;
 }
+
+.navbar .nav li a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
 
 .navbar .nav li.active a, .navbar .nav li.active a:hover {
     background-color: #eff1e6;
     box-shadow: none;
     color: #011d28 !important;
-    border-bottom: 2px solid #0cbce3;
+    /* border-bottom: 2px solid #0cbce3; */
 }
 
 .navbar a.brand {
@@ -211,7 +217,7 @@ a:hover {
     height: 36px;
     padding: 0;
     margin: 7px 0 0 40px;
-    box-shadow: inset -1px 1px 1px 1px #eff2e6;
+    /* box-shadow: inset -1px 1px 1px 1px #eff2e6; */
 }
 
 .navbar a.brand img {
