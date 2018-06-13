@@ -58,23 +58,28 @@
 } */
 
 body {
-    font-family: "Gotham-Light", Helvetica, Arial, sans-serif;
+    font-family: 'Questrial', sans-serif, Helvetica, Arial, sans-serif;
+    /* font-family: ; */
     font-size: 16px;
     color: #fff;
     background-color: #000;
 }
 
-h1, h2, h3, .slogan p {
-    font-family: "Quicksand-Bold";
+.slogan p{
+    font-family: 'Questrial', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Questrial', sans-serif;
     text-align: center;
 }
 
 h4 {
-    font-family: "Quicksand-Regular";
+    font-family: 'Questrial', sans-serif;
 }
 
 a, p {
-    font-family: "Quicksand-light";
+    font-family: "Quicksand-Regular";
     font-size: 16px;
 }
 
@@ -100,8 +105,9 @@ h3 {
 }
 
 h4 {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 25px;
+    font-weight: normal;
 }
 
 a, a:hover, a:visited {
@@ -155,7 +161,7 @@ a:hover {
 }
 
 .sil-widget {
-    font-family: "Gotham-Light";
+    font-family: "Quicksand-Regular";
 }
 
 .sil-widget a {
@@ -357,7 +363,8 @@ p.credit {
     bottom: 0;
     padding: 10px 40px 0 0;
     width: 240px;
-    font-family: "Gotham-Light";
+    font-family: "Quicksand-Regular";
+    /* font-family: 'Questrial', sans-serif; */
 }
 
 #contact .contact-form .sil-widget>div>div>a {
