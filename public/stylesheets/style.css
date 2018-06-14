@@ -469,7 +469,7 @@ p.credit {
 .overlay .slogan {
     display: none;
     position: absolute;
-    top: -150px;
+    top: -50px;
     left: 0;
     right: 0;
     padding: 0 0 0 10px;
@@ -479,14 +479,17 @@ p.credit {
 }
 
 .overlay .slogan p.we {
-    margin-left: 40px;
-    font-size: 70px;
-    letter-spacing: 30px;
+    margin-right: 20px;
+    font-size: 50px;
+    letter-spacing: 5px;
     line-height: 100px;
+    text-align: right;
     color: #0cbce3;
+    display: inline;
+    float: right;
 }
 
-.overlay .slogan p.tomorrows {
+/* .overlay .slogan p.tomorrows {
     font-size: 95px;
     line-height: 130px;
     letter-spacing: 12px;
@@ -501,8 +504,26 @@ p.credit {
     letter-spacing: 17px;
     color: #eff1e6;
     text-shadow: 1px 0 0 #ede88c, 0 1px 0 #ede88c, 0 -1px 0 #ede88c, 1px 1px 0 #ede88c, -1px 1px 0 #ede88c, -1px 0 0 #ede88c, -1px -1px 0 #ede88c, 1px -1px 0 #ede88c, 0 10px 15px rgba(0, 0, 0, 0.5);
+} */
+/* Astronaut
+-------------------------------------------------- */
+.astronaut{
+    position: absolute;
+    width: 409px;
+    height: 346px;
+    z-index: 2;
+    margin-left:10px;
+    margin-top: 40px;
+    transform: rotate(43deg);
+    padding:0px;
+    /* overflow-X: hidden; */
 }
 
+.astronaut img{
+    margin-top:50px;
+    opacity: 1 !important;
+    margin-top: -104px !important;
+}
 /* RESPONSIVE CSS */
 
 @media (max-width: 979px) {
