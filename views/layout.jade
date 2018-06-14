@@ -20,6 +20,7 @@ html(lang='en')
     //if lt IE 9
       script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
     link(rel='shortcut icon', href='/favicon.ico')
+
     style.
 
       ::input-placeholder { /* WebKit browsers */
@@ -105,13 +106,13 @@ html(lang='en')
           span.icon-bar
           span.icon-bar
         a.brand(href='#', title='Countable')
-          img(src="/images/countable-logo_white.png" href="Company Logo")
+            img(src="/images/countable-logo_white.png" href="Company Logo" id='company-logo')
 
         //
            Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
         .nav-collapse.collapse
           ul.nav.pull-right
-            li.active
+            li
               a.local(href='#what',data-toggle='collapse',data-target='.nav-collapse') What
             li
               a.local(href='#why',data-toggle='collapse',data-target='.nav-collapse') Why
@@ -165,7 +166,7 @@ html(lang='en')
     script(src="/javascripts/skrollr-pages.js")
     script(src='/javascripts/jquery.scrollTo-1.4.3.1.js')
     script(src="/javascripts/js.js")
-
+    script(src="/javascripts/index.js")
     | <script type="text/javascript">
     |  var _gaq = _gaq || [];
     |  _gaq.push(['_setAccount', 'UA-8351010-1']);
