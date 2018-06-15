@@ -5,7 +5,7 @@
             hash: true
         });
         $(window).resize(function() {
-            return $(".resize-page").css("min-height", $(window).height() - 100 + "px");
+            return $(".resize-page").css("min-height", $(window).height() - 230 + "px");
         }).resize();
         $(".contact-us").click(function() {
             if (!$("#contact").hasClass("open")) {

@@ -134,14 +134,33 @@ a:hover {
 
 #how, #why, #who {}
 
+.why-question{
+    /* position: absolute; */
+    display: flex;
+    max-width: 700px;
+    right: 0;
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+/* .why-content{
+    /* below:;
+    display: flex;
+    max-width: 700px;
+    right: 0;
+    margin-left: 0px;
+    margin-right: auto;
+}
+*/
+
 #how .page-inner, #why .page-inner {
     background-color: #eff1e6;
     padding: 50px;
 }
 
-/*#why .page-inner {
-    background-color: #0cbce3;
-}*/
+/* #why .page-inner {
+    float: right;
+} */
 
 /*#why .page-inner {
     padding-left: 30%;
@@ -469,7 +488,7 @@ p.credit {
 .overlay .slogan {
     display: none;
     position: absolute;
-    top: -50px;
+    top: 25px;
     left: 0;
     right: 0;
     padding: 0 0 0 10px;
@@ -484,9 +503,11 @@ p.credit {
     letter-spacing: 5px;
     line-height: 100px;
     text-align: right;
-    color: #0cbce3;
+    color: rgb(255, 255, 255);
     display: inline;
     float: right;
+    font-family: 'Questrial';
+    font-weight: bold;
 }
 
 /* .overlay .slogan p.tomorrows {
