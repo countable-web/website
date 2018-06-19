@@ -534,8 +534,8 @@ p.credit {
     height: 346px;
     z-index: 2;
     margin-left:10px;
-    margin-top: 40px;
-    transform: rotate(43deg);
+    margin-top: 64px;
+    transform: rotate(44deg);
     padding:0px;
     /* overflow-X: hidden; */
 }
