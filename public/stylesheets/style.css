@@ -15,33 +15,32 @@
     font-style: normal;
 }*/
 @font-face {
-    font-family: 'Quicksand-Bold';
-    src: url("/font/Quicksand/Quicksand-Bold.ttf") format('truetype');
+    font-family: "Quicksand-Bold";
+    src: url("/font/Quicksand/Quicksand-Bold.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Quicksand-Meduim';
-    src: url("/font/Quicksand/Quicksand-Medium.ttf") format('truetype');
+    font-family: "Quicksand-Meduim";
+    src: url("/font/Quicksand/Quicksand-Medium.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Quicksand-Regular';
-    src: url("/font/Quicksand/Quicksand-Regular.ttf") format('truetype');
+    font-family: "Quicksand-Regular";
+    src: url("/font/Quicksand/Quicksand-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Quicksand-light';
-    src: url("/font/Quicksand/Quicksand-Light.ttf") format('truetype');
+    font-family: "Quicksand-light";
+    src: url("/font/Quicksand/Quicksand-Light.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
-
 
 /* @font-face {
     font-family: 'Gotham-Medium';
@@ -58,27 +57,30 @@
 } */
 
 body {
-    font-family: 'Questrial', sans-serif, Helvetica, Arial, sans-serif;
+    font-family: "Questrial", sans-serif, Helvetica, Arial, sans-serif;
     /* font-family: ; */
     font-size: 16px;
     color: #fff;
     background-color: #000;
 }
 
-.slogan p{
-    font-family: 'Questrial', sans-serif;
+.slogan p {
+    font-family: "Questrial", sans-serif;
 }
 
-h1, h2, h3 {
-    font-family: 'Questrial', sans-serif;
+h1,
+h2,
+h3 {
+    font-family: "Questrial", sans-serif;
     text-align: center;
 }
 
 h4 {
-    font-family: 'Questrial', sans-serif;
+    font-family: "Questrial", sans-serif;
 }
 
-a, p {
+a,
+p {
     font-family: "Quicksand-Regular";
     font-size: 16px;
 }
@@ -110,7 +112,9 @@ h4 {
     font-weight: normal;
 }
 
-a, a:hover, a:visited {
+a,
+a:hover,
+a:visited {
     color: #0cbce3;
     cursor: pointer;
 }
@@ -132,9 +136,12 @@ a:hover {
     text-align: left;
 }
 
-#how, #why, #who {}
+#how,
+#why,
+#who {
+}
 
-.why-question{
+.why-question {
     /* position: absolute; */
     display: flex;
     max-width: 700px;
@@ -143,21 +150,34 @@ a:hover {
     margin-right: 0px;
 }
 
-/* .why-content{
-    /* below:;
+.why-content {
+    /* position: absolute; */
     display: flex;
-    max-width: 700px;
+    max-width: 850px;
     right: 0;
     margin-left: 0px;
     margin-right: auto;
 }
-*/
 
-#how .page-inner, #why .page-inner {
+.how-content {
+    /* position: absolute; */
+    display: flex;
+    max-width: 850px;
+    right: 0;
+    margin-left: 0px;
+    margin-right: auto;
+}
+
+.how-content .page-inner a img {
+    width: 250px;
+    margin: 40px;
+}
+
+#how .page-inner,
+#why .page-inner {
     background-color: #eff1e6;
     padding: 50px;
 }
-
 /* #why .page-inner {
     float: right;
 } */
@@ -187,7 +207,8 @@ a:hover {
     color: #000;
 }
 
-.page, #footer {
+.page,
+#footer {
     visibility: hidden;
 }
 
@@ -222,8 +243,8 @@ a:hover {
     color: rgba(255, 255, 255, 1);
 }
 
-
-.navbar .nav li.active a, .navbar .nav li.active a:hover {
+.navbar .nav li.active a,
+.navbar .nav li.active a:hover {
     background-color: #eff1e6;
     box-shadow: none;
     color: #011d28 !important;
@@ -241,10 +262,10 @@ a:hover {
 .navbar a.brand img {
     width: auto;
     height: 100%;
-    margin-top:7px;
+    margin-top: 7px;
 }
 .navbar-inner.scrolled {
-    background-color: rgba(6,30,41, 0.8)!important;
+    background-color: rgba(6, 30, 41, 0.8) !important;
     color: black;
     transition: background-color 200ms linear;
     height: 65px;
@@ -256,10 +277,10 @@ a:hover {
 /* Sticky footer styles
 -------------------------------------------------- */
 
-html, body {
+html,
+body {
     height: 100%;
     /* The html and body elements cannot have any padding or margin. */
-    ;
 }
 
 /* Wrapper for page content to push down footer */
@@ -274,7 +295,8 @@ html, body {
 
 /* Set the fixed height of the footer here */
 
-#push, #footer {
+#push,
+#footer {
     height: 80px;
     color: #eff1e6;
 }
@@ -401,7 +423,7 @@ p.credit {
     /* font-family: 'Questrial', sans-serif; */
 }
 
-#contact .contact-form .sil-widget>div>div>a {
+#contact .contact-form .sil-widget > div > div > a {
     display: none;
 }
 
@@ -413,7 +435,8 @@ p.credit {
     height: 60px;
 }
 
-#contact .contact-form input, #contact .contact-form textarea {
+#contact .contact-form input,
+#contact .contact-form textarea {
     padding: 5px;
     display: block;
     width: 100%;
@@ -421,7 +444,9 @@ p.credit {
     background-color: #eff1e6;
 }
 
-#contact .contact-form button, #contact .contact-form input, #contact .contact-form textarea {
+#contact .contact-form button,
+#contact .contact-form input,
+#contact .contact-form textarea {
     border-width: 0px;
     border-radius: 0px;
 }
@@ -506,7 +531,7 @@ p.credit {
     color: rgb(255, 255, 255);
     display: inline;
     float: right;
-    font-family: 'Questrial';
+    font-family: "Questrial";
     font-weight: bold;
 }
 
@@ -528,20 +553,20 @@ p.credit {
 } */
 /* Astronaut
 -------------------------------------------------- */
-.astronaut{
+.astronaut {
     position: absolute;
     width: 409px;
     height: 346px;
     z-index: 2;
-    margin-left:10px;
+    margin-left: 10px;
     margin-top: 64px;
     transform: rotate(44deg);
-    padding:0px;
+    padding: 0px;
     /* overflow-X: hidden; */
 }
 
-.astronaut img{
-    margin-top:50px;
+.astronaut img {
+    margin-top: 50px;
     opacity: 1 !important;
     margin-top: -104px !important;
 }
@@ -566,7 +591,7 @@ p.credit {
         background-color: #eff1e6;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     }
-    .nav-collapse .nav>li>a {
+    .nav-collapse .nav > li > a {
         font-weight: normal;
     }
     #navbar {
@@ -601,7 +626,9 @@ p.credit {
 }
 
 @media (max-width: 768px) {
-    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+    .navbar-fixed-top,
+    .navbar-fixed-bottom,
+    .navbar-static-top {
         margin-left: 0px;
         margin-right: 0px;
     }
