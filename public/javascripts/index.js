@@ -11,3 +11,19 @@ $(document).scroll(function () {
     // }
 });
 
+$(function(){
+    var stickyHeaderTop = $('.rocketship').offset().top - 300;
+    $(window).scroll(function(){
+            if( $(window).scrollTop()> stickyHeaderTop ) {
+                $('.rocketship').css({position: 'fixed', top: '300px'});
+                $('#sticky').css('display', 'inline-block');
+            } else {
+                $('.rocketship').css({position: 'absolute', 'top': '1360px'});
+                $('#sticky').css('display', 'none');
+            }
+            if ($(window).scrollTop()> 1500){
+                $('.rocketship').css({position: 'absolute', 'top': '1800px'});
+                $('#sticky').css('display', 'none');
+            }
+    });
+});
