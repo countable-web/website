@@ -551,8 +551,9 @@ p.credit {
     color: #eff1e6;
     text-shadow: 1px 0 0 #ede88c, 0 1px 0 #ede88c, 0 -1px 0 #ede88c, 1px 1px 0 #ede88c, -1px 1px 0 #ede88c, -1px 0 0 #ede88c, -1px -1px 0 #ede88c, 1px -1px 0 #ede88c, 0 10px 15px rgba(0, 0, 0, 0.5);
 } */
-/* Astronaut
--------------------------------------------------- */
+
+/* Astronaut */
+
 .astronaut {
     position: absolute;
     width: 409px;
@@ -566,10 +567,33 @@ p.credit {
 }
 
 .astronaut img {
-    margin-top: 50px;
+    right: 50px;
     opacity: 1 !important;
     margin-top: -104px !important;
 }
+/* Rocketship */
+
+.rocketship {
+    display: block;
+    position: absolute;
+    /* width: 409px;
+    height: 346px; */
+    /* right: -50px; */
+    /* margin-top: 64px; */
+    padding: 0px;
+    /* overflow-y: hidden; */
+    right: 0px;
+}
+
+.rocketship img {
+    /* right: 50px; */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    float: right;
+    opacity: 1 !important;
+    margin-top: -150px !important;
+}
+
 /* RESPONSIVE CSS */
 
 @media (max-width: 979px) {
